@@ -161,7 +161,7 @@
       <div class="reveal reveal-delay-1">
 
         <div class="map-wrap">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.5!2d12.393!3d44.020!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDAxJzEyLjAiTiAxMsKwMjMnMzQuOCJF!5e0!3m2!1sit!2sit!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mappa Studio Dentistico Rinaldi Montalbano"></iframe>
+          <iframe src="https://www.google.com/maps?q=Via%20Emilia%20Ovest%2045%2FA%2C%20Savignano%20sul%20Rubicone%2C%20FC%2C%20Italia&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mappa Studio Dentistico Rinaldi Montalbano"></iframe>
         </div>
 
         <div class="form-card" id="contact-form">
@@ -271,7 +271,7 @@
     if (!nome || !email || !privacy) return;
     const btn = this.querySelector('button[type="submit"]');
     btn.disabled = true;
-    btn.textContent = 'Invio in corso…';
+    btn.textContent = localStorage.getItem('sdm-lang') === 'en' ? 'Sending…' : 'Invio in corso…';
     setTimeout(function() {
       document.getElementById('form-success').style.display = 'block';
       btn.style.display = 'none';
