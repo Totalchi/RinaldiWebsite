@@ -4,281 +4,221 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Contatti — Studio Dentistico Rinaldi Montalbano</title>
-<meta name="description" content="Prenota un appuntamento al Studio Dentistico Rinaldi Montalbano. Via Emilia Ovest 45/A, Savignano sul Rubicone. Tel: 0541 944339. Modulo online disponibile."/>
+<meta name="description" content="Contatta lo Studio Dentistico Rinaldi Montalbano a Savignano sul Rubicone. Prenota un appuntamento online o chiamaci al 0541 944339."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 
 <!-- NAV -->
-<nav class="nav" id="main-nav">
-  <a href="index.html" class="nav-logo">
-    <div class="nav-logo-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="2.5" fill="currentColor" stroke="none"/></svg>
+<nav class="nav scrolled" id="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C9 2 7 4.5 7 7c0 3 2.5 5.5 3 8h4c.5-2.5 3-5 3-8 0-2.5-2-5-5-5z"/><path d="M9 17c0 3 1.5 5 3 5s3-2 3-5"/></svg></div>
+      <div class="nav-logo-text">Rinaldi Montalbano</div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="chi-siamo.html">Chi siamo</a></li>
+      <li><a href="trattamenti.html">Trattamenti</a></li>
+      <li><a href="urgenze.html" class="urgent">Urgenze</a></li>
+      <li><a href="domande-frequenti.html">FAQ</a></li>
+      <li><a href="contatti.html">Contatti</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-lang"><button data-lang-btn="it" class="is-active">IT</button><button data-lang-btn="en">EN</button></div>
+      <a href="contatti.html" class="btn btn-gold btn-sm nav-cta-btn">Prenota</a>
+      <button class="nav-burger" id="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
-    <span>Rinaldi <em style="font-style:italic;color:var(--terra)">·</em> Montalbano</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="chi-siamo.html">Chi siamo</a></li>
-    <li><a href="trattamenti.html">Trattamenti</a></li>
-    <li><a href="urgenze.html" class="urgent">🚨 Urgenze</a></li>
-    <li><a href="domande-frequenti.html">FAQ</a></li>
-    <li><a href="contatti.html" class="is-active">Contatti</a></li>
-  </ul>
-  <div class="nav-right">
-    <div class="nav-lang">
-      <button data-lang-btn="it">IT</button>
-      <button data-lang-btn="en">EN</button>
-    </div>
-    <a href="contatti.html" class="btn btn-primary btn-sm nav-cta">Prenota</a>
   </div>
-  <button class="nav-burger" id="nav-burger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
 </nav>
-
-<!-- MOBILE NAV -->
 <div class="mob-nav" id="mob-nav">
+  <div class="mob-overlay" id="mob-overlay"></div>
   <div class="mob-drawer">
-    <button class="mob-close" id="mob-close">✕</button>
+    <button class="mob-close-btn" id="mob-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
     <ul class="mob-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="chi-siamo.html">Chi siamo</a></li>
       <li><a href="trattamenti.html">Trattamenti</a></li>
-      <li><a href="urgenze.html" class="urgent">🚨 Urgenze</a></li>
+      <li><a href="urgenze.html" class="urgent">Urgenze</a></li>
       <li><a href="domande-frequenti.html">FAQ</a></li>
       <li><a href="contatti.html">Contatti</a></li>
     </ul>
-    <div class="mob-lang">
-      <button data-lang-btn="it">Italiano</button>
-      <button data-lang-btn="en">English</button>
-    </div>
-    <div style="margin-top:1.5rem">
-      <a href="contatti.html" class="btn btn-primary" style="width:100%;justify-content:center">Prenota un appuntamento</a>
+    <div class="mob-footer">
+      <div class="mob-lang-row"><button data-lang-btn="it" class="is-active">Italiano</button><button data-lang-btn="en">English</button></div>
+      <a href="contatti.html" class="btn btn-gold" style="justify-content:center">Prenota appuntamento</a>
     </div>
   </div>
 </div>
 
 <!-- PAGE HERO -->
 <div class="page-hero">
-  <p class="eyebrow" style="color:var(--terra-2)">Siamo qui per te</p>
-  <h1>Contatti</h1>
-  <p class="lead">Prenota la tua visita online oppure chiamaci direttamente. Siamo a Savignano sul Rubicone, facilmente raggiungibili con parcheggio gratuito.</p>
+  <div class="page-hero-inner">
+    <span class="eyebrow reveal">Contatti</span>
+    <h1 class="reveal reveal-delay-1">Vieni a trovarci<br>o <em>scrivici</em>.</h1>
+    <p class="lead reveal reveal-delay-2">Siamo a Savignano sul Rubicone, facilmente raggiungibili dalla Via Emilia. Prenota un appuntamento o mandaci un messaggio: ti risponderemo al più presto.</p>
+  </div>
 </div>
 
-<!-- CONTACT SECTION -->
-<section class="section section-light">
+<!-- CONTACT GRID -->
+<section class="section bg-paper">
   <div class="container">
-    <div class="contact-grid reveal">
+    <div class="contact-grid">
 
-      <!-- LEFT: Info -->
-      <div>
-        <h2 style="font-size:1.5rem;margin-bottom:0.25rem;color:var(--navy)">Informazioni</h2>
-        <p style="color:var(--fog);font-size:0.88rem;margin-bottom:1.5rem">Tutto quello che ti serve per raggiungerci e contattarci.</p>
+      <!-- LEFT: info + hours -->
+      <div class="reveal">
 
         <div class="contact-info-item">
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div class="c-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
           </div>
           <div>
-            <div class="contact-info-label">Indirizzo</div>
-            <div class="contact-info-val">Via Emilia Ovest, 45/A<br>47039 Savignano sul Rubicone (FC)<br><span style="font-size:0.82rem;color:var(--fog)">Zona Cesare</span></div>
+            <div class="c-label">Indirizzo</div>
+            <div class="c-value">Via Emilia Ovest, 45/A<br>Savignano sul Rubicone (Zona Cesare), FC<br><a href="https://maps.google.com/?q=Via+Emilia+Ovest+45/A+Savignano+sul+Rubicone" target="_blank" rel="noopener">Apri in Google Maps →</a></div>
           </div>
         </div>
 
         <div class="contact-info-item">
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.64 3.4 2 2 0 013.62 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 9.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <div class="c-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.64 3.4 2 2 0 013.62 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 9.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
           </div>
           <div>
-            <div class="contact-info-label">Telefono</div>
-            <div class="contact-info-val"><a href="tel:0541944339">0541 944339</a></div>
+            <div class="c-label">Telefono</div>
+            <div class="c-value"><a href="tel:0541944339">0541 944339</a></div>
           </div>
         </div>
 
         <div class="contact-info-item">
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <div class="c-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
           </div>
           <div>
-            <div class="contact-info-label">Email</div>
-            <div class="contact-info-val"><a href="mailto:info@studiorinaldimontalbano.it">info@studiorinaldimontalbano.it</a></div>
+            <div class="c-label">Email</div>
+            <div class="c-value"><a href="mailto:info@studiorinaldimontalbano.it">info@studiorinaldimontalbano.it</a></div>
           </div>
         </div>
 
         <div class="contact-info-item">
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          <div class="c-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
           <div>
-            <div class="contact-info-label">Orari di apertura</div>
-            <div class="contact-info-val">
-              <table class="hours-table" style="margin-top:0.5rem">
-                <tbody>
-                  <tr>
-                    <td>Lunedì</td>
-                    <td>9:00 – 13:00 &nbsp;·&nbsp; 15:00 – 19:00</td>
-                  </tr>
-                  <tr>
-                    <td>Martedì</td>
-                    <td>9:00 – 13:00 &nbsp;·&nbsp; 15:00 – 19:00</td>
-                  </tr>
-                  <tr>
-                    <td>Mercoledì</td>
-                    <td>9:00 – 13:00 &nbsp;·&nbsp; 15:00 – 19:00</td>
-                  </tr>
-                  <tr>
-                    <td>Giovedì</td>
-                    <td>9:00 – 13:00 &nbsp;·&nbsp; 15:00 – 19:00</td>
-                  </tr>
-                  <tr>
-                    <td>Venerdì</td>
-                    <td>9:00 – 13:00 &nbsp;·&nbsp; 15:00 – 19:00</td>
-                  </tr>
-                  <tr>
-                    <td>Sabato</td>
-                    <td>Su appuntamento</td>
-                  </tr>
-                  <tr>
-                    <td>Domenica</td>
-                    <td class="closed">Chiuso</td>
-                  </tr>
-                </tbody>
+            <div class="c-label">Orari di apertura</div>
+            <div class="c-value">
+              <table class="hours-table">
+                <tr>
+                  <td>Lunedì – Venerdì</td>
+                  <td>9:00–13:00 / 15:00–19:00</td>
+                </tr>
+                <tr>
+                  <td>Sabato</td>
+                  <td class="closed">Su appuntamento</td>
+                </tr>
+                <tr>
+                  <td>Domenica</td>
+                  <td class="closed">Chiuso</td>
+                </tr>
               </table>
             </div>
           </div>
         </div>
 
         <div class="contact-info-item">
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          <div class="c-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 13l4 4L19 7"/></svg>
           </div>
           <div>
-            <div class="contact-info-label">Parcheggio</div>
-            <div class="contact-info-val">Parcheggio gratuito direttamente di fronte allo studio. Nessun problema di sosta.</div>
+            <div class="c-label">Parcheggio</div>
+            <div class="c-value">Parcheggio gratuito direttamente di fronte allo studio, con ampia disponibilità di posti.</div>
           </div>
         </div>
 
         <div class="contact-info-item">
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          <div class="c-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22V12m0 0l-3-3m3 3l3-3M3 17l3-3 3 3 3-3 3 3 3-3"/></svg>
           </div>
           <div>
-            <div class="contact-info-label">Accessibilità</div>
-            <div class="contact-info-val">Struttura senza barriere architettoniche. Accesso facilitato per sedia a rotelle e passeggino. Servizi igienici accessibili.</div>
+            <div class="c-label">Accessibilità</div>
+            <div class="c-value">Accesso privo di barriere architettoniche per sedia a rotelle e passeggino. Ascensore interno disponibile.</div>
           </div>
         </div>
 
         <div class="contact-info-item">
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          <div class="c-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 7h12m0 0l-4-4m4 4l-4 4M4 17H20M16 17l-4 4m0 0l-4-4"/></svg>
           </div>
           <div>
-            <div class="contact-info-label">Mezzi pubblici</div>
-            <div class="contact-info-val">Fermata autobus Start Romagna a circa 200 m. Linea Cesena–Rimini con fermate in Via Emilia. La stazione ferroviaria di Savignano-Cesena si trova a circa 1,5 km.</div>
+            <div class="c-label">Mezzi pubblici</div>
+            <div class="c-value">Autobus linea Cesena–Rimini, fermata Via Emilia Ovest. Lo studio è raggiungibile in pochi minuti a piedi dalla fermata.</div>
           </div>
         </div>
 
       </div>
 
-      <!-- RIGHT: Map + Form -->
-      <div>
-        <div class="map-wrap" style="margin-bottom:2rem">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2883.5!2d12.4020!3d44.0840!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca5aad35b2d0f%3A0x1!2sVia+Emilia+Ovest+45%2FA%2C+47039+Savignano+sul+Rubicone+FC%2C+Italy!5e0!3m2!1sit!2sit!4v1700000000000"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Studio Dentistico Rinaldi Montalbano — Via Emilia Ovest 45/A Savignano sul Rubicone">
-          </iframe>
+      <!-- RIGHT: map + form -->
+      <div class="reveal reveal-delay-1">
+
+        <div class="map-wrap">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.5!2d12.393!3d44.020!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDAxJzEyLjAiTiAxMsKwMjMnMzQuOCJF!5e0!3m2!1sit!2sit!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mappa Studio Dentistico Rinaldi Montalbano"></iframe>
         </div>
 
-        <!-- Appointment Form -->
-        <div class="form-card">
-          <h2 style="font-size:1.4rem;margin-bottom:0.5rem;color:var(--navy)">Prenota un appuntamento</h2>
-          <p style="font-size:0.86rem;color:var(--fog);margin-bottom:1.75rem">Compila il modulo e ti ricontatteremo entro 24 ore per confermare la data.</p>
-
-          <form id="contact-form" novalidate>
+        <div class="form-card" id="contact-form">
+          <h2 style="font-family:var(--f-display);font-size:1.6rem;font-weight:400;color:var(--deep);margin-bottom:1.75rem">Prenota o scrivi</h2>
+          <form id="booking-form" novalidate>
             <div class="form-row">
               <div class="form-group">
-                <label for="nome">Nome <span style="color:var(--red)">*</span></label>
-                <input type="text" id="nome" name="nome" autocomplete="given-name" placeholder="Mario" required/>
+                <label for="nome">Nome <span style="color:var(--red)" aria-hidden="true">*</span></label>
+                <input type="text" id="nome" name="nome" placeholder="Mario" required autocomplete="given-name"/>
               </div>
               <div class="form-group">
-                <label for="cognome">Cognome <span style="color:var(--red)">*</span></label>
-                <input type="text" id="cognome" name="cognome" autocomplete="family-name" placeholder="Rossi" required/>
+                <label for="cognome">Cognome</label>
+                <input type="text" id="cognome" name="cognome" placeholder="Rossi" autocomplete="family-name"/>
               </div>
             </div>
-
             <div class="form-row">
               <div class="form-group">
-                <label for="telefono">Telefono <span style="color:var(--red)">*</span></label>
-                <input type="tel" id="telefono" name="telefono" autocomplete="tel" placeholder="333 123 4567" required/>
+                <label for="telefono">Telefono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="333 1234567" autocomplete="tel"/>
               </div>
               <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" autocomplete="email" placeholder="mario@esempio.it"/>
+                <label for="email">Email <span style="color:var(--red)" aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" placeholder="mario@email.it" required autocomplete="email"/>
               </div>
             </div>
-
             <div class="form-group">
-              <label for="motivo">Motivo della visita <span style="color:var(--red)">*</span></label>
-              <select id="motivo" name="motivo" required>
-                <option value="" disabled selected>Seleziona un'opzione…</option>
-                <option value="prima-visita">Prima visita / Controllo</option>
-                <option value="igiene">Igiene dentale e pulizia</option>
-                <option value="carie">Carie o dolore ai denti</option>
-                <option value="implantologia">Consulenza implantologia</option>
-                <option value="ortodonzia">Consulenza ortodonzia</option>
-                <option value="protesi">Consulenza protesi</option>
-                <option value="chirurgia">Chirurgia orale / Dente del giudizio</option>
-                <option value="pedodonzia">Prima visita bambino</option>
-                <option value="urgenza">Urgenza dentale</option>
+              <label for="motivo">Motivo della visita</label>
+              <select id="motivo" name="motivo">
+                <option value="" disabled selected>Seleziona un motivo…</option>
+                <option value="controllo">Visita di controllo</option>
+                <option value="urgenza">Urgenza</option>
+                <option value="implantologia">Implantologia</option>
+                <option value="ortodonzia">Ortodonzia</option>
+                <option value="igiene">Igiene professionale</option>
+                <option value="chirurgia">Chirurgia orale</option>
+                <option value="protesi">Protesi</option>
                 <option value="altro">Altro</option>
               </select>
             </div>
-
             <div class="form-group">
-              <label for="messaggio">Note o richieste particolari</label>
-              <textarea id="messaggio" name="messaggio" rows="3" placeholder="Es. preferenze di orario, allergie ai farmaci, forte ansia dentale…"></textarea>
+              <label for="messaggio">Messaggio</label>
+              <textarea id="messaggio" name="messaggio" placeholder="Descrivi brevemente la tua richiesta o indica la fascia oraria preferita…" rows="4"></textarea>
             </div>
-
-            <label class="form-consent">
-              <input type="checkbox" id="privacy-check" name="privacy" required/>
-              Ho letto e accetto la <a href="privacy.html" target="_blank">Privacy Policy</a>. Acconsento al trattamento dei miei dati personali ai fini della gestione della richiesta di appuntamento. <span style="color:var(--red)">*</span>
-            </label>
-
-            <div class="form-success" id="form-success" role="alert">
-              Grazie! Abbiamo ricevuto la tua richiesta. Ti contatteremo entro 24 ore per confermare l'appuntamento.
+            <div class="form-consent">
+              <input type="checkbox" id="privacy" name="privacy" required/>
+              <label for="privacy">Ho letto e accetto la <a href="privacy.html" target="_blank">Privacy Policy</a>. Acconsento al trattamento dei miei dati personali per ricevere risposta alla mia richiesta. <span style="color:var(--red)" aria-hidden="true">*</span></label>
             </div>
-
-            <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center">
               Invia richiesta
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </button>
+            <div class="form-success" id="form-success" role="alert">
+              Grazie! La tua richiesta è stata inviata. Ti contatteremo al più presto per confermare l'appuntamento.
+            </div>
           </form>
         </div>
-      </div>
 
-    </div>
-  </div>
-</section>
-
-<!-- AFTER HOURS NOTE -->
-<section class="section section-warm">
-  <div class="container">
-    <div style="max-width:760px;margin:0 auto" class="reveal">
-      <div class="after-hours">
-        <h3>Fuori orario di studio</h3>
-        <p style="margin-bottom:1rem">Se hai bisogno di assistenza urgente al di fuori degli orari di apertura, ecco dove rivolgerti:</p>
-        <ul>
-          <li><strong>Pronto Soccorso:</strong> Ospedale di Cesena (Via Nazionale 112 — circa 15 km) — per dolori acuti intensi, gonfiori importanti o traumi con ferite.</li>
-          <li><strong>Guardia Medica:</strong> disponibile nelle ore notturne e nei festivi, può fornire indicazioni e prescrivere antidolorifici in attesa della riapertura dello studio.</li>
-          <li><strong>Il giorno seguente:</strong> chiama subito alle 9:00 al numero <a href="tel:0541944339" style="color:var(--teal-2)">0541 944339</a> — riserviamo sempre spazi per le urgenze.</li>
-        </ul>
-        <p style="margin-top:1rem;font-size:0.84rem;opacity:0.65">In caso di difficoltà respiratoria, deglutizione bloccata o trauma grave: chiama immediatamente il <strong>118</strong>.</p>
       </div>
     </div>
   </div>
@@ -286,66 +226,56 @@
 
 <!-- FOOTER -->
 <footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div style="font-family:var(--f-display);font-size:1.2rem;color:#F5F2EE">Studio Dentistico<br>Rinaldi Montalbano</div>
-        <p style="margin-top:0.75rem">Via Emilia Ovest, 45/A<br>Savignano sul Rubicone (Zona Cesare)<br>Tel: <a href="tel:0541944339" style="color:var(--teal-2)">0541 944339</a></p>
-      </div>
-      <div>
-        <h4>Pagine</h4>
-        <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="chi-siamo.html">Chi siamo</a></li>
-          <li><a href="trattamenti.html">Trattamenti</a></li>
-          <li><a href="urgenze.html" class="urgent">🚨 Urgenze</a></li>
-          <li><a href="domande-frequenti.html">FAQ</a></li>
-          <li><a href="contatti.html">Contatti</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Legale</h4>
-        <ul class="footer-links">
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="cookie.html">Cookie Policy</a></li>
-        </ul>
-        <h4 style="margin-top:1.5rem">Orari</h4>
-        <p style="font-size:0.82rem;line-height:1.8">Lun–Ven: 9:00–13:00<br>15:00–19:00<br>Sab: su appuntamento</p>
-      </div>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-name">Studio Dentistico<br>Rinaldi Montalbano</div>
+      <p>Via Emilia Ovest, 45/A<br>Savignano sul Rubicone (Zona Cesare)<br><a href="tel:0541944339">0541 944339</a><br><a href="mailto:info@studiorinaldimontalbano.it">info@studiorinaldimontalbano.it</a></p>
     </div>
-    <div class="footer-bottom">
-      <span>© 2025 Studio Dentistico Rinaldi Montalbano</span>
-      <span><a href="privacy.html">Privacy</a> · <a href="cookie.html">Cookie</a></span>
+    <div>
+      <div class="footer-col-title">Navigazione</div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="chi-siamo.html">Chi siamo</a></li>
+        <li><a href="trattamenti.html">Trattamenti</a></li>
+        <li><a href="urgenze.html" class="urgent">Urgenze</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Info</div>
+      <ul class="footer-links">
+        <li><a href="domande-frequenti.html">FAQ</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="cookie.html">Cookie Policy</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Orari</div>
+      <p style="font-size:0.84rem;line-height:1.9;color:rgba(246,243,237,0.45)">Lun–Ven<br>9:00–13:00 · 15:00–19:00<br>Sabato<br>Su appuntamento</p>
     </div>
   </div>
+  <div class="footer-bottom">
+    <span>© 2025 Studio Dentistico Rinaldi Montalbano</span>
+    <span><a href="privacy.html">Privacy</a> · <a href="cookie.html">Cookie</a></span>
+  </div>
 </footer>
-
-<!-- PHONE FLOAT -->
-<a href="tel:0541944339" class="phone-float" aria-label="Chiama lo studio">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.64 3.4 2 2 0 013.62 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 9.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-</a>
-
-<!-- COOKIE BAR -->
-<div class="cookie-bar" id="cookie-bar">
-  <p>Utilizziamo i cookie per migliorare la tua esperienza. Continuando accetti la nostra <a href="cookie.html">cookie policy</a> e <a href="privacy.html">privacy policy</a>.</p>
-  <button class="btn btn-primary btn-sm" id="cookie-ok">Accetta</button>
-</div>
-
+<a href="tel:0541944339" class="phone-float" aria-label="Chiama"><svg class="phone-float-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.64 3.4 2 2 0 013.62 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 9.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><span class="phone-float-label">0541 944339</span></a>
+<div class="cookie-bar" id="cookie-bar"><p>Utilizziamo cookie tecnici. <a href="cookie.html">Cookie policy</a> · <a href="privacy.html">Privacy</a></p><button class="btn btn-gold btn-sm" id="cookie-ok">Accetta</button></div>
 <script src="js/main.js"></script>
 <script>
-  // Simple form feedback — replace with real backend integration as needed
-  document.getElementById('contact-form')?.addEventListener('submit', function(e) {
+  document.getElementById('booking-form').addEventListener('submit', function(e) {
     e.preventDefault();
-    const requiredFields = this.querySelectorAll('[required]');
-    let valid = true;
-    requiredFields.forEach(f => {
-      if (!f.value || (f.type === 'checkbox' && !f.checked)) { valid = false; f.focus(); }
-    });
-    if (valid) {
+    const nome = document.getElementById('nome').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const privacy = document.getElementById('privacy').checked;
+    if (!nome || !email || !privacy) return;
+    const btn = this.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Invio in corso…';
+    setTimeout(function() {
       document.getElementById('form-success').style.display = 'block';
-      this.reset();
-      this.querySelector('[type="submit"]').disabled = true;
-    }
+      btn.style.display = 'none';
+    }, 800);
   });
 </script>
 </body>

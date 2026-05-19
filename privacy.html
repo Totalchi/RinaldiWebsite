@@ -3,183 +3,142 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Privacy Policy — Studio Dentistico Rinaldi Montalbano</title>
-<meta name="description" content="Informativa sul trattamento dei dati personali ai sensi del Regolamento UE 2016/679 (GDPR) — Studio Dentistico Rinaldi Montalbano, Via Emilia Ovest 45/A, Savignano sul Rubicone."/>
 <meta name="robots" content="noindex"/>
+<title>Privacy Policy — Studio Dentistico Rinaldi Montalbano</title>
+<meta name="description" content="Informativa sul trattamento dei dati personali ai sensi del Regolamento UE 2016/679 (GDPR) — Studio Dentistico Rinaldi Montalbano."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 
 <!-- NAV -->
-<nav class="nav" id="main-nav">
-  <a href="index.html" class="nav-logo">
-    <div class="nav-logo-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="2.5" fill="currentColor" stroke="none"/></svg>
+<nav class="nav scrolled" id="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C9 2 7 4.5 7 7c0 3 2.5 5.5 3 8h4c.5-2.5 3-5 3-8 0-2.5-2-5-5-5z"/><path d="M9 17c0 3 1.5 5 3 5s3-2 3-5"/></svg></div>
+      <div class="nav-logo-text">Rinaldi Montalbano</div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="chi-siamo.html">Chi siamo</a></li>
+      <li><a href="trattamenti.html">Trattamenti</a></li>
+      <li><a href="urgenze.html" class="urgent">Urgenze</a></li>
+      <li><a href="domande-frequenti.html">FAQ</a></li>
+      <li><a href="contatti.html">Contatti</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-lang"><button data-lang-btn="it" class="is-active">IT</button><button data-lang-btn="en">EN</button></div>
+      <a href="contatti.html" class="btn btn-gold btn-sm nav-cta-btn">Prenota</a>
+      <button class="nav-burger" id="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
-    <span>Rinaldi <em style="font-style:italic;color:var(--terra)">·</em> Montalbano</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="chi-siamo.html">Chi siamo</a></li>
-    <li><a href="trattamenti.html">Trattamenti</a></li>
-    <li><a href="urgenze.html" class="urgent">🚨 Urgenze</a></li>
-    <li><a href="domande-frequenti.html">FAQ</a></li>
-    <li><a href="contatti.html">Contatti</a></li>
-  </ul>
-  <div class="nav-right">
-    <div class="nav-lang">
-      <button data-lang-btn="it">IT</button>
-      <button data-lang-btn="en">EN</button>
-    </div>
-    <a href="contatti.html" class="btn btn-primary btn-sm nav-cta">Prenota</a>
   </div>
-  <button class="nav-burger" id="nav-burger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
 </nav>
-
-<!-- MOBILE NAV -->
 <div class="mob-nav" id="mob-nav">
+  <div class="mob-overlay" id="mob-overlay"></div>
   <div class="mob-drawer">
-    <button class="mob-close" id="mob-close">✕</button>
+    <button class="mob-close-btn" id="mob-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
     <ul class="mob-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="chi-siamo.html">Chi siamo</a></li>
       <li><a href="trattamenti.html">Trattamenti</a></li>
-      <li><a href="urgenze.html" class="urgent">🚨 Urgenze</a></li>
+      <li><a href="urgenze.html" class="urgent">Urgenze</a></li>
       <li><a href="domande-frequenti.html">FAQ</a></li>
       <li><a href="contatti.html">Contatti</a></li>
     </ul>
-    <div class="mob-lang">
-      <button data-lang-btn="it">Italiano</button>
-      <button data-lang-btn="en">English</button>
-    </div>
-    <div style="margin-top:1.5rem">
-      <a href="contatti.html" class="btn btn-primary" style="width:100%;justify-content:center">Prenota un appuntamento</a>
+    <div class="mob-footer">
+      <div class="mob-lang-row"><button data-lang-btn="it" class="is-active">Italiano</button><button data-lang-btn="en">English</button></div>
+      <a href="contatti.html" class="btn btn-gold" style="justify-content:center">Prenota appuntamento</a>
     </div>
   </div>
 </div>
 
 <!-- PAGE HERO -->
 <div class="page-hero">
-  <p class="eyebrow" style="color:var(--terra-2)">Informativa ai sensi del GDPR</p>
-  <h1>Privacy Policy</h1>
-  <p class="lead">Aggiornata al 1° gennaio 2025 · Versione 1.0</p>
+  <div class="page-hero-inner">
+    <span class="eyebrow reveal">Informativa legale</span>
+    <h1 class="reveal reveal-delay-1">Privacy<br><em>Policy.</em></h1>
+    <p class="lead reveal reveal-delay-2">Ai sensi dell'art. 13 del Regolamento UE 2016/679 (GDPR), vi forniamo le seguenti informazioni sul trattamento dei vostri dati personali.</p>
+  </div>
 </div>
 
-<!-- PRIVACY CONTENT -->
-<section class="section section-light">
+<!-- PROSE CONTENT -->
+<section class="section bg-paper">
   <div class="container">
     <div class="prose reveal">
 
       <h2>1. Titolare del trattamento</h2>
-      <p>
-        Il titolare del trattamento dei dati personali è:<br>
-        <strong>Studio Dentistico Rinaldi Montalbano</strong><br>
-        Via Emilia Ovest, 45/A<br>
-        47039 Savignano sul Rubicone (FC)<br>
-        Partita IVA: [inserire P.IVA]<br>
-        Telefono: <a href="tel:0541944339">0541 944339</a><br>
-        Email: <a href="mailto:info@studiorinaldimontalbano.it">info@studiorinaldimontalbano.it</a>
-      </p>
-      <p>
-        Per qualsiasi questione relativa alla protezione dei dati personali è possibile contattare il titolare del trattamento ai recapiti sopra indicati. Il responsabile del trattamento per i dati sanitari è il Dott. Marcello Rinaldi, in qualità di professionista sanitario responsabile delle prestazioni erogate dallo studio.
-      </p>
+      <p>Il titolare del trattamento dei dati personali è:</p>
+      <p><strong>Studio Dentistico Rinaldi Montalbano</strong><br>
+      Via Emilia Ovest, 45/A<br>
+      47039 Savignano sul Rubicone (FC)<br>
+      Email: <a href="mailto:info@studiorinaldimontalbano.it">info@studiorinaldimontalbano.it</a><br>
+      Telefono: <a href="tel:0541944339">0541 944339</a></p>
 
-      <h2>2. Finalità e base giuridica del trattamento</h2>
-      <p>I dati personali degli interessati vengono trattati per le seguenti finalità, con le corrispondenti basi giuridiche ai sensi dell'art. 6 e art. 9 del Regolamento UE 2016/679 (GDPR):</p>
-
-      <h3>2.1 Gestione degli appuntamenti e delle prestazioni sanitarie</h3>
-      <p>I dati sono trattati per pianificare, organizzare e documentare le visite e i trattamenti odontoiatrici richiesti dal paziente. La base giuridica è l'esecuzione di un contratto (art. 6, par. 1, lett. b) e, per i dati sanitari, il trattamento necessario per finalità di medicina preventiva, diagnosi, assistenza e cura sanitaria (art. 9, par. 2, lett. h, in combinato disposto con il D.Lgs. 196/2003 come modificato dal D.Lgs. 101/2018 e con l'art. 75 del Codice della Privacy).</p>
-
-      <h3>2.2 Adempimenti di legge</h3>
-      <p>I dati sono trattati per adempiere agli obblighi previsti dalla normativa vigente in materia sanitaria, fiscale, previdenziale e contabile. La base giuridica è l'adempimento di un obbligo legale (art. 6, par. 1, lett. c).</p>
-
-      <h3>2.3 Comunicazioni amministrative e promemoria</h3>
-      <p>Con il consenso espresso dell'interessato, i dati di contatto (telefono, email) possono essere utilizzati per inviare promemoria di appuntamenti, comunicazioni di carattere amministrativo e, se espressamente richiesto, informazioni su nuovi trattamenti o promozioni dello studio. La base giuridica è il consenso dell'interessato (art. 6, par. 1, lett. a). Il consenso è revocabile in qualsiasi momento.</p>
-
-      <h3>2.4 Gestione del sito web e dei cookie</h3>
-      <p>Il sito web dello studio utilizza cookie tecnici necessari al funzionamento. Per i cookie analitici e di profilazione, è richiesto il consenso esplicito tramite il banner cookie. Per ulteriori dettagli consultare la <a href="cookie.html">Cookie Policy</a>.</p>
-
-      <h2>3. Categorie di dati trattati</h2>
-      <p>Lo studio tratta le seguenti categorie di dati personali:</p>
+      <h2>2. Tipi di dati raccolti</h2>
+      <p>Attraverso il presente sito web e i canali di contatto dello studio raccogliamo le seguenti categorie di dati personali:</p>
       <ul>
-        <li><strong>Dati identificativi:</strong> nome, cognome, data di nascita, codice fiscale, documento di identità.</li>
-        <li><strong>Dati di contatto:</strong> indirizzo di residenza/domicilio, numero di telefono, indirizzo email.</li>
-        <li><strong>Dati sanitari (categorie particolari ai sensi dell'art. 9 GDPR):</strong> anamnesi medica, diagnosi, cartella clinica odontostomatologica, referti radiografici, fotografie intraorali ed extraorali, documentazione dei trattamenti eseguiti.</li>
-        <li><strong>Dati economici:</strong> informazioni di fatturazione, modalità di pagamento (non vengono conservati dati di carte di credito).</li>
-        <li><strong>Dati di navigazione:</strong> indirizzi IP, pagine visitate, durata della sessione sul sito web (raccolti tramite cookie, con i limiti previsti dal consenso).</li>
+        <li><strong>Dati di identificazione:</strong> nome, cognome;</li>
+        <li><strong>Dati di contatto:</strong> indirizzo email, numero di telefono;</li>
+        <li><strong>Dati sanitari (categorie particolari ex art. 9 GDPR):</strong> informazioni relative allo stato di salute orale, anamnesi medica, diagnosi, piani di trattamento, radiografie e documentazione clinica raccolta nel corso delle visite;</li>
+        <li><strong>Dati di navigazione:</strong> indirizzo IP, tipo di browser, sistema operativo e pagine visitate, raccolti automaticamente in forma anonima o pseudonimizzata dai log del server.</li>
       </ul>
-      <p>Il conferimento dei dati identificativi, di contatto e sanitari è obbligatorio per poter erogare le prestazioni sanitarie richieste. Il conferimento dei dati per finalità di marketing è facoltativo e il rifiuto non pregiudica in alcun modo l'accesso alle cure.</p>
+      <p>Non raccogliamo dati sensibili ulteriori rispetto a quelli strettamente necessari per le finalità indicate. Non raccogliamo dati di persone di età inferiore ai 14 anni senza il consenso esplicito dei genitori o tutori legali.</p>
+
+      <h2>3. Finalità e base giuridica del trattamento</h2>
+
+      <h3>3.1 Gestione delle prenotazioni e dei rapporti clinici</h3>
+      <p>I dati personali (comprese le informazioni sanitarie) sono trattati per la gestione degli appuntamenti, l'esecuzione delle prestazioni sanitarie richieste, la tenuta della cartella clinica e il rispetto degli obblighi normativi in ambito sanitario. La base giuridica è l'esecuzione di un contratto di cui l'interessato è parte (art. 6, par. 1, lett. b) GDPR) e, per i dati sanitari, il trattamento necessario a fini di medicina preventiva, diagnosi medica, assistenza sanitaria e trattamento terapeutico (art. 9, par. 2, lett. h) GDPR).</p>
+
+      <h3>3.2 Risposta a richieste di contatto</h3>
+      <p>Quando compilate il modulo di contatto sul sito o ci scrivete per email, trattiamo i dati forniti per rispondere alla vostra richiesta. La base giuridica è il consenso dell'interessato (art. 6, par. 1, lett. a) GDPR) espresso attraverso l'accettazione dell'informativa prima dell'invio del modulo.</p>
+
+      <h3>3.3 Obblighi di legge</h3>
+      <p>Alcuni dati sono trattati per adempiere a obblighi di legge applicabili allo studio medico, quali la normativa fiscale, contabile e sanitaria. La base giuridica è l'adempimento di un obbligo legale (art. 6, par. 1, lett. c) GDPR).</p>
+
+      <h3>3.4 Legittimo interesse</h3>
+      <p>Potremmo trattare alcuni dati di contatto per l'invio di comunicazioni relative a richiami periodici o all'andamento di un trattamento in corso, nell'interesse legittimo della continuità delle cure (art. 6, par. 1, lett. f) GDPR). Avete sempre la facoltà di opporvi a tale trattamento.</p>
 
       <h2>4. Modalità del trattamento</h2>
-      <p>Il trattamento dei dati avviene con strumenti elettronici (software gestionale per lo studio medico conforme alle normative sanitarie) e in forma cartacea (cartella clinica), nel rispetto delle misure di sicurezza tecniche e organizzative previste dal GDPR. I dati sono conservati in locali protetti e accessibili solo al personale autorizzato. L'accesso ai sistemi informatici è protetto da credenziali individuali. Le cartelle cliniche cartacee sono custodite in archivi chiusi a chiave.</p>
+      <p>I dati sono trattati sia in formato elettronico — attraverso sistemi informativi adeguatamente protetti — sia in formato cartaceo, conservato in archivi fisici protetti da accesso non autorizzato. Adottiamo misure tecniche e organizzative appropriate per garantire un livello di sicurezza adeguato al rischio, incluse misure di cifratura, controllo degli accessi e procedure di pseudonimizzazione ove applicabili.</p>
+      <p>Il trattamento è effettuato esclusivamente da personale autorizzato e adeguatamente istruito, vincolato al rispetto della riservatezza dei dati.</p>
 
-      <h2>5. Periodo di conservazione dei dati</h2>
-      <p>I dati vengono conservati per i periodi minimi previsti dalla legge e comunque non oltre quanto strettamente necessario:</p>
-      <ul>
-        <li><strong>Cartella clinica e dati sanitari:</strong> 10 anni dalla data dell'ultimo trattamento, in conformità con l'art. 22 del D.Lgs. 196/2003 e le linee guida del Ministero della Salute. Per le radiografie digitali il periodo di conservazione è di 10 anni; per le ortopantomografie e la documentazione ortodontica il periodo può estendersi a 20 anni.</li>
-        <li><strong>Dati di fatturazione:</strong> 10 anni ai sensi delle normative fiscali e contabili vigenti.</li>
-        <li><strong>Dati di contatto per comunicazioni di marketing:</strong> fino alla revoca del consenso o alla cancellazione richiesta dall'interessato.</li>
-        <li><strong>Dati di navigazione (cookie):</strong> secondo la durata prevista nella Cookie Policy.</li>
-      </ul>
+      <h2>5. Periodo di conservazione</h2>
+      <p>I dati sanitari contenuti nella cartella clinica sono conservati per un periodo non inferiore a <strong>10 anni</strong> dalla data dell'ultima prestazione, in conformità alle normative sanitarie vigenti (D.Lgs. 196/2003 e successive modifiche, nonché le linee guida del Ministero della Salute). Per i dati relativi alla gestione delle prenotazioni e ai contatti generali non sfociati in un rapporto clinico, il periodo di conservazione è di <strong>2 anni</strong> dalla raccolta. I dati di navigazione sono conservati in forma aggregata e anonima.</p>
 
-      <h2>6. Destinatari dei dati</h2>
-      <p>I dati personali non vengono diffusi o ceduti a terzi, salvo nei seguenti casi:</p>
+      <h2>6. Destinatari e comunicazione dei dati</h2>
+      <p>I vostri dati personali non sono ceduti a terzi a fini commerciali né comunicati a soggetti non autorizzati. Potrebbero essere comunicati nelle seguenti circostanze:</p>
       <ul>
-        <li><strong>Laboratori odontotecnici:</strong> i dati strettamente necessari (impronte digitali, modelli 3D, istruzioni di lavoro) vengono trasmessi ai laboratori convenzionati per la realizzazione di manufatti protesici, nel rispetto di appositi accordi di trattamento dati.</li>
-        <li><strong>Specialisti e strutture sanitarie:</strong> in caso di consulti o referral, i dati clinici necessari vengono condivisi con il consenso del paziente.</li>
-        <li><strong>Commercialista e studio legale:</strong> per adempimenti fiscali, legali e contabili, previa nomina come responsabili del trattamento ai sensi dell'art. 28 GDPR.</li>
-        <li><strong>Autorità competenti:</strong> in adempimento di obblighi di legge o su ordine delle autorità giudiziarie e di pubblica sicurezza.</li>
-        <li><strong>Fornitori di servizi IT:</strong> i fornitori che gestiscono i sistemi informatici dello studio sono nominati responsabili del trattamento e operano secondo istruzioni vincolanti.</li>
+        <li>A <strong>laboratori odontotecnici</strong> incaricati della realizzazione di protesi o dispositivi su misura, nella misura strettamente necessaria per l'esecuzione della prestazione;</li>
+        <li>A <strong>fornitori di servizi tecnici</strong> (es. provider email, hosting del sito) che agiscono come responsabili del trattamento ai sensi dell'art. 28 GDPR, vincolati da appositi accordi contrattuali;</li>
+        <li>Ad <strong>autorità pubbliche</strong> nei casi previsti dalla legge (Garante Privacy, Autorità Giudiziaria, Ministero della Salute).</li>
       </ul>
-      <p>I dati non vengono trasferiti al di fuori dello Spazio Economico Europeo (SEE), salvo l'eventuale utilizzo di servizi cloud europei con garanzie adeguate.</p>
+      <p>I dati non sono trasferiti verso Paesi terzi al di fuori dell'Unione Europea, salvo diversa indicazione specifica e con le garanzie previste dalla normativa applicabile.</p>
 
       <h2>7. Diritti dell'interessato</h2>
-      <p>Ai sensi degli artt. 15–22 del GDPR, l'interessato ha il diritto di:</p>
+      <p>In qualità di interessato, avete il diritto di esercitare i seguenti diritti nei confronti del titolare del trattamento, ai sensi degli artt. 15–22 del GDPR:</p>
       <ul>
-        <li><strong>Accesso (art. 15):</strong> ottenere conferma del trattamento e copia dei dati personali trattati.</li>
-        <li><strong>Rettifica (art. 16):</strong> richiedere la correzione di dati inesatti o l'integrazione di dati incompleti.</li>
-        <li><strong>Cancellazione (art. 17):</strong> chiedere la cancellazione ("diritto all'oblio"), nei limiti previsti dalla legge — non è possibile cancellare dati sanitari durante il periodo minimo di conservazione obbligatoria.</li>
-        <li><strong>Limitazione del trattamento (art. 18):</strong> richiedere la restrizione del trattamento in determinati casi previsti dal GDPR.</li>
-        <li><strong>Portabilità dei dati (art. 20):</strong> ricevere i propri dati in formato strutturato, di uso comune e leggibile da dispositivo automatico, e trasmetterli a un altro titolare — ove tecnicamente fattibile e nei limiti di legge.</li>
-        <li><strong>Opposizione (art. 21):</strong> opporsi al trattamento in qualsiasi momento per finalità di marketing o per motivi legati alla propria situazione particolare.</li>
-        <li><strong>Revoca del consenso:</strong> revocare in qualsiasi momento il consenso prestato per le finalità di marketing, senza pregiudicare la liceità del trattamento effettuato prima della revoca.</li>
+        <li><strong>Diritto di accesso (art. 15):</strong> ottenere conferma che sia in corso un trattamento di dati che vi riguardano e ottenerne copia;</li>
+        <li><strong>Diritto di rettifica (art. 16):</strong> far correggere dati inesatti o far integrare dati incompleti;</li>
+        <li><strong>Diritto alla cancellazione (art. 17):</strong> richiedere l'eliminazione dei dati ("diritto all'oblio"), nei casi previsti dalla normativa;</li>
+        <li><strong>Diritto alla portabilità dei dati (art. 20):</strong> ricevere i dati forniti in formato strutturato e leggibile da macchina;</li>
+        <li><strong>Diritto di limitazione del trattamento (art. 18):</strong> ottenere la limitazione del trattamento in specifiche circostanze;</li>
+        <li><strong>Diritto di opposizione (art. 21):</strong> opporsi al trattamento fondato su legittimo interesse, incluso il marketing diretto.</li>
       </ul>
-      <p>Per esercitare i propri diritti è possibile contattare lo studio tramite:</p>
-      <ul>
-        <li>Email: <a href="mailto:info@studiorinaldimontalbano.it">info@studiorinaldimontalbano.it</a></li>
-        <li>Telefono: <a href="tel:0541944339">0541 944339</a></li>
-        <li>Raccomandata A/R: Studio Dentistico Rinaldi Montalbano, Via Emilia Ovest 45/A, 47039 Savignano sul Rubicone (FC)</li>
-      </ul>
-      <p>Lo studio risponderà alla richiesta entro 30 giorni dal ricevimento, salvo proroga motivata di ulteriori 60 giorni per richieste complesse.</p>
+      <p>Per esercitare questi diritti, è sufficiente inviare una richiesta scritta a <a href="mailto:info@studiorinaldimontalbano.it">info@studiorinaldimontalbano.it</a> indicando il proprio nome, cognome e la natura della richiesta. Risponderemo entro 30 giorni dalla ricezione, come previsto dal GDPR.</p>
 
-      <h2>8. Diritto di reclamo all'Autorità di controllo</h2>
-      <p>Se l'interessato ritiene che il trattamento dei propri dati personali violi il GDPR o le disposizioni nazionali applicabili, ha il diritto di proporre reclamo all'Autorità Garante per la protezione dei dati personali:</p>
-      <p>
-        <strong>Garante per la protezione dei dati personali</strong><br>
-        Piazza Venezia, 11 — 00187 Roma<br>
-        Tel: +39 06 696771<br>
-        Email: <a href="mailto:garante@gpdp.it">garante@gpdp.it</a><br>
-        Sito web: <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer">www.garanteprivacy.it</a>
-      </p>
+      <h2>8. Diritto di reclamo al Garante</h2>
+      <p>Se ritenete che il trattamento dei vostri dati personali violi il Regolamento GDPR, avete il diritto di proporre reclamo all'autorità di controllo competente. In Italia, l'autorità di controllo è il:</p>
+      <p><strong>Garante per la protezione dei dati personali</strong><br>
+      Piazza Venezia 11 — 00187 Roma<br>
+      Sito web: <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">www.garanteprivacy.it</a></p>
 
-      <h2>9. Sicurezza dei dati</h2>
-      <p>Lo studio adotta misure tecniche e organizzative adeguate per proteggere i dati personali da accessi non autorizzati, distruzione, perdita, alterazione o divulgazione. Tra le misure adottate: cifratura dei dati sensibili archiviati, backup regolari con verifica dell'integrità, accesso ai sistemi limitato al personale autorizzato tramite credenziali individuali, formazione periodica del personale in materia di protezione dei dati, protocolli di gestione delle violazioni dei dati (data breach).</p>
+      <h2>9. Cookie</h2>
+      <p>Per le informazioni sull'utilizzo dei cookie e degli strumenti di tracciamento sul presente sito, si rimanda alla nostra <a href="cookie.html">Cookie Policy</a>, disponibile in una pagina dedicata.</p>
 
-      <h2>10. Minori</h2>
-      <p>In conformità con l'art. 8 GDPR e l'art. 2-quinquies del Codice Privacy, i dati personali dei minori di anni 14 vengono trattati esclusivamente con il consenso del genitore o del tutore legale. In sede di prima visita pediatrica, il consenso al trattamento dei dati viene sempre richiesto al genitore o tutore presente.</p>
-
-      <h2>11. Modifiche alla presente informativa</h2>
-      <p>La presente informativa può essere aggiornata periodicamente per riflettere modifiche normative, tecnologiche o organizzative. Le modifiche vengono pubblicate su questa pagina con indicazione della data di aggiornamento. In caso di modifiche significative, gli interessati registrati vengono informati tramite email o avviso diretto in studio.</p>
-      <p>La presente informativa è stata redatta in conformità al Regolamento UE 2016/679 (GDPR), al D.Lgs. 196/2003 come modificato dal D.Lgs. 101/2018 e ai provvedimenti dell'Autorità Garante per la protezione dei dati personali.</p>
-
-      <p style="margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--line);font-size:0.82rem;color:var(--fog-2)">
-        Documento redatto in conformità al Regolamento (UE) 2016/679 (GDPR) · Ultima revisione: 1° gennaio 2025<br>
-        Studio Dentistico Rinaldi Montalbano · Via Emilia Ovest, 45/A · 47039 Savignano sul Rubicone (FC)
-      </p>
+      <h2>10. Aggiornamenti dell'informativa</h2>
+      <p>La presente informativa può essere aggiornata in qualsiasi momento per riflettere modifiche normative o organizzative. Ogni aggiornamento rilevante sarà comunicato con apposito avviso sul sito. La presente versione è aggiornata a <strong>gennaio 2025</strong>.</p>
 
     </div>
   </div>
@@ -187,51 +146,41 @@
 
 <!-- FOOTER -->
 <footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div style="font-family:var(--f-display);font-size:1.2rem;color:#F5F2EE">Studio Dentistico<br>Rinaldi Montalbano</div>
-        <p style="margin-top:0.75rem">Via Emilia Ovest, 45/A<br>Savignano sul Rubicone (Zona Cesare)<br>Tel: <a href="tel:0541944339" style="color:var(--teal-2)">0541 944339</a></p>
-      </div>
-      <div>
-        <h4>Pagine</h4>
-        <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="chi-siamo.html">Chi siamo</a></li>
-          <li><a href="trattamenti.html">Trattamenti</a></li>
-          <li><a href="urgenze.html" class="urgent">🚨 Urgenze</a></li>
-          <li><a href="domande-frequenti.html">FAQ</a></li>
-          <li><a href="contatti.html">Contatti</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Legale</h4>
-        <ul class="footer-links">
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="cookie.html">Cookie Policy</a></li>
-        </ul>
-        <h4 style="margin-top:1.5rem">Orari</h4>
-        <p style="font-size:0.82rem;line-height:1.8">Lun–Ven: 9:00–13:00<br>15:00–19:00<br>Sab: su appuntamento</p>
-      </div>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-name">Studio Dentistico<br>Rinaldi Montalbano</div>
+      <p>Via Emilia Ovest, 45/A<br>Savignano sul Rubicone (Zona Cesare)<br><a href="tel:0541944339">0541 944339</a><br><a href="mailto:info@studiorinaldimontalbano.it">info@studiorinaldimontalbano.it</a></p>
     </div>
-    <div class="footer-bottom">
-      <span>© 2025 Studio Dentistico Rinaldi Montalbano</span>
-      <span><a href="privacy.html">Privacy</a> · <a href="cookie.html">Cookie</a></span>
+    <div>
+      <div class="footer-col-title">Navigazione</div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="chi-siamo.html">Chi siamo</a></li>
+        <li><a href="trattamenti.html">Trattamenti</a></li>
+        <li><a href="urgenze.html" class="urgent">Urgenze</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Info</div>
+      <ul class="footer-links">
+        <li><a href="domande-frequenti.html">FAQ</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="cookie.html">Cookie Policy</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Orari</div>
+      <p style="font-size:0.84rem;line-height:1.9;color:rgba(246,243,237,0.45)">Lun–Ven<br>9:00–13:00 · 15:00–19:00<br>Sabato<br>Su appuntamento</p>
     </div>
   </div>
+  <div class="footer-bottom">
+    <span>© 2025 Studio Dentistico Rinaldi Montalbano</span>
+    <span><a href="privacy.html">Privacy</a> · <a href="cookie.html">Cookie</a></span>
+  </div>
 </footer>
-
-<!-- PHONE FLOAT -->
-<a href="tel:0541944339" class="phone-float" aria-label="Chiama lo studio">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.64 3.4 2 2 0 013.62 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 9.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-</a>
-
-<!-- COOKIE BAR -->
-<div class="cookie-bar" id="cookie-bar">
-  <p>Utilizziamo i cookie per migliorare la tua esperienza. Continuando accetti la nostra <a href="cookie.html">cookie policy</a> e <a href="privacy.html">privacy policy</a>.</p>
-  <button class="btn btn-primary btn-sm" id="cookie-ok">Accetta</button>
-</div>
-
+<a href="tel:0541944339" class="phone-float" aria-label="Chiama"><svg class="phone-float-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.64 3.4 2 2 0 013.62 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 9.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><span class="phone-float-label">0541 944339</span></a>
+<div class="cookie-bar" id="cookie-bar"><p>Utilizziamo cookie tecnici. <a href="cookie.html">Cookie policy</a> · <a href="privacy.html">Privacy</a></p><button class="btn btn-gold btn-sm" id="cookie-ok">Accetta</button></div>
 <script src="js/main.js"></script>
 </body>
 </html>

@@ -5,141 +5,166 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="robots" content="noindex"/>
 <title>Cookie Policy — Studio Dentistico Rinaldi Montalbano</title>
+<meta name="description" content="Informativa sull'utilizzo dei cookie sul sito dello Studio Dentistico Rinaldi Montalbano, ai sensi del Regolamento UE 2016/679 e del D.Lgs. 196/2003."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-<nav class="nav" id="main-nav">
-  <a href="index.html" class="nav-logo">
-    <div class="nav-logo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="2.5" fill="currentColor" stroke="none"/></svg></div>
-    <span>Rinaldi <em style="font-style:italic;color:var(--terra)">·</em> Montalbano</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="chi-siamo.html">Chi siamo</a></li>
-    <li><a href="trattamenti.html">Trattamenti</a></li>
-    <li><a href="urgenze.html" class="urgent">🚨 Urgenze</a></li>
-    <li><a href="domande-frequenti.html">FAQ</a></li>
-    <li><a href="contatti.html">Contatti</a></li>
-  </ul>
-  <div class="nav-right">
-    <div class="nav-lang"><button data-lang-btn="it">IT</button><button data-lang-btn="en">EN</button></div>
-    <a href="contatti.html" class="btn btn-primary btn-sm nav-cta">Prenota</a>
+
+<!-- NAV -->
+<nav class="nav scrolled" id="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C9 2 7 4.5 7 7c0 3 2.5 5.5 3 8h4c.5-2.5 3-5 3-8 0-2.5-2-5-5-5z"/><path d="M9 17c0 3 1.5 5 3 5s3-2 3-5"/></svg></div>
+      <div class="nav-logo-text">Rinaldi Montalbano</div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="chi-siamo.html">Chi siamo</a></li>
+      <li><a href="trattamenti.html">Trattamenti</a></li>
+      <li><a href="urgenze.html" class="urgent">Urgenze</a></li>
+      <li><a href="domande-frequenti.html">FAQ</a></li>
+      <li><a href="contatti.html">Contatti</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-lang"><button data-lang-btn="it" class="is-active">IT</button><button data-lang-btn="en">EN</button></div>
+      <a href="contatti.html" class="btn btn-gold btn-sm nav-cta-btn">Prenota</a>
+      <button class="nav-burger" id="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
   </div>
-  <button class="nav-burger" id="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
 <div class="mob-nav" id="mob-nav">
+  <div class="mob-overlay" id="mob-overlay"></div>
   <div class="mob-drawer">
-    <button class="mob-close" id="mob-close">✕</button>
+    <button class="mob-close-btn" id="mob-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
     <ul class="mob-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="chi-siamo.html">Chi siamo</a></li>
       <li><a href="trattamenti.html">Trattamenti</a></li>
-      <li><a href="urgenze.html" class="urgent">🚨 Urgenze</a></li>
+      <li><a href="urgenze.html" class="urgent">Urgenze</a></li>
       <li><a href="domande-frequenti.html">FAQ</a></li>
       <li><a href="contatti.html">Contatti</a></li>
     </ul>
-    <div class="mob-lang"><button data-lang-btn="it">Italiano</button><button data-lang-btn="en">English</button></div>
+    <div class="mob-footer">
+      <div class="mob-lang-row"><button data-lang-btn="it" class="is-active">Italiano</button><button data-lang-btn="en">English</button></div>
+      <a href="contatti.html" class="btn btn-gold" style="justify-content:center">Prenota appuntamento</a>
+    </div>
   </div>
 </div>
 
+<!-- PAGE HERO -->
 <div class="page-hero">
-  <div class="container">
-    <p class="eyebrow" style="color:var(--terra-2)">Informativa</p>
-    <h1>Cookie Policy</h1>
-    <p class="lead">Ultimo aggiornamento: gennaio 2025</p>
+  <div class="page-hero-inner">
+    <span class="eyebrow reveal">Informativa legale</span>
+    <h1 class="reveal reveal-delay-1">Cookie<br><em>Policy.</em></h1>
+    <p class="lead reveal reveal-delay-2">Informazioni trasparenti su come utilizziamo i cookie su questo sito, cosa raccolgono e come potete gestirli in qualsiasi momento.</p>
   </div>
 </div>
 
-<section class="section section-light">
+<!-- PROSE CONTENT -->
+<section class="section bg-paper">
   <div class="container">
-    <div class="prose">
+    <div class="prose reveal">
+
       <h2>1. Cosa sono i cookie</h2>
-      <p>I cookie sono piccoli file di testo che i siti web salvano sul dispositivo dell'utente durante la navigazione. Vengono utilizzati per far funzionare il sito in modo efficiente e per fornire informazioni al proprietario del sito.</p>
+      <p>I cookie sono piccoli file di testo che i siti web salvano nel vostro browser quando li visitate. Servono a memorizzare informazioni sulla vostra visita — come le preferenze di lingua o lo stato di autenticazione — in modo che non dobbiate reinserirle ogni volta che tornate sul sito. I cookie sono una tecnologia fondamentale per il funzionamento del web moderno.</p>
+      <p>Esistono diverse categorie di cookie: cookie tecnici (necessari al funzionamento del sito), cookie analitici (per misurare il traffico) e cookie di profilazione (per la pubblicità). Questo sito utilizza esclusivamente cookie tecnici e, sulla sola pagina dei Contatti, cookie di terze parti legati alla mappa incorporata di Google Maps.</p>
 
-      <h2>2. Tipologie di cookie utilizzati</h2>
-      <h3>Cookie tecnici (necessari)</h3>
-      <p>Questi cookie sono indispensabili per il funzionamento del sito e non possono essere disattivati. Non raccolgono informazioni personali identificabili.</p>
+      <h2>2. Cookie tecnici utilizzati da questo sito</h2>
+      <p>I cookie tecnici sono strettamente necessari per il corretto funzionamento del sito e non richiedono il consenso preventivo dell'utente ai sensi della normativa vigente. Utilizziamo i seguenti cookie di prima parte:</p>
+
+      <div style="overflow-x:auto;margin:1.5rem 0">
+        <table style="width:100%;border-collapse:collapse;font-size:0.88rem">
+          <thead>
+            <tr style="background:var(--warm)">
+              <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;color:var(--deep);border-bottom:2px solid var(--line)">Nome cookie</th>
+              <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;color:var(--deep);border-bottom:2px solid var(--line)">Scopo</th>
+              <th style="padding:0.75rem 1rem;text-align:left;font-weight:700;color:var(--deep);border-bottom:2px solid var(--line)">Durata</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--line)">
+              <td style="padding:0.75rem 1rem;color:var(--deep);font-family:monospace;font-size:0.85rem">sdm-cookies</td>
+              <td style="padding:0.75rem 1rem;color:var(--stone)">Memorizza la preferenza di consenso al banner cookie, in modo da non mostrarlo nuovamente nelle visite successive.</td>
+              <td style="padding:0.75rem 1rem;color:var(--stone);white-space:nowrap">1 anno</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--line)">
+              <td style="padding:0.75rem 1rem;color:var(--deep);font-family:monospace;font-size:0.85rem">sdm-lang</td>
+              <td style="padding:0.75rem 1rem;color:var(--stone)">Memorizza la lingua preferita selezionata dall'utente (Italiano / English), per mantenere la scelta nelle visite successive.</td>
+              <td style="padding:0.75rem 1rem;color:var(--stone);white-space:nowrap">1 anno</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Entrambi i cookie sono di prima parte (impostati direttamente da questo sito), non contengono dati personali identificativi e non vengono condivisi con terze parti.</p>
+
+      <h2>3. Cookie di terze parti</h2>
+      <p>Sulla pagina <a href="contatti.html">Contatti</a> è incorporata una mappa interattiva di <strong>Google Maps</strong> (Google LLC). Quando caricate quella pagina, Google potrebbe impostare dei propri cookie nel vostro browser per il corretto funzionamento della mappa e, in base alle sue politiche, per finalità di misurazione e personalizzazione. Questi cookie sono gestiti direttamente da Google, su cui non abbiamo controllo.</p>
+      <p>Per informazioni complete sui cookie utilizzati da Google e sulle vostre opzioni, vi invitiamo a consultare la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Informativa sulla privacy di Google</a> e la <a href="https://policies.google.com/technologies/cookies" target="_blank" rel="noopener">pagina dedicata ai cookie di Google</a>.</p>
+      <p>Questo sito non utilizza cookie di profilazione, strumenti di remarketing pubblicitario, pixel di tracciamento o servizi di analisi di terze parti (come Google Analytics). La vostra navigazione non viene profilata a fini commerciali.</p>
+
+      <h2>4. Come gestire i cookie</h2>
+      <p>Potete controllare, limitare o eliminare i cookie direttamente attraverso le impostazioni del vostro browser. Di seguito trovate i link alle istruzioni dei browser più diffusi:</p>
       <ul>
-        <li><strong>sdm-cookies</strong> — Memorizza la preferenza di accettazione dei cookie. Durata: 1 anno.</li>
-        <li><strong>sdm-lang</strong> — Memorizza la lingua preferita (italiano/inglese). Durata: 1 anno.</li>
+        <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Google Chrome — gestione cookie</a></li>
+        <li><a href="https://support.mozilla.org/it/kb/Gestione-cookie" target="_blank" rel="noopener">Mozilla Firefox — gestione cookie</a></li>
+        <li><a href="https://support.apple.com/it-it/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Apple Safari — gestione cookie</a></li>
+        <li><a href="https://support.microsoft.com/it-it/windows/eliminare-e-gestire-i-cookie-168dab11-0753-043d-7c16-ede5947fc64d" target="_blank" rel="noopener">Microsoft Edge — gestione cookie</a></li>
       </ul>
+      <p>Tenete presente che la disabilitazione dei cookie tecnici potrebbe compromettere il corretto funzionamento di alcune funzionalità del sito, come il ricordo delle preferenze linguistiche o la conservazione del vostro consenso al banner cookie.</p>
 
-      <h3>Cookie analitici</h3>
-      <p>Questo sito non utilizza al momento cookie analitici di terze parti (come Google Analytics). Se in futuro venissero introdotti, questa policy verrà aggiornata e sarà richiesto il consenso.</p>
+      <h2>5. Consenso</h2>
+      <p>In conformità con il Provvedimento del Garante per la protezione dei dati personali sull'uso dei cookie (8 maggio 2014) e con le successive linee guida del 2021, il presente sito non richiede il consenso preventivo per i soli cookie tecnici elencati al punto 2. Il banner informativo visibile al primo accesso al sito vi segnala la presenza di cookie tecnici e vi rimanda a questa pagina per i dettagli.</p>
+      <p>Per i cookie di Google Maps (di terze parti), l'utilizzo del sito e della pagina Contatti implica l'accettazione delle politiche cookie di Google, come da informativa al punto 3. Se non desiderate che Google imposti cookie attraverso la mappa incorporata, potete accedere alle informazioni sull'indirizzo dello studio in altri modi (ad esempio ricercando l'indirizzo direttamente su maps.google.com in una sessione separata) o disabilitare i cookie di terze parti nel vostro browser.</p>
 
-      <h3>Cookie di terze parti</h3>
-      <p>La pagina Contatti include una mappa fornita da Google Maps (Google LLC). Google potrebbe impostare i propri cookie per il funzionamento del servizio. Per maggiori informazioni consulta la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy di Google</a>.</p>
+      <h2>6. Contatti e aggiornamenti</h2>
+      <p>Per qualsiasi domanda relativa all'utilizzo dei cookie su questo sito, potete contattarci a <a href="mailto:info@studiorinaldimontalbano.it">info@studiorinaldimontalbano.it</a>. Per informazioni più ampie sul trattamento dei vostri dati personali, consultate la nostra <a href="privacy.html">Privacy Policy</a>.</p>
+      <p>La presente Cookie Policy può essere aggiornata per riflettere modifiche tecniche al sito o variazioni normative. Ogni modifica rilevante sarà comunicata tramite avviso sul sito. La presente versione è aggiornata a <strong>gennaio 2025</strong>.</p>
 
-      <h2>3. Come gestire i cookie</h2>
-      <p>Puoi gestire le preferenze sui cookie direttamente dal tuo browser. Di seguito i link alle istruzioni per i principali browser:</p>
-      <ul>
-        <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Google Chrome</a></li>
-        <li><a href="https://support.mozilla.org/it/kb/protezione-antitracciamento-avanzata-firefox-desktop" target="_blank" rel="noopener">Mozilla Firefox</a></li>
-        <li><a href="https://support.apple.com/it-it/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Apple Safari</a></li>
-        <li><a href="https://support.microsoft.com/it-it/microsoft-edge" target="_blank" rel="noopener">Microsoft Edge</a></li>
-      </ul>
-      <p>Tieni presente che disabilitare i cookie tecnici potrebbe compromettere il corretto funzionamento del sito.</p>
-
-      <h2>4. Consenso</h2>
-      <p>Continuando a navigare su questo sito dopo aver visualizzato l'informativa, esprimi il tuo consenso all'utilizzo dei cookie tecnici sopra descritti.</p>
-
-      <h2>5. Aggiornamenti</h2>
-      <p>Questa Cookie Policy può essere aggiornata periodicamente. Ti invitiamo a consultarla regolarmente. La data dell'ultimo aggiornamento è indicata in cima alla pagina.</p>
-
-      <h2>6. Contatti</h2>
-      <p>Per qualsiasi domanda relativa ai cookie, puoi contattarci a:<br>
-      <strong>Studio Dentistico Rinaldi Montalbano</strong><br>
-      Via Emilia Ovest, 45/A — Savignano sul Rubicone<br>
-      Email: <a href="mailto:info@studiorinaldimontalbano.it">info@studiorinaldimontalbano.it</a><br>
-      Tel: <a href="tel:0541944339">0541 944339</a></p>
-
-      <p style="margin-top:2rem"><a href="privacy.html" class="btn btn-outline">Leggi la Privacy Policy</a></p>
     </div>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div style="font-family:var(--f-display);font-size:1.2rem;color:#F5F2EE">Studio Dentistico<br>Rinaldi Montalbano</div>
-        <p style="margin-top:0.75rem">Via Emilia Ovest, 45/A<br>Savignano sul Rubicone<br>Tel: <a href="tel:0541944339" style="color:var(--teal-2)">0541 944339</a></p>
-      </div>
-      <div>
-        <h4>Pagine</h4>
-        <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="chi-siamo.html">Chi siamo</a></li>
-          <li><a href="trattamenti.html">Trattamenti</a></li>
-          <li><a href="urgenze.html" class="urgent">🚨 Urgenze</a></li>
-          <li><a href="domande-frequenti.html">FAQ</a></li>
-          <li><a href="contatti.html">Contatti</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Legale</h4>
-        <ul class="footer-links">
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="cookie.html">Cookie Policy</a></li>
-        </ul>
-      </div>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-name">Studio Dentistico<br>Rinaldi Montalbano</div>
+      <p>Via Emilia Ovest, 45/A<br>Savignano sul Rubicone (Zona Cesare)<br><a href="tel:0541944339">0541 944339</a><br><a href="mailto:info@studiorinaldimontalbano.it">info@studiorinaldimontalbano.it</a></p>
     </div>
-    <div class="footer-bottom">
-      <span>© 2025 Studio Dentistico Rinaldi Montalbano</span>
-      <span><a href="privacy.html">Privacy</a> · <a href="cookie.html">Cookie</a></span>
+    <div>
+      <div class="footer-col-title">Navigazione</div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="chi-siamo.html">Chi siamo</a></li>
+        <li><a href="trattamenti.html">Trattamenti</a></li>
+        <li><a href="urgenze.html" class="urgent">Urgenze</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Info</div>
+      <ul class="footer-links">
+        <li><a href="domande-frequenti.html">FAQ</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="cookie.html">Cookie Policy</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Orari</div>
+      <p style="font-size:0.84rem;line-height:1.9;color:rgba(246,243,237,0.45)">Lun–Ven<br>9:00–13:00 · 15:00–19:00<br>Sabato<br>Su appuntamento</p>
     </div>
   </div>
+  <div class="footer-bottom">
+    <span>© 2025 Studio Dentistico Rinaldi Montalbano</span>
+    <span><a href="privacy.html">Privacy</a> · <a href="cookie.html">Cookie</a></span>
+  </div>
 </footer>
-
-<a href="tel:0541944339" class="phone-float" aria-label="Chiama lo studio">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.64 3.4 2 2 0 013.62 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 9.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-</a>
-<div class="cookie-bar" id="cookie-bar">
-  <p>Utilizziamo i cookie per migliorare la tua esperienza. Continuando accetti la nostra <a href="cookie.html">cookie policy</a> e <a href="privacy.html">privacy policy</a>.</p>
-  <button class="btn btn-primary btn-sm" id="cookie-ok">Accetta</button>
-</div>
+<a href="tel:0541944339" class="phone-float" aria-label="Chiama"><svg class="phone-float-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.64 3.4 2 2 0 013.62 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 9.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><span class="phone-float-label">0541 944339</span></a>
+<div class="cookie-bar" id="cookie-bar"><p>Utilizziamo cookie tecnici. <a href="cookie.html">Cookie policy</a> · <a href="privacy.html">Privacy</a></p><button class="btn btn-gold btn-sm" id="cookie-ok">Accetta</button></div>
 <script src="js/main.js"></script>
 </body>
 </html>

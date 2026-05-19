@@ -4,284 +4,285 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Domande Frequenti — Studio Dentistico Rinaldi Montalbano</title>
-<meta name="description" content="Risposte alle domande più comuni sui trattamenti, gli appuntamenti e i servizi del Studio Dentistico Rinaldi Montalbano di Savignano sul Rubicone."/>
+<meta name="description" content="Risposte alle domande più comuni sul nostro studio dentistico a Savignano sul Rubicone: visite, costi, appuntamenti, accessibilità e molto altro."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 
 <!-- NAV -->
-<nav class="nav" id="main-nav">
-  <a href="index.html" class="nav-logo">
-    <div class="nav-logo-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="2.5" fill="currentColor" stroke="none"/></svg>
+<nav class="nav scrolled" id="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C9 2 7 4.5 7 7c0 3 2.5 5.5 3 8h4c.5-2.5 3-5 3-8 0-2.5-2-5-5-5z"/><path d="M9 17c0 3 1.5 5 3 5s3-2 3-5"/></svg></div>
+      <div class="nav-logo-text">Rinaldi Montalbano</div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="chi-siamo.html">Chi siamo</a></li>
+      <li><a href="trattamenti.html">Trattamenti</a></li>
+      <li><a href="urgenze.html" class="urgent">Urgenze</a></li>
+      <li><a href="domande-frequenti.html">FAQ</a></li>
+      <li><a href="contatti.html">Contatti</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-lang"><button data-lang-btn="it" class="is-active">IT</button><button data-lang-btn="en">EN</button></div>
+      <a href="contatti.html" class="btn btn-gold btn-sm nav-cta-btn">Prenota</a>
+      <button class="nav-burger" id="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
-    <span>Rinaldi <em style="font-style:italic;color:var(--terra)">·</em> Montalbano</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="chi-siamo.html">Chi siamo</a></li>
-    <li><a href="trattamenti.html">Trattamenti</a></li>
-    <li><a href="urgenze.html" class="urgent">🚨 Urgenze</a></li>
-    <li><a href="domande-frequenti.html" class="is-active">FAQ</a></li>
-    <li><a href="contatti.html">Contatti</a></li>
-  </ul>
-  <div class="nav-right">
-    <div class="nav-lang">
-      <button data-lang-btn="it">IT</button>
-      <button data-lang-btn="en">EN</button>
-    </div>
-    <a href="contatti.html" class="btn btn-primary btn-sm nav-cta">Prenota</a>
   </div>
-  <button class="nav-burger" id="nav-burger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
 </nav>
-
-<!-- MOBILE NAV -->
 <div class="mob-nav" id="mob-nav">
+  <div class="mob-overlay" id="mob-overlay"></div>
   <div class="mob-drawer">
-    <button class="mob-close" id="mob-close">✕</button>
+    <button class="mob-close-btn" id="mob-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
     <ul class="mob-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="chi-siamo.html">Chi siamo</a></li>
       <li><a href="trattamenti.html">Trattamenti</a></li>
-      <li><a href="urgenze.html" class="urgent">🚨 Urgenze</a></li>
+      <li><a href="urgenze.html" class="urgent">Urgenze</a></li>
       <li><a href="domande-frequenti.html">FAQ</a></li>
       <li><a href="contatti.html">Contatti</a></li>
     </ul>
-    <div class="mob-lang">
-      <button data-lang-btn="it">Italiano</button>
-      <button data-lang-btn="en">English</button>
-    </div>
-    <div style="margin-top:1.5rem">
-      <a href="contatti.html" class="btn btn-primary" style="width:100%;justify-content:center">Prenota un appuntamento</a>
+    <div class="mob-footer">
+      <div class="mob-lang-row"><button data-lang-btn="it" class="is-active">Italiano</button><button data-lang-btn="en">English</button></div>
+      <a href="contatti.html" class="btn btn-gold" style="justify-content:center">Prenota appuntamento</a>
     </div>
   </div>
 </div>
 
 <!-- PAGE HERO -->
 <div class="page-hero">
-  <p class="eyebrow" style="color:var(--terra-2)">Hai dubbi?</p>
-  <h1>Domande frequenti</h1>
-  <p class="lead">Raccogliamo le risposte alle domande che ci vengono poste più spesso. Se non trovi quello che cerchi, chiamaci: siamo qui per te.</p>
+  <div class="page-hero-inner">
+    <span class="eyebrow reveal">Domande frequenti</span>
+    <h1 class="reveal reveal-delay-1">Le risposte che<br><em>cerchi.</em></h1>
+    <p class="lead reveal reveal-delay-2">Hai dubbi su visite, trattamenti, appuntamenti o accessibilità dello studio? Qui trovi le risposte alle domande che ci vengono poste più spesso. Se non trovi quello che cerchi, chiamaci direttamente.</p>
+  </div>
 </div>
 
 <!-- FAQ SECTION -->
-<section class="section section-light">
-  <div class="container">
+<section class="section bg-paper">
+  <div class="container-narrow">
 
-    <div class="text-center reveal" style="margin-bottom:3rem">
-      <p class="eyebrow">FAQ</p>
-      <h2>Tutto quello che vuoi sapere<br><em>prima di venirci a trovare</em></h2>
+    <!-- Categoria: Visite e cure -->
+    <div class="faq-list reveal">
+
+      <div class="faq-category">Visite e cure</div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Una visita di controllo fa male?
+          <span class="faq-q-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a">
+          <p>Assolutamente no. La visita di controllo è una procedura completamente indolore: il dentista esamina visivamente i denti, le gengive e i tessuti molli della bocca, e se necessario effettua una radiografia. Non vengono utilizzati strumenti che causino dolore. Se nel corso della visita dovessimo rilevare qualcosa che richiede ulteriori approfondimenti, vi spiegheremo con calma cosa è necessario fare e perché, senza fretta.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Ogni quanto devo andare dal dentista?
+          <span class="faq-q-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a">
+          <p>Per la maggior parte delle persone, una visita di controllo ogni sei mesi è sufficiente per monitorare la salute orale e intercettare eventuali problemi prima che diventino gravi. In alcuni casi — come pazienti con predisposizione alle carie, gengivite o apparecchi ortodontici — potremmo consigliare controlli più frequenti. I bambini andrebbero portati dal dentista già dal secondo anno di vita, per abituarli gradualmente all'ambiente e per un controllo precoce dello sviluppo dentale.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Quanto costa una prima visita?
+          <span class="faq-q-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a">
+          <p>Il costo della prima visita dipende da ciò che comprende: una visita di controllo base, con eventuale radiografia panoramica, ha un costo che vi verrà comunicato al momento della prenotazione. Offriamo sempre un preventivo chiaro e dettagliato prima di iniziare qualsiasi trattamento, così potete valutare con serenità le vostre opzioni. Vi invitiamo a contattarci direttamente per informazioni aggiornate sui costi, poiché possono variare in base alle necessità cliniche specifiche.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Posso venire con dolore acuto oggi?
+          <span class="faq-q-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a">
+          <p>Sì. Le urgenze odontoiatriche sono una priorità per il nostro studio e cerchiamo sempre di trovare spazio in giornata per i pazienti con dolore acuto, ascessi, traumi o rotture improvvise. Chiamate il nostro numero <strong>0541 944339</strong> appena possibile: vi illustreremo la situazione e troveremo la soluzione più rapida. Visitate anche la nostra pagina <a href="urgenze.html" style="color:var(--gold)">Urgenze</a> per ulteriori informazioni su cosa fare fuori dall'orario di apertura.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Trattate anche i bambini piccoli?
+          <span class="faq-q-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a">
+          <p>Sì, la pedodonzia è una delle nostre specializzazioni. La Dott.ssa Clara Montalbano segue i bambini fin dalla primissima infanzia con un approccio dolce e graduale, pensato per trasformare ogni visita in un'esperienza positiva. Prima ancora di effettuare qualsiasi trattamento, dedichiamo del tempo a familiarizzare con il bambino, mostrandogli gli strumenti e spiegando tutto con parole semplici. Un bambino che non ha paura del dentista è un adulto con una buona salute orale.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Ho paura del dentista. Cosa posso fare?
+          <span class="faq-q-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a">
+          <p>La dentofobia è molto comune e non c'è nulla di cui vergognarsi: lo sappiamo bene e ne teniamo conto nel modo in cui lavoriamo. Vi chiediamo semplicemente di dircelo apertamente al momento della prenotazione o all'inizio della visita. Lavoreremo al vostro ritmo, spiegando ogni passo prima di eseguirlo e stabilendo insieme un segnale per fermarci in qualsiasi momento se sentite il bisogno. Un'esperienza positiva alla volta, molti pazienti ansiosi diventano pazienti sereni nel giro di poche visite.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Lo sbiancamento dei denti è rimborsato dal SSN?
+          <span class="faq-q-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a">
+          <p>No, lo sbiancamento dentale è considerato un trattamento estetico e non è incluso nelle prestazioni rimborsabili dal Servizio Sanitario Nazionale. È tuttavia un trattamento sicuro, efficace e non invasivo, eseguito in studio con prodotti professionali che garantiscono risultati visibili e duraturi. Prima di procedere, valutiamo sempre lo stato di salute delle gengive e dello smalto per assicurarci che il trattamento sia adatto a voi.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Cos'è l'impronta digitale e perché è meglio?
+          <span class="faq-q-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a">
+          <p>L'impronta digitale viene rilevata con uno scanner intraorale 3D che acquisisce una mappa tridimensionale precisa della vostra dentatura in pochi minuti, senza dover usare il materiale d'impronta tradizionale in pasta — che molti pazienti trovano scomodo o causa di riflesso faringeo. Il modello digitale è immediato, più preciso e viene inviato direttamente al laboratorio odontotecnico, riducendo i tempi di realizzazione di protesi, corone e apparecchi ortodontici e migliorando la qualità del risultato finale.</p>
+        </div>
+      </div>
+
+      <!-- Categoria: Appuntamenti -->
+      <div class="faq-category">Appuntamenti</div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Come prenoto un appuntamento?
+          <span class="faq-q-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a">
+          <p>Potete prenotare un appuntamento in tre modi: telefonando allo <strong>0541 944339</strong> negli orari di apertura, compilando il modulo sulla nostra <a href="contatti.html" style="color:var(--gold)">pagina Contatti</a>, oppure inviando un'email a <a href="mailto:info@studiorinaldimontalbano.it" style="color:var(--gold)">info@studiorinaldimontalbano.it</a>. Vi risponderemo nel più breve tempo possibile per confermare data e ora che fanno al caso vostro. Anche in fase di prenotazione, non esitate a segnalarci eventuali urgenze o particolari necessità.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Posso disdire o spostare un appuntamento?
+          <span class="faq-q-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a">
+          <p>Certo, comprendiamo che gli imprevisti capitano. Vi chiediamo gentilmente di avvisarci con almeno 24 ore di anticipo, in modo da poter offrire lo slot a un altro paziente che ne abbia bisogno. Potete chiamarci al <strong>0541 944339</strong> o inviarci un'email. In caso di disdetta tardiva ripetuta senza giustificato motivo, potremmo non essere in grado di garantire priorità nella prenotazione successiva.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Quanto dura mediamente una visita di controllo?
+          <span class="faq-q-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a">
+          <p>Una visita di controllo di routine dura in media tra i 20 e i 40 minuti, a seconda di quanto è necessario approfondire e se vengono effettuate radiografie. La prima visita, in cui raccogliamo la vostra anamnesi completa e facciamo una valutazione più dettagliata, può richiedere un po' più di tempo — tra i 45 minuti e un'ora. Vi consigliamo di non programmare impegni urgenti immediatamente dopo la visita, così potrete parlare con tranquillità con il dentista.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Accettate nuovi pazienti?
+          <span class="faq-q-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a">
+          <p>Sì, siamo aperti a nuovi pazienti di tutte le età, sia residenti a Savignano sul Rubicone sia provenienti dai comuni limitrofi. Accogliamo famiglie intere con piacere: avere un unico studio di riferimento per tutti i componenti della famiglia semplifica la gestione degli appuntamenti e permette al dentista di conoscere la storia clinica di ogni membro nel dettaglio. Contattateci per fissare la vostra prima visita.</p>
+        </div>
+      </div>
+
+      <!-- Categoria: Studio e accessibilità -->
+      <div class="faq-category">Studio e accessibilità</div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Avete un parcheggio?
+          <span class="faq-q-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a">
+          <p>Sì, lo studio dispone di parcheggio gratuito direttamente di fronte all'edificio, con ampia disponibilità di posti auto. Siamo ubicati in Via Emilia Ovest 45/A, nella zona Cesare di Savignano sul Rubicone, su un'arteria stradale facilmente raggiungibile sia da Cesena sia da Rimini. Non avrete difficoltà a trovare parcheggio nemmeno nelle fasce orarie più affollate.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Lo studio è accessibile in sedia a rotelle?
+          <span class="faq-q-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a">
+          <p>Sì, lo studio è completamente accessibile a persone con disabilità motorie: sono presenti un ingresso privo di barriere architettoniche, un ascensore interno e gli spazi sono progettati per consentire la mobilità in sedia a rotelle o con passeggino. Se avete esigenze particolari legate alla mobilità, vi invitiamo a segnalarcelo al momento della prenotazione in modo che possiamo organizzarci al meglio per accogliervi.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q">
+          Quali metodi di pagamento accettate?
+          <span class="faq-q-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="faq-a">
+          <p>Accettiamo pagamenti in contanti, con carta di credito o debito (Visa, Mastercard, Bancomat) e tramite bonifico bancario per trattamenti di importo elevato. Per i trattamenti più significativi — come implantologia, ortodonzia o riabilitazioni complete — è possibile concordare un piano di pagamento rateale. Parlateci delle vostre esigenze: cercheremo sempre la soluzione più comoda per voi, perché la salute dentale non dovrebbe essere un ostacolo economico.</p>
+        </div>
+      </div>
+
     </div>
 
-    <!-- Categoria: Visite e trattamenti -->
-    <div style="max-width:800px;margin:0 auto">
-      <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--terra);margin-bottom:1rem" class="reveal">Visite e trattamenti</p>
-      <div class="faq-list reveal">
-
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
-            Una visita di controllo fa male?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-          </button>
-          <div class="faq-a">
-            No, una normale visita di controllo non fa male. Si tratta di un esame visivo della bocca, dei denti e delle gengive, spesso accompagnato da una radiografia panoramica o endorale. Non viene utilizzato alcun anestetico perché non è necessario. Se dovessimo individuare qualcosa che richiede un trattamento, ti spiegheremo tutto con calma prima di procedere, e valuteremo insieme la soluzione più adatta. Il nostro obiettivo è che tu esca dallo studio informato e tranquillo.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
-            Ogni quanto devo andare dal dentista?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-          </button>
-          <div class="faq-a">
-            Per la maggior parte degli adulti, raccomandiamo una visita di controllo e una pulizia professionale ogni sei mesi. Questo intervallo permette di individuare eventuali carie o problemi gengivali nelle fasi iniziali, quando il trattamento è più semplice, rapido ed economico. Alcuni pazienti con particolari predisposizioni genetiche, portatori di apparecchio ortodontico, fumatori o con parodontite nota potrebbero aver bisogno di controlli più frequenti — ogni tre o quattro mesi. Per i bambini, la prima visita è consigliata entro i 3 anni di età.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
-            Quanto costa una prima visita?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-          </button>
-          <div class="faq-a">
-            La prima visita comprende un esame completo della bocca, la valutazione delle gengive e, se necessario, una radiografia endorale. I costi variano in base alle necessità cliniche riscontrate. Vi informiamo sempre in modo trasparente prima di qualsiasi trattamento: ricevete un preventivo scritto dettagliato con le voci di costo, così da poter prendere le vostre decisioni con piena consapevolezza. Per informazioni specifiche sui prezzi, vi invitiamo a contattarci telefonicamente al 0541 944339 o a compilare il modulo di contatto.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
-            Posso venire con dolore acuto?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-          </button>
-          <div class="faq-a">
-            Assolutamente sì. Il dolore dentale acuto è una priorità per noi. Chiamate il numero 0541 944339 durante gli orari di apertura (lunedì–venerdì 9:00–13:00 e 15:00–19:00) e vi faremo venire il prima possibile, anche in giornata. Non aspettate: il dolore acuto indica spesso una situazione che peggiora se trascurata. Se il dolore si manifesta fuori orario, consultate la nostra pagina <a href="urgenze.html">Urgenze</a> per le istruzioni su cosa fare nell'attesa.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
-            Trattate anche i bambini?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-          </button>
-          <div class="faq-a">
-            Sì, con grande piacere. La Dott.ssa Clara Montalbano si è specializzata anche nella cura dei più piccoli e utilizza un approccio dolce e graduale, pensato specificamente per ridurre l'ansia dei bambini. La prima visita è pensata come un momento di gioco e scoperta: niente rumori forti, niente fretta, sempre con mamma o papà presenti. Trattiamo la carie dei denti da latte, eseguiamo sigillature preventive, effettuiamo fluoroprofilassi e monitoriamo la crescita dentale per intercettare precocemente eventuali problemi ortodontici. Portare il bambino dal dentista prima dei 3 anni è il regalo più bello che puoi fargli per la salute del sorriso.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
-            Cosa fare con un dente rotto o scheggiato?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-          </button>
-          <div class="faq-a">
-            Se si è rotto un dente o una scheggia, l'ideale è raccogliere il frammento e conservarlo in un contenitore con latte o soluzione salina fisiologica. Risciacquate la bocca delicatamente con acqua tiepida. Se c'è sanguinamento, premete una garza sterile sulla zona per circa 10 minuti. Applicate del ghiaccio avvolto in un panno sulla guancia in caso di gonfiore. Quindi contattate subito lo studio al 0541 944339: in molti casi è possibile intervenire in giornata. Nelle ore fuori orario, consultate la pagina <a href="urgenze.html">Urgenze</a> per istruzioni dettagliate.
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Categoria: Appuntamenti e studio -->
-      <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--terra);margin-bottom:1rem;margin-top:3rem" class="reveal">Appuntamenti e studio</p>
-      <div class="faq-list reveal">
-
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
-            Posso disdire o spostare un appuntamento?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-          </button>
-          <div class="faq-a">
-            Certo, la vita è imprevedibile e lo capiamo benissimo. Vi chiediamo gentilmente di avvisarci con almeno 24–48 ore di anticipo, in modo da poter offrire lo slot libero a un altro paziente in lista d'attesa. Per disdire o spostare un appuntamento è sufficiente chiamare lo studio al 0541 944339 durante gli orari di apertura. In caso di disdetta dell'ultimo minuto per emergenza, non preoccupatevi: vi troveremo una nuova data il prima possibile.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
-            Ho paura del dentista. Cosa posso fare?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-          </button>
-          <div class="faq-a">
-            La paura del dentista — la cosiddetta odontofobia — è molto più comune di quanto si pensi, e il nostro team la prende molto sul serio. Il primo passo è raccontarcelo: dite al dentista o al personale di segreteria che avete ansia, così possiamo adattare l'approccio. Prendiamo le cose con calma, spieghiamo ogni gesto prima di farlo, e facciamo pause quando ne avete bisogno. Per i casi di ansia importante, valutiamo insieme soluzioni farmacologiche leggere come la premedicazione orale o la sedazione cosciente con protossido d'azoto (gas esilarante), che rende l'esperienza molto più rilassata senza perdere la coscienza.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
-            Quali metodi di pagamento accettate?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-          </button>
-          <div class="faq-a">
-            Accettiamo pagamenti in contanti, con carta di credito o debito (Visa, Mastercard, Maestro) e tramite bonifico bancario. Per i trattamenti di importo significativo come l'implantologia o l'ortodonzia, offriamo la possibilità di dilazionare il pagamento in più rate senza interessi, in collaborazione con finanziarie convenzionate. Parlateci delle vostre esigenze: troviamo sempre una soluzione che permette di accedere alle cure necessarie senza rinunciare per motivi economici.
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Categoria: Pratico -->
-      <p style="font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--terra);margin-bottom:1rem;margin-top:3rem" class="reveal">Logistica e accessibilità</p>
-      <div class="faq-list reveal">
-
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
-            Avete un parcheggio?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-          </button>
-          <div class="faq-a">
-            Sì, è disponibile un ampio parcheggio gratuito direttamente di fronte allo studio, in Via Emilia Ovest 45/A, nella Zona Cesare di Savignano sul Rubicone. Non è necessario cercare parcheggio: arrivate tranquillamente in auto. Per chi arriva in bicicletta o moto, sono presenti rastrelliere e spazi dedicati nelle immediate vicinanze.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
-            Siete accessibili con sedia a rotelle o passeggino?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-          </button>
-          <div class="faq-a">
-            Sì, la struttura è completamente accessibile a persone con mobilità ridotta, utenti di sedia a rotelle e genitori con passeggino. L'ingresso è privo di barriere architettoniche, le porte sono sufficientemente larghe e i servizi igienici sono accessibili. Se avete esigenze particolari, segnalateglielo al momento della prenotazione: faremo di tutto per garantirvi il massimo comfort durante la visita.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false">
-            Lo sbiancamento dentale è rimborsato dal sistema sanitario?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-          </button>
-          <div class="faq-a">
-            No, lo sbiancamento dentale è considerato un trattamento estetico e non è coperto dal Servizio Sanitario Nazionale né, generalmente, dalle assicurazioni sanitarie integrative standard. È quindi interamente a carico del paziente. Prima di procedere con qualsiasi trattamento di sbiancamento, eseguiamo sempre una visita valutativa per verificare la salute di denti e gengive e discutere le aspettative di risultato: non tutti i tipi di colorazione rispondono allo stesso modo al sbiancamento.
-          </div>
-        </div>
-
+    <!-- Still have questions -->
+    <div class="reveal" style="margin-top:4rem;padding:2.5rem;background:var(--cream);border-radius:var(--r-lg);border:1px solid var(--line);text-align:center">
+      <p class="eyebrow" style="margin-bottom:0.75rem">Non hai trovato la tua risposta?</p>
+      <h3 style="font-family:var(--f-display);font-size:1.8rem;font-weight:400;color:var(--deep);margin-bottom:0.75rem">Parlaci direttamente.</h3>
+      <p style="font-size:0.92rem;color:var(--stone);margin-bottom:1.75rem;max-width:420px;margin-left:auto;margin-right:auto">Il nostro team è a disposizione per rispondere a qualsiasi domanda, anche prima di decidere se prendere un appuntamento.</p>
+      <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap">
+        <a href="contatti.html" class="btn btn-gold">Scrivici</a>
+        <a href="tel:0541944339" class="btn btn-outline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.64 3.4 2 2 0 013.62 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 9.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          0541 944339
+        </a>
       </div>
     </div>
 
-  </div>
-</section>
-
-<!-- STILL HAVE QUESTIONS -->
-<section class="section section-warm">
-  <div class="container text-center">
-    <div class="reveal">
-      <p class="eyebrow">Non hai trovato risposta?</p>
-      <h2>Scrivici o chiamaci</h2>
-      <p class="lead" style="margin:1rem auto 2rem">Il nostro personale è sempre disponibile a rispondere a qualsiasi domanda, anche prima che tu decida di fissare un appuntamento.</p>
-      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
-        <a href="contatti.html" class="btn btn-primary btn-lg">Scrivici un messaggio</a>
-        <a href="tel:0541944339" class="btn btn-outline btn-lg">📞 0541 944339</a>
-      </div>
-    </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div style="font-family:var(--f-display);font-size:1.2rem;color:#F5F2EE">Studio Dentistico<br>Rinaldi Montalbano</div>
-        <p style="margin-top:0.75rem">Via Emilia Ovest, 45/A<br>Savignano sul Rubicone (Zona Cesare)<br>Tel: <a href="tel:0541944339" style="color:var(--teal-2)">0541 944339</a></p>
-      </div>
-      <div>
-        <h4>Pagine</h4>
-        <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="chi-siamo.html">Chi siamo</a></li>
-          <li><a href="trattamenti.html">Trattamenti</a></li>
-          <li><a href="urgenze.html" class="urgent">🚨 Urgenze</a></li>
-          <li><a href="domande-frequenti.html">FAQ</a></li>
-          <li><a href="contatti.html">Contatti</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Legale</h4>
-        <ul class="footer-links">
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="cookie.html">Cookie Policy</a></li>
-        </ul>
-        <h4 style="margin-top:1.5rem">Orari</h4>
-        <p style="font-size:0.82rem;line-height:1.8">Lun–Ven: 9:00–13:00<br>15:00–19:00<br>Sab: su appuntamento</p>
-      </div>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-name">Studio Dentistico<br>Rinaldi Montalbano</div>
+      <p>Via Emilia Ovest, 45/A<br>Savignano sul Rubicone (Zona Cesare)<br><a href="tel:0541944339">0541 944339</a><br><a href="mailto:info@studiorinaldimontalbano.it">info@studiorinaldimontalbano.it</a></p>
     </div>
-    <div class="footer-bottom">
-      <span>© 2025 Studio Dentistico Rinaldi Montalbano</span>
-      <span><a href="privacy.html">Privacy</a> · <a href="cookie.html">Cookie</a></span>
+    <div>
+      <div class="footer-col-title">Navigazione</div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="chi-siamo.html">Chi siamo</a></li>
+        <li><a href="trattamenti.html">Trattamenti</a></li>
+        <li><a href="urgenze.html" class="urgent">Urgenze</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Info</div>
+      <ul class="footer-links">
+        <li><a href="domande-frequenti.html">FAQ</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="cookie.html">Cookie Policy</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Orari</div>
+      <p style="font-size:0.84rem;line-height:1.9;color:rgba(246,243,237,0.45)">Lun–Ven<br>9:00–13:00 · 15:00–19:00<br>Sabato<br>Su appuntamento</p>
     </div>
   </div>
+  <div class="footer-bottom">
+    <span>© 2025 Studio Dentistico Rinaldi Montalbano</span>
+    <span><a href="privacy.html">Privacy</a> · <a href="cookie.html">Cookie</a></span>
+  </div>
 </footer>
-
-<!-- PHONE FLOAT -->
-<a href="tel:0541944339" class="phone-float" aria-label="Chiama lo studio">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.64 3.4 2 2 0 013.62 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 9.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-</a>
-
-<!-- COOKIE BAR -->
-<div class="cookie-bar" id="cookie-bar">
-  <p>Utilizziamo i cookie per migliorare la tua esperienza. Continuando accetti la nostra <a href="cookie.html">cookie policy</a> e <a href="privacy.html">privacy policy</a>.</p>
-  <button class="btn btn-primary btn-sm" id="cookie-ok">Accetta</button>
-</div>
-
+<a href="tel:0541944339" class="phone-float" aria-label="Chiama"><svg class="phone-float-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.64 3.4 2 2 0 013.62 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 9.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><span class="phone-float-label">0541 944339</span></a>
+<div class="cookie-bar" id="cookie-bar"><p>Utilizziamo cookie tecnici. <a href="cookie.html">Cookie policy</a> · <a href="privacy.html">Privacy</a></p><button class="btn btn-gold btn-sm" id="cookie-ok">Accetta</button></div>
 <script src="js/main.js"></script>
 </body>
 </html>

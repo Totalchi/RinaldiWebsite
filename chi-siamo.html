@@ -4,325 +4,266 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Chi siamo — Studio Dentistico Rinaldi Montalbano</title>
-<meta name="description" content="Conosci il team del Studio Dentistico Rinaldi Montalbano: Dott. Marcello Rinaldi, Dott.ssa Clara Montalbano e Dott. Mauro Rinaldi. Un team familiare con 25 anni di esperienza a Savignano sul Rubicone."/>
+<meta name="description" content="Conosci il team dello Studio Dentistico Rinaldi Montalbano: Dott. Marcello Rinaldi, Dott.ssa Clara Montalbano e Dott. Mauro Rinaldi. Tre specialisti, un'unica cura da oltre 25 anni a Savignano sul Rubicone."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="css/style.css"/>
+<style>
+  @media (max-width: 860px) { .storia-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; } }
+  @media (max-width: 760px) { .values-grid { grid-template-columns: 1fr 1fr !important; } }
+  @media (max-width: 480px) { .values-grid { grid-template-columns: 1fr !important; } }
+</style>
 </head>
 <body>
 
 <!-- NAV -->
-<nav class="nav" id="main-nav">
-  <a href="index.html" class="nav-logo">
-    <div class="nav-logo-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="2.5" fill="currentColor" stroke="none"/></svg>
+<nav class="nav scrolled" id="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C9 2 7 4.5 7 7c0 3 2.5 5.5 3 8h4c.5-2.5 3-5 3-8 0-2.5-2-5-5-5z"/><path d="M9 17c0 3 1.5 5 3 5s3-2 3-5"/></svg></div>
+      <div class="nav-logo-text">Rinaldi Montalbano</div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="chi-siamo.html">Chi siamo</a></li>
+      <li><a href="trattamenti.html">Trattamenti</a></li>
+      <li><a href="urgenze.html" class="urgent">Urgenze</a></li>
+      <li><a href="domande-frequenti.html">FAQ</a></li>
+      <li><a href="contatti.html">Contatti</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="nav-lang"><button data-lang-btn="it" class="is-active">IT</button><button data-lang-btn="en">EN</button></div>
+      <a href="contatti.html" class="btn btn-gold btn-sm nav-cta-btn">Prenota</a>
+      <button class="nav-burger" id="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
-    <span>Rinaldi <em style="font-style:italic;color:var(--terra)">·</em> Montalbano</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="chi-siamo.html" class="is-active">Chi siamo</a></li>
-    <li><a href="trattamenti.html">Trattamenti</a></li>
-    <li><a href="urgenze.html" class="urgent">🚨 Urgenze</a></li>
-    <li><a href="domande-frequenti.html">FAQ</a></li>
-    <li><a href="contatti.html">Contatti</a></li>
-  </ul>
-  <div class="nav-right">
-    <div class="nav-lang">
-      <button data-lang-btn="it">IT</button>
-      <button data-lang-btn="en">EN</button>
-    </div>
-    <a href="contatti.html" class="btn btn-primary btn-sm nav-cta">Prenota</a>
   </div>
-  <button class="nav-burger" id="nav-burger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
 </nav>
-
-<!-- MOBILE NAV -->
 <div class="mob-nav" id="mob-nav">
+  <div class="mob-overlay" id="mob-overlay"></div>
   <div class="mob-drawer">
-    <button class="mob-close" id="mob-close">✕</button>
+    <button class="mob-close-btn" id="mob-close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
     <ul class="mob-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="chi-siamo.html">Chi siamo</a></li>
       <li><a href="trattamenti.html">Trattamenti</a></li>
-      <li><a href="urgenze.html" class="urgent">🚨 Urgenze</a></li>
+      <li><a href="urgenze.html" class="urgent">Urgenze</a></li>
       <li><a href="domande-frequenti.html">FAQ</a></li>
       <li><a href="contatti.html">Contatti</a></li>
     </ul>
-    <div class="mob-lang">
-      <button data-lang-btn="it">Italiano</button>
-      <button data-lang-btn="en">English</button>
-    </div>
-    <div style="margin-top:1.5rem">
-      <a href="contatti.html" class="btn btn-primary" style="width:100%;justify-content:center">Prenota un appuntamento</a>
+    <div class="mob-footer">
+      <div class="mob-lang-row"><button data-lang-btn="it" class="is-active">Italiano</button><button data-lang-btn="en">English</button></div>
+      <a href="contatti.html" class="btn btn-gold" style="justify-content:center">Prenota appuntamento</a>
     </div>
   </div>
 </div>
 
 <!-- PAGE HERO -->
 <div class="page-hero">
-  <p class="eyebrow" style="color:var(--terra-2)">Il nostro studio</p>
-  <h1>Chi siamo</h1>
-  <p class="lead">Un team di tre professionisti uniti dalla stessa passione: offrirti cure dentali di eccellenza in un ambiente familiare, accogliente e all'avanguardia.</p>
+  <div class="page-hero-inner">
+    <span class="eyebrow reveal">Il team</span>
+    <h1 class="reveal reveal-delay-1">Tre dentisti.<br><em>Un'unica cura.</em></h1>
+    <p class="lead reveal reveal-delay-2">Da oltre venticinque anni, tre professionisti condividono uno spazio, una filosofia e un obiettivo: prendersi cura della salute orale di ogni paziente come se fosse di famiglia.</p>
+  </div>
 </div>
 
-<!-- STORIA DELLO STUDIO -->
-<section class="section section-light">
+<!-- STORIA -->
+<section class="section bg-cream">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center" class="reveal">
-      <div>
-        <p class="eyebrow">Dal 1998</p>
-        <h2>Una storia di famiglia,<br><em>al servizio della comunità</em></h2>
-        <p style="color:var(--fog);line-height:1.8;margin-top:1rem;font-size:0.95rem">
-          Il Studio Dentistico Rinaldi Montalbano nasce nel 1998, quando il Dott. Marcello Rinaldi apre il suo primo studio a Savignano sul Rubicone con l'obiettivo di offrire cure odontoiatriche di alta qualità in un contesto familiare e accogliente. Fin dai primi anni, lo studio si distingue per il rapporto diretto e autentico con i pazienti, molti dei quali seguiti nel corso di generazioni intere.
-        </p>
-        <p style="color:var(--fog);line-height:1.8;margin-top:1rem;font-size:0.95rem">
-          Negli anni successivi, lo studio cresce grazie all'ingresso di Dott.ssa Clara Montalbano, specialista in ortodonzia, e del Dott. Mauro Rinaldi, esperto in protesi e riabilitazione orale. Questa evoluzione ha permesso di offrire ai pazienti un percorso di cura completo e multidisciplinare, senza dover ricorrere a strutture esterne per le diverse specializzazioni.
-        </p>
-        <p style="color:var(--fog);line-height:1.8;margin-top:1rem;font-size:0.95rem">
-          Oggi lo studio è dotato delle più moderne tecnologie — scanner intraorali 3D, TAC dentale cone beam e sistemi di impronta digitale — che permettono diagnosi precise e trattamenti minimamente invasivi. Nonostante la crescita e l'aggiornamento tecnologico, lo spirito rimane quello delle origini: ogni paziente è una persona, non un numero.
-        </p>
+    <div class="storia-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center">
+      <div class="reveal">
+        <span class="eyebrow" style="display:block;margin-bottom:1rem">La nostra storia</span>
+        <div class="divider"></div>
+        <h2 class="display" style="color:var(--deep);margin-bottom:1.5rem">Nati qui,<br><em>cresciuti con voi.</em></h2>
+        <p style="font-size:1rem;color:var(--stone);line-height:1.85;margin-bottom:1.25rem">Lo studio nasce nel <strong style="color:var(--deep)">1998</strong> per volontà del Dott. Marcello Rinaldi, con una convinzione semplice e radicata: la salute dentale deve essere cura accessibile, umana e di qualità per tutti.</p>
+        <p style="font-size:1rem;color:var(--stone);line-height:1.85;margin-bottom:1.25rem">In oltre venticinque anni lo studio è cresciuto, si è arricchito di nuovi specialisti e di tecnologie all'avanguardia, senza mai perdere il calore di un approccio familiare. Ogni paziente viene accolto per nome, ascoltato con attenzione e accompagnato in ogni fase del percorso di cura.</p>
+        <p style="font-size:1rem;color:var(--stone);line-height:1.85">Siamo profondamente radicati nel territorio romagnolo: Savignano sul Rubicone è la nostra casa, e le famiglie di questa zona sono le nostre famiglie da generazioni.</p>
       </div>
-      <div style="background:linear-gradient(135deg,var(--cream) 0%,#D4E8EC 100%);border-radius:16px;padding:3rem;display:flex;flex-direction:column;gap:2rem">
-        <div style="display:flex;align-items:center;gap:1.25rem">
-          <div style="width:56px;height:56px;border-radius:12px;background:rgba(42,122,138,0.15);display:grid;place-items:center;flex-shrink:0">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:28px;height:28px;color:var(--teal)"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-          </div>
-          <div>
-            <div style="font-family:var(--f-display);font-size:2rem;color:var(--navy);line-height:1">1998</div>
-            <div style="font-size:0.82rem;color:var(--fog);margin-top:0.2rem">Anno di fondazione</div>
-          </div>
-        </div>
-        <div style="display:flex;align-items:center;gap:1.25rem">
-          <div style="width:56px;height:56px;border-radius:12px;background:rgba(42,122,138,0.15);display:grid;place-items:center;flex-shrink:0">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:28px;height:28px;color:var(--teal)"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
-          </div>
-          <div>
-            <div style="font-family:var(--f-display);font-size:2rem;color:var(--navy);line-height:1">3</div>
-            <div style="font-size:0.82rem;color:var(--fog);margin-top:0.2rem">Specialisti del team</div>
-          </div>
-        </div>
-        <div style="display:flex;align-items:center;gap:1.25rem">
-          <div style="width:56px;height:56px;border-radius:12px;background:rgba(42,122,138,0.15);display:grid;place-items:center;flex-shrink:0">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:28px;height:28px;color:var(--teal)"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-          </div>
-          <div>
-            <div style="font-family:var(--f-display);font-size:2rem;color:var(--navy);line-height:1">9</div>
-            <div style="font-size:0.82rem;color:var(--fog);margin-top:0.2rem">Specializzazioni offerte</div>
-          </div>
-        </div>
-        <div style="display:flex;align-items:center;gap:1.25rem">
-          <div style="width:56px;height:56px;border-radius:12px;background:rgba(42,122,138,0.15);display:grid;place-items:center;flex-shrink:0">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:28px;height:28px;color:var(--teal)"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
-          </div>
-          <div>
-            <div style="font-family:var(--f-display);font-size:2rem;color:var(--navy);line-height:1">25+</div>
-            <div style="font-size:0.82rem;color:var(--fog);margin-top:0.2rem">Anni di esperienza</div>
+      <div class="reveal reveal-delay-1">
+        <div style="background:linear-gradient(145deg,var(--warm) 0%,var(--stone-3) 100%);border-radius:var(--r-lg);aspect-ratio:4/5;display:grid;place-items:center;position:relative;overflow:hidden">
+          <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1" width="80" height="80" style="color:var(--stone-2)">
+            <path d="M40 8C28 8 20 16 20 26c0 10 6 18 8 28h24c2-10 8-18 8-28 0-10-8-18-20-18z"/>
+            <path d="M28 62c0 8 4 12 12 12s12-4 12-12"/>
+          </svg>
+          <div style="position:absolute;bottom:1.5rem;left:1.5rem;right:1.5rem;background:var(--deep);color:var(--cream);padding:1.25rem 1.5rem;border-radius:var(--r);display:flex;align-items:center;gap:1.25rem">
+            <div>
+              <div style="font-family:var(--f-display);font-size:2rem;line-height:1;color:var(--gold-light)">1998</div>
+              <div style="font-size:0.7rem;letter-spacing:0.08em;color:var(--stone-2);margin-top:0.2rem">Fondazione</div>
+            </div>
+            <div style="width:1px;height:40px;background:rgba(246,243,237,0.1)"></div>
+            <div>
+              <div style="font-family:var(--f-display);font-size:2rem;line-height:1;color:var(--gold-light)">25+</div>
+              <div style="font-size:0.7rem;letter-spacing:0.08em;color:var(--stone-2);margin-top:0.2rem">Anni di attività</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- STATS -->
+<div class="stats-row bg-paper">
+  <div class="stat-item reveal">
+    <div class="stat-num">1998</div>
+    <div class="stat-label">Anno di fondazione</div>
+  </div>
+  <div class="stat-item reveal reveal-delay-1">
+    <div class="stat-num">3</div>
+    <div class="stat-label">Specialisti</div>
+  </div>
+  <div class="stat-item reveal reveal-delay-2">
+    <div class="stat-num">9</div>
+    <div class="stat-label">Trattamenti</div>
+  </div>
+  <div class="stat-item reveal reveal-delay-3">
+    <div class="stat-num">25+</div>
+    <div class="stat-label">Anni di esperienza</div>
+  </div>
+</div>
 
 <!-- TEAM -->
-<section class="section section-warm">
+<section class="section bg-cream">
   <div class="container">
-    <div class="text-center reveal" style="margin-bottom:3rem">
-      <p class="eyebrow">Il nostro team</p>
-      <h2>Tre specialisti, un unico obiettivo</h2>
-      <p class="lead" style="margin:1rem auto 0">Ognuno con la propria competenza specifica, insieme garantiamo un piano di cura completo, coordinato e personalizzato per ogni paziente.</p>
+    <div style="margin-bottom:4rem">
+      <span class="eyebrow reveal" style="display:block;margin-bottom:1rem">Il team</span>
+      <h2 class="display reveal reveal-delay-1" style="color:var(--deep)">I professionisti<br><em>che ti curano.</em></h2>
     </div>
-
     <div class="team-grid">
-      <!-- Marcello Rinaldi -->
+
       <div class="team-card reveal">
-        <div class="team-photo" style="background:linear-gradient(135deg,#C8DDE0 0%,#2A7A8A 100%)">
-          <div class="team-photo-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <div class="team-photo" style="background:linear-gradient(145deg,#D8CFC4 0%,#9E7E3A 100%)">
+          <div class="team-photo-bg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           </div>
         </div>
-        <div class="team-info">
-          <div class="team-title">Odontoiatra · Fondatore · Implantologia &amp; Chirurgia</div>
-          <h3>Dott. Marcello Rinaldi</h3>
-          <p>Laureato in Odontoiatria e Protesi Dentaria presso l'Università di Bologna nel 1994, il Dott. Marcello Rinaldi ha fondato lo studio nel 1998 dopo anni di formazione specialistica in implantologia e chirurgia orale. Nel corso della sua carriera ha seguito migliaia di pazienti nel territorio di Savignano sul Rubicone e dintorni, costruendo un rapporto di fiducia basato sulla chiarezza, sulla trasparenza e sull'ascolto. Si aggiorna regolarmente attraverso corsi e congressi nazionali e internazionali in implantologia avanzata, con particolare interesse per le tecniche di carico immediato e la chirurgia guidata computerizzata. Al di fuori dello studio, è appassionato di fotografia e trekking sull'Appennino romagnolo.</p>
-        </div>
+        <div class="team-tag">Fondatore · Implantologia &amp; Chirurgia Orale</div>
+        <h3>Dott. Marcello Rinaldi</h3>
+        <p>Fondatore dello studio nel 1998, il Dott. Marcello Rinaldi è specialista in implantologia e chirurgia orale con oltre venticinque anni di esperienza clinica. Cresciuto e formatosi nel territorio romagnolo, porta in ogni intervento la precisione della specializzazione e il calore di chi conosce i propri pazienti da una vita. È il punto di riferimento per i casi più complessi di chirurgia implantologica, con un approccio diretto, trasparente e sempre orientato al benessere del paziente.</p>
       </div>
 
-      <!-- Clara Montalbano -->
       <div class="team-card reveal reveal-delay-1">
-        <div class="team-photo" style="background:linear-gradient(135deg,#E8D5C8 0%,#C8784E 100%)">
-          <div class="team-photo-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <div class="team-photo" style="background:linear-gradient(145deg,#EDE0D8 0%,#C4622D 100%)">
+          <div class="team-photo-bg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           </div>
         </div>
-        <div class="team-info">
-          <div class="team-title">Odontoiatra · Ortodonzia &amp; Pedodonzia</div>
-          <h3>Dott.ssa Clara Montalbano</h3>
-          <p>La Dott.ssa Clara Montalbano si è laureata con lode in Odontoiatria presso l'Università di Ferrara e ha successivamente conseguito un master di II livello in Ortodonzia Clinica. Da oltre diciassette anni lavora all'interno dello studio, portando una specializzazione unica nel trattamento ortodontico sia per l'età evolutiva che per gli adulti. È particolarmente esperta nell'uso degli allineatori trasparenti di ultima generazione, che permettono di correggere il sorriso in modo quasi invisibile e confortevole. Dedica grande attenzione ai pazienti più giovani: il suo approccio dolce e rassicurante ha contribuito a superare la classica "paura del dentista" in decine di bambini seguiti nel corso degli anni. È membro della Società Italiana di Ortodonzia (SIDO).</p>
-        </div>
+        <div class="team-tag">Ortodonzia · Allineatori · Pedodonzia</div>
+        <h3>Dott.ssa Clara Montalbano</h3>
+        <p>Specialista in ortodonzia fissa e mobile, la Dott.ssa Clara Montalbano si distingue per la competenza con gli allineatori trasparenti e per la cura particolare riservata alla pedodonzia. Il suo approccio gentile e rassicurante la rende il riferimento per i pazienti più giovani e per le famiglie che cercano un dentista capace di mettere a proprio agio anche i bambini più timorosi. Porta avanti la propria formazione con costanza, aggiornandosi sulle tecniche ortodontiche più innovative.</p>
       </div>
 
-      <!-- Mauro Rinaldi -->
       <div class="team-card reveal reveal-delay-2">
-        <div class="team-photo" style="background:linear-gradient(135deg,#C8D8E8 0%,#1C2B3A 100%)">
-          <div class="team-photo-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <div class="team-photo" style="background:linear-gradient(145deg,#C8D4DC 0%,#1A1410 100%)">
+          <div class="team-photo-bg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
           </div>
         </div>
-        <div class="team-info">
-          <div class="team-title">Odontoiatra · Protesi &amp; Riabilitazione Orale</div>
-          <h3>Dott. Mauro Rinaldi</h3>
-          <p>Figlio del fondatore, il Dott. Mauro Rinaldi ha studiato Odontoiatria a Bologna e si è poi specializzato in protesi dentale e riabilitazione orale complessa. Lavora nello studio di famiglia da oltre dieci anni, portando freschezza e un costante aggiornamento sulle tecnologie digitali applicate alla protesica: dall'impronta ottica alla progettazione CAD/CAM, fino alle corone in ceramica integrale esteticamente insuperabili. È appassionato di estetica del sorriso e si occupa con dedizione dei pazienti che desiderano migliorare l'aspetto del proprio sorriso in modo naturale e duraturo. Collabora con i migliori laboratori odontotecnici del territorio per garantire manufatti di altissima qualità artigianale.</p>
-        </div>
+        <div class="team-tag">Protesi · Riabilitazione · Estetica</div>
+        <h3>Dott. Mauro Rinaldi</h3>
+        <p>Il Dott. Mauro Rinaldi è lo specialista dello studio in protesi dentale, riabilitazione orale completa ed estetica del sorriso. Con un occhio attento alle proporzioni e ai dettagli, trasforma sorrisi compromessi in nuove identità utilizzando materiali all'avanguardia e tecnologie digitali per garantire precisione e durata. La sua passione per l'estetica dentale si fonde con una solida competenza clinica, rendendo ogni riabilitazione un progetto su misura per il singolo paziente.</p>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- VALORI -->
-<section class="section section-light">
+<!-- VALUES -->
+<section class="section bg-paper">
   <div class="container">
-    <div class="text-center reveal" style="margin-bottom:3rem">
-      <p class="eyebrow">I nostri valori</p>
-      <h2>Cosa ci guida ogni giorno</h2>
-      <p class="lead" style="margin:1rem auto 0">Quattro principi fondamentali che definiscono il nostro modo di fare odontoiatria e di relazionarci con ogni paziente.</p>
+    <div style="text-align:center;margin-bottom:4rem">
+      <span class="eyebrow reveal" style="display:block;margin-bottom:1rem">I nostri valori</span>
+      <h2 class="display reveal reveal-delay-1" style="color:var(--deep)">Quello che ci guida<br><em>ogni giorno.</em></h2>
     </div>
-    <div class="why-grid">
-      <div class="why-item reveal">
-        <div class="why-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+    <div class="values-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem">
+
+      <div class="reveal" style="padding:2rem;border-radius:var(--r-lg);background:var(--cream);border:1px solid var(--line)">
+        <div style="width:44px;height:44px;border-radius:var(--r-sm);background:rgba(158,126,58,0.1);display:grid;place-items:center;margin-bottom:1.25rem">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22" style="color:var(--gold)"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
         </div>
-        <h3>Professionalità</h3>
-        <p>Ogni trattamento è pianificato con rigore clinico, strumenti di ultima generazione e protocolli aggiornati alle più recenti linee guida internazionali.</p>
+        <h3 style="font-family:var(--f-display);font-size:1.2rem;font-weight:400;color:var(--deep);margin-bottom:0.6rem">Professionalità</h3>
+        <p style="font-size:0.85rem;color:var(--stone);line-height:1.75">Ogni intervento è eseguito con rigore scientifico, aggiornamento costante e materiali certificati. La qualità non è un optional, è il nostro standard quotidiano.</p>
       </div>
-      <div class="why-item reveal reveal-delay-1">
-        <div class="why-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+
+      <div class="reveal reveal-delay-1" style="padding:2rem;border-radius:var(--r-lg);background:var(--cream);border:1px solid var(--line)">
+        <div style="width:44px;height:44px;border-radius:var(--r-sm);background:rgba(158,126,58,0.1);display:grid;place-items:center;margin-bottom:1.25rem">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22" style="color:var(--gold)"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
         </div>
-        <h3>Ascolto</h3>
-        <p>Prima di qualsiasi intervento, dedichiamo il tempo necessario a capire le esigenze del paziente, le sue preoccupazioni e i suoi obiettivi. Non esistono domande senza risposta.</p>
+        <h3 style="font-family:var(--f-display);font-size:1.2rem;font-weight:400;color:var(--deep);margin-bottom:0.6rem">Ascolto</h3>
+        <p style="font-size:0.85rem;color:var(--stone);line-height:1.75">Prima di agire, ascoltiamo. Ogni paziente porta con sé una storia, delle preoccupazioni e delle aspettative. Il nostro punto di partenza è sempre la persona, non la diagnosi.</p>
       </div>
-      <div class="why-item reveal reveal-delay-2">
-        <div class="why-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+
+      <div class="reveal reveal-delay-2" style="padding:2rem;border-radius:var(--r-lg);background:var(--cream);border:1px solid var(--line)">
+        <div style="width:44px;height:44px;border-radius:var(--r-sm);background:rgba(158,126,58,0.1);display:grid;place-items:center;margin-bottom:1.25rem">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22" style="color:var(--gold)"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
         </div>
-        <h3>Aggiornamento continuo</h3>
-        <p>Il mondo dell'odontoiatria evolve rapidamente. I nostri dentisti partecipano ogni anno a corsi, congressi e master di specializzazione per portare in studio le tecniche più avanzate e sicure.</p>
+        <h3 style="font-family:var(--f-display);font-size:1.2rem;font-weight:400;color:var(--deep);margin-bottom:0.6rem">Aggiornamento continuo</h3>
+        <p style="font-size:0.85rem;color:var(--stone);line-height:1.75">L'odontoiatria evolve rapidamente. Investiamo in formazione, tecnologie e nuove metodiche per offrire sempre il meglio che la medicina dentale ha da dare.</p>
       </div>
-      <div class="why-item reveal reveal-delay-3">
-        <div class="why-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+
+      <div class="reveal reveal-delay-3" style="padding:2rem;border-radius:var(--r-lg);background:var(--cream);border:1px solid var(--line)">
+        <div style="width:44px;height:44px;border-radius:var(--r-sm);background:rgba(158,126,58,0.1);display:grid;place-items:center;margin-bottom:1.25rem">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22" style="color:var(--gold)"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
         </div>
-        <h3>Cura del paziente</h3>
-        <p>Il benessere della persona viene prima di tutto. Lavoriamo per ridurre il dolore, l'ansia e il disagio in ogni fase del trattamento, costruendo un rapporto di fiducia che dura nel tempo.</p>
+        <h3 style="font-family:var(--f-display);font-size:1.2rem;font-weight:400;color:var(--deep);margin-bottom:0.6rem">Cura del paziente</h3>
+        <p style="font-size:0.85rem;color:var(--stone);line-height:1.75">Non ci fermiamo alla seduta. Seguiamo i nostri pazienti nel tempo, con richiami, controlli preventivi e una presenza costante che va ben oltre il singolo appuntamento.</p>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- TECNOLOGIA -->
-<section class="section section-warm">
-  <div class="container">
-    <div class="text-center reveal" style="margin-bottom:3rem">
-      <p class="eyebrow">La nostra struttura</p>
-      <h2>Tecnologia moderna,<br><em>ambiente a misura d'uomo</em></h2>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.5rem">
-      <div class="svc-card reveal">
-        <div class="svc-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
-        </div>
-        <h3>Scanner intraorali 3D</h3>
-        <p>Impronte digitali precise e confortevoli, senza materiali tradizionali. La tecnologia 3D permette rilevazioni più accurate e risultati protesici superiori.</p>
-      </div>
-      <div class="svc-card reveal reveal-delay-1">
-        <div class="svc-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 3"/></svg>
-        </div>
-        <h3>TAC dentale cone beam</h3>
-        <p>Tomografia tridimensionale per visualizzare con precisione le strutture ossee, pianificare gli impianti e diagnosticare con certezza situazioni complesse.</p>
-      </div>
-      <div class="svc-card reveal reveal-delay-2">
-        <div class="svc-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-        </div>
-        <h3>Sterilizzazione certificata</h3>
-        <p>Protocolli di sterilizzazione rigorosi con autoclave classe B e monitoraggio continuo. La sicurezza del paziente è la nostra priorità assoluta.</p>
-      </div>
-      <div class="svc-card reveal reveal-delay-3">
-        <div class="svc-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
-        </div>
-        <h3>Sala d'attesa confortevole</h3>
-        <p>Un ambiente pensato per mettere a proprio agio grandi e piccini: spazio dedicato ai bambini, connessione Wi-Fi gratuita e personale sempre disponibile.</p>
-      </div>
+<!-- CTA BAND -->
+<div class="cta-band">
+  <div class="cta-band-inner">
+    <h2 class="reveal">Vieni a conoscerci<br><em>di persona.</em></h2>
+    <div class="cta-band-actions reveal reveal-delay-1">
+      <a href="contatti.html" class="btn btn-dark btn-lg">Prenota una visita</a>
+      <a href="tel:0541944339" class="btn btn-lg" style="background:transparent;border:1.5px solid rgba(26,20,16,0.3);color:var(--deep)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.64 3.4 2 2 0 013.62 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 9.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        0541 944339
+      </a>
     </div>
   </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-band">
-  <div class="container text-center">
-    <p class="eyebrow reveal" style="color:rgba(255,255,255,0.6)">Inizia il tuo percorso</p>
-    <h2 class="reveal">Vieni a conoscerci di persona</h2>
-    <p class="reveal" style="max-width:520px;margin:0 auto 2rem">La prima visita è un momento di ascolto e valutazione. Nessuna pressione, nessun impegno: solo la cura che meriti.</p>
-    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap" class="reveal">
-      <a href="contatti.html" class="btn btn-terra btn-lg">Prenota una visita</a>
-      <a href="tel:0541944339" class="btn btn-outline-white btn-lg">📞 0541 944339</a>
-    </div>
-  </div>
-</section>
+</div>
 
 <!-- FOOTER -->
 <footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div style="font-family:var(--f-display);font-size:1.2rem;color:#F5F2EE">Studio Dentistico<br>Rinaldi Montalbano</div>
-        <p style="margin-top:0.75rem">Via Emilia Ovest, 45/A<br>Savignano sul Rubicone (Zona Cesare)<br>Tel: <a href="tel:0541944339" style="color:var(--teal-2)">0541 944339</a></p>
-      </div>
-      <div>
-        <h4>Pagine</h4>
-        <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="chi-siamo.html">Chi siamo</a></li>
-          <li><a href="trattamenti.html">Trattamenti</a></li>
-          <li><a href="urgenze.html" class="urgent">🚨 Urgenze</a></li>
-          <li><a href="domande-frequenti.html">FAQ</a></li>
-          <li><a href="contatti.html">Contatti</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Legale</h4>
-        <ul class="footer-links">
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="cookie.html">Cookie Policy</a></li>
-        </ul>
-        <h4 style="margin-top:1.5rem">Orari</h4>
-        <p style="font-size:0.82rem;line-height:1.8">Lun–Ven: 9:00–13:00<br>15:00–19:00<br>Sab: su appuntamento</p>
-      </div>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-brand-name">Studio Dentistico<br>Rinaldi Montalbano</div>
+      <p>Via Emilia Ovest, 45/A<br>Savignano sul Rubicone (Zona Cesare)<br><a href="tel:0541944339">0541 944339</a><br><a href="mailto:info@studiorinaldimontalbano.it">info@studiorinaldimontalbano.it</a></p>
     </div>
-    <div class="footer-bottom">
-      <span>© 2025 Studio Dentistico Rinaldi Montalbano</span>
-      <span><a href="privacy.html">Privacy</a> · <a href="cookie.html">Cookie</a></span>
+    <div>
+      <div class="footer-col-title">Navigazione</div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="chi-siamo.html">Chi siamo</a></li>
+        <li><a href="trattamenti.html">Trattamenti</a></li>
+        <li><a href="urgenze.html" class="urgent">Urgenze</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Info</div>
+      <ul class="footer-links">
+        <li><a href="domande-frequenti.html">FAQ</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="cookie.html">Cookie Policy</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Orari</div>
+      <p style="font-size:0.84rem;line-height:1.9;color:rgba(246,243,237,0.45)">Lun–Ven<br>9:00–13:00 · 15:00–19:00<br>Sabato<br>Su appuntamento</p>
     </div>
   </div>
+  <div class="footer-bottom">
+    <span>© 2025 Studio Dentistico Rinaldi Montalbano</span>
+    <span><a href="privacy.html">Privacy</a> · <a href="cookie.html">Cookie</a></span>
+  </div>
 </footer>
-
-<!-- PHONE FLOAT -->
-<a href="tel:0541944339" class="phone-float" aria-label="Chiama lo studio">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.64 3.4 2 2 0 013.62 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 9.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-</a>
-
-<!-- COOKIE BAR -->
-<div class="cookie-bar" id="cookie-bar">
-  <p>Utilizziamo i cookie per migliorare la tua esperienza. Continuando accetti la nostra <a href="cookie.html">cookie policy</a> e <a href="privacy.html">privacy policy</a>.</p>
-  <button class="btn btn-primary btn-sm" id="cookie-ok">Accetta</button>
-</div>
-
+<a href="tel:0541944339" class="phone-float" aria-label="Chiama"><svg class="phone-float-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.64 3.4 2 2 0 013.62 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 9.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><span class="phone-float-label">0541 944339</span></a>
+<div class="cookie-bar" id="cookie-bar"><p>Utilizziamo cookie tecnici. <a href="cookie.html">Cookie policy</a> · <a href="privacy.html">Privacy</a></p><button class="btn btn-gold btn-sm" id="cookie-ok">Accetta</button></div>
 <script src="js/main.js"></script>
 </body>
 </html>
