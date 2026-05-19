@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Trattamenti — Studio Dentistico Rinaldi Montalbano</title>
+<meta name="description" content="Tutti i trattamenti del Studio Dentistico Rinaldi Montalbano: odontoiatria, implantologia, chirurgia orale, protesi, ortodonzia, pedodonzia, igiene dentale, impronta digitale e TAC dentale."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+<style>
+  .treat-card {
+    background: #fff;
+    border-radius: var(--r);
+    border: 1px solid var(--line);
+    overflow: hidden;
+    transition: transform 0.25s var(--ease-out), box-shadow 0.25s;
+  }
+  .treat-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-l); }
+  .treat-card-header {
+    padding: 2rem 2rem 1.5rem;
+    border-bottom: 1px solid var(--line);
+    display: flex; align-items: center; gap: 1.25rem;
+  }
+  .treat-card-body { padding: 1.75rem 2rem 2rem; }
+  .treat-card-body p { font-size: 0.9rem; color: var(--fog); line-height: 1.8; margin-bottom: 1.25rem; }
+  .treat-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
+  @media (max-width: 500px) { .treat-meta { grid-template-columns: 1fr; } }
+  .treat-meta-box {
+    background: var(--ivory);
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: 0.82rem;
+  }
+  .treat-meta-label {
+    font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--teal); font-size: 0.7rem; margin-bottom: 0.4rem;
+  }
+  .treat-meta-text { color: var(--ink-2); line-height: 1.55; }
+  .treat-icon-wrap {
+    width: 56px; height: 56px; border-radius: 14px; flex-shrink: 0;
+    background: rgba(42,122,138,0.10);
+    display: grid; place-items: center;
+  }
+  .treat-icon-wrap svg { width: 28px; height: 28px; color: var(--teal); }
+  .treat-number {
+    font-family: var(--f-display); font-size: 0.8rem; color: var(--fog-2);
+    font-weight: 400;
+  }
+  .treatments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 2rem;
+  }
+  @media (max-width: 420px) { .treatments-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="main-nav">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="2.5" fill="currentColor" stroke="none"/></svg>
+    </div>
+    <span>Rinaldi <em style="font-style:italic;color:var(--terra)">·</em> Montalbano</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="chi-siamo.html">Chi siamo</a></li>
+    <li><a href="trattamenti.html" class="is-active">Trattamenti</a></li>
+    <li><a href="urgenze.html" class="urgent">🚨 Urgenze</a></li>
+    <li><a href="domande-frequenti.html">FAQ</a></li>
+    <li><a href="contatti.html">Contatti</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="nav-lang">
+      <button data-lang-btn="it">IT</button>
+      <button data-lang-btn="en">EN</button>
+    </div>
+    <a href="contatti.html" class="btn btn-primary btn-sm nav-cta">Prenota</a>
+  </div>
+  <button class="nav-burger" id="nav-burger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mob-nav" id="mob-nav">
+  <div class="mob-drawer">
+    <button class="mob-close" id="mob-close">✕</button>
+    <ul class="mob-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="chi-siamo.html">Chi siamo</a></li>
+      <li><a href="trattamenti.html">Trattamenti</a></li>
+      <li><a href="urgenze.html" class="urgent">🚨 Urgenze</a></li>
+      <li><a href="domande-frequenti.html">FAQ</a></li>
+      <li><a href="contatti.html">Contatti</a></li>
+    </ul>
+    <div class="mob-lang">
+      <button data-lang-btn="it">Italiano</button>
+      <button data-lang-btn="en">English</button>
+    </div>
+    <div style="margin-top:1.5rem">
+      <a href="contatti.html" class="btn btn-primary" style="width:100%;justify-content:center">Prenota un appuntamento</a>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <p class="eyebrow" style="color:var(--terra-2)">Tutto in un unico studio</p>
+  <h1>I nostri trattamenti</h1>
+  <p class="lead">Dalla visita di controllo all'implantologia complessa, offriamo nove specializzazioni per prenderci cura della tua salute orale a qualsiasi età.</p>
+</div>
+
+<!-- TREATMENTS GRID -->
+<section class="section section-light">
+  <div class="container">
+    <div class="treatments-grid">
+
+      <!-- 1. Odontoiatria -->
+      <div class="treat-card reveal">
+        <div class="treat-card-header">
+          <div class="treat-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C8.5 2 7 4.5 7 7c0 2 1 4 2 5.5L12 22l3-9.5C16 11 17 9 17 7c0-2.5-1.5-5-5-5z"/></svg>
+          </div>
+          <div>
+            <div class="treat-number">01</div>
+            <h3 style="font-family:var(--f-body);font-size:1.2rem;font-weight:700;color:var(--navy)">Odontoiatria Conservativa</h3>
+          </div>
+        </div>
+        <div class="treat-card-body">
+          <p>L'odontoiatria conservativa è il cuore della salute dentale quotidiana. Si occupa della diagnosi e del trattamento delle carie, delle devitalizzazioni (terapia canalare) e delle ricostruzioni dei denti danneggiati. L'obiettivo è conservare il dente naturale il più a lungo possibile, evitando estrazioni non necessarie. Utilizziamo materiali estetici compositi di ultima generazione, che imitano perfettamente il colore e la trasparenza dello smalto naturale. La prevenzione è la nostra priorità: controlli regolari permettono di individuare le carie nelle fasi iniziali, quando il trattamento è rapido, indolore e poco invasivo.</p>
+          <div class="treat-meta">
+            <div class="treat-meta-box">
+              <div class="treat-meta-label">Quando venire</div>
+              <div class="treat-meta-text">Dolore ai denti, sensibilità al freddo o al caldo, macchie scure, visita di controllo semestrale.</div>
+            </div>
+            <div class="treat-meta-box">
+              <div class="treat-meta-label">Cosa aspettarsi</div>
+              <div class="treat-meta-text">Visita, eventuale radiografia, trattamento in una o più sedute. Senza dolore grazie all'anestesia locale.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Implantologia -->
+      <div class="treat-card reveal reveal-delay-1">
+        <div class="treat-card-header">
+          <div class="treat-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+          </div>
+          <div>
+            <div class="treat-number">02</div>
+            <h3 style="font-family:var(--f-body);font-size:1.2rem;font-weight:700;color:var(--navy)">Implantologia</h3>
+          </div>
+        </div>
+        <div class="treat-card-body">
+          <p>L'implantologia dentale è la soluzione più avanzata e duratura per sostituire uno o più denti mancanti. Utilizziamo impianti in titanio di ultima generazione che si integrano naturalmente con l'osso mascellare (osteointegrazione), garantendo una stabilità eccellente nel lungo periodo. Grazie alla pianificazione digitale con TAC cone beam e chirurgia guidata, ogni intervento è preciso, sicuro e minimamente invasivo. Gli impianti riproducono perfettamente la funzione masticatoria e l'estetica del dente naturale, migliorando notevolmente la qualità della vita. Il Dott. Marcello Rinaldi, con oltre 25 anni di esperienza in implantologia, segue personalmente ogni fase del trattamento.</p>
+          <div class="treat-meta">
+            <div class="treat-meta-box">
+              <div class="treat-meta-label">Quando venire</div>
+              <div class="treat-meta-text">Uno o più denti mancanti, protesi mobile non soddisfacente, dente non recuperabile.</div>
+            </div>
+            <div class="treat-meta-box">
+              <div class="treat-meta-label">Cosa aspettarsi</div>
+              <div class="treat-meta-text">Visita e TAC, inserimento implantare in anestesia locale, guarigione 2–4 mesi, corona definitiva.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Chirurgia Orale -->
+      <div class="treat-card reveal">
+        <div class="treat-card-header">
+          <div class="treat-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <div class="treat-number">03</div>
+            <h3 style="font-family:var(--f-body);font-size:1.2rem;font-weight:700;color:var(--navy)">Chirurgia Orale</h3>
+          </div>
+        </div>
+        <div class="treat-card-body">
+          <p>La chirurgia orale comprende tutte le procedure chirurgiche eseguite in regime ambulatoriale, dall'estrazione semplice alla rimozione dei denti del giudizio inclusi o semi-inclusi. Il nostro studio è attrezzato per eseguire anche interventi di chirurgia dei tessuti molli, resezioni apicali, trattamento di cisti mandibolari e rigenerazioni ossee guidate in preparazione all'implantologia. Ogni procedura viene pianificata con cura, con la massima attenzione alla riduzione del disagio post-operatorio. Il paziente riceve sempre istruzioni chiare e un recapito telefonico diretto per qualsiasi necessità nelle ore successive all'intervento.</p>
+          <div class="treat-meta">
+            <div class="treat-meta-box">
+              <div class="treat-meta-label">Quando venire</div>
+              <div class="treat-meta-text">Dente del giudizio con dolore, dente non recuperabile, cisti dentale, dolore persistente alla radice.</div>
+            </div>
+            <div class="treat-meta-box">
+              <div class="treat-meta-label">Cosa aspettarsi</div>
+              <div class="treat-meta-text">Radiografia o TAC preliminare, intervento in anestesia locale, foglio istruzioni post-operatorie dettagliato.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Protesi -->
+      <div class="treat-card reveal reveal-delay-1">
+        <div class="treat-card-header">
+          <div class="treat-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+          </div>
+          <div>
+            <div class="treat-number">04</div>
+            <h3 style="font-family:var(--f-body);font-size:1.2rem;font-weight:700;color:var(--navy)">Protesi Dentale</h3>
+          </div>
+        </div>
+        <div class="treat-card-body">
+          <p>La protesi dentale ripristina la funzione masticatoria, l'estetica e la fonazione nei pazienti che hanno perso uno o più denti. Il Dott. Mauro Rinaldi si occupa di protesi fisse (corone singole, ponti, faccette in porcellana), protesi rimovibili parziali o totali e protesi su impianti. Tutti i manufatti sono realizzati da laboratori odontotecnici selezionati, con materiali certificati di altissima qualità. Grazie all'impronta digitale 3D, l'adattamento è più preciso che mai, riducendo le fasi di aggiustamento. Il nostro obiettivo è restituirti un sorriso naturale, confortevole e duraturo, indistinguibile dai denti originali.</p>
+          <div class="treat-meta">
+            <div class="treat-meta-box">
+              <div class="treat-meta-label">Quando venire</div>
+              <div class="treat-meta-text">Denti mancanti, protesi usurata o rotta, corona danneggiata, desiderio di migliorare l'estetica del sorriso.</div>
+            </div>
+            <div class="treat-meta-box">
+              <div class="treat-meta-label">Cosa aspettarsi</div>
+              <div class="treat-meta-text">Visita, impronta digitale, prova estetica, consegna definitiva. Più sedute nel corso di alcune settimane.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Ortodonzia -->
+      <div class="treat-card reveal">
+        <div class="treat-card-header">
+          <div class="treat-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a10 10 0 110 20 10 10 0 010-20z"/><path d="M8 12s1.5 3 4 3 4-3 4-3"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          </div>
+          <div>
+            <div class="treat-number">05</div>
+            <h3 style="font-family:var(--f-body);font-size:1.2rem;font-weight:700;color:var(--navy)">Ortodonzia</h3>
+          </div>
+        </div>
+        <div class="treat-card-body">
+          <p>L'ortodonzia corregge la posizione dei denti e dei mascellari, migliorando sia la funzione masticatoria che l'estetica del sorriso. La Dott.ssa Clara Montalbano, specialista in ortodonzia clinica, tratta pazienti di tutte le età: dai bambini in fase di sviluppo, agli adolescenti con apparecchi fissi, fino agli adulti che preferiscono gli allineatori trasparenti praticamente invisibili. Offriamo apparecchi fissi in ceramica e metallo, aparecchi funzionali per i bambini in fase di crescita, e sistemi di allineatori removibili di ultima generazione. Il piano di trattamento è sempre personalizzato, basato su fotografie, modelli digitali e radiografie cefalometriche.</p>
+          <div class="treat-meta">
+            <div class="treat-meta-box">
+              <div class="treat-meta-label">Quando venire</div>
+              <div class="treat-meta-text">Denti storti, morso aperto o incrociato, affollamento dentale, desiderio di migliorare il sorriso a qualsiasi età.</div>
+            </div>
+            <div class="treat-meta-box">
+              <div class="treat-meta-label">Cosa aspettarsi</div>
+              <div class="treat-meta-text">Visita ortodontica, fotografie e radiografie, preventivo personalizzato, attivazioni mensili per tutta la durata del trattamento.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Pedodonzia -->
+      <div class="treat-card reveal reveal-delay-1">
+        <div class="treat-card-header">
+          <div class="treat-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+          </div>
+          <div>
+            <div class="treat-number">06</div>
+            <h3 style="font-family:var(--f-body);font-size:1.2rem;font-weight:700;color:var(--navy)">Pedodonzia</h3>
+          </div>
+        </div>
+        <div class="treat-card-body">
+          <p>La pedodonzia è la branca dell'odontoiatria dedicata ai bambini, dalla comparsa dei primi dentini fino all'adolescenza. Il nostro studio è pensato per accogliere i piccoli pazienti in un ambiente rilassante e privo di stress: la prima visita è un momento di gioco e scoperta, non di paura. La Dott.ssa Montalbano utilizza tecniche di comunicazione specifiche per l'età del bambino, in grado di ridurre l'ansia e rendere l'esperienza positiva. Ci occupiamo di sigillature preventive, fluoroprofilassi, cura delle carie nei denti da latte, estrazioni atraumatiche e intercettazione precoce dei problemi ortodontici. Far crescere bambini con una relazione serena con il dentista è uno degli obiettivi di cui andiamo più fieri.</p>
+          <div class="treat-meta">
+            <div class="treat-meta-box">
+              <div class="treat-meta-label">Quando venire</div>
+              <div class="treat-meta-text">Prima visita consigliata entro i 3 anni, poi controlli ogni 6 mesi. Anche per dolore o trauma ai denti da latte.</div>
+            </div>
+            <div class="treat-meta-box">
+              <div class="treat-meta-label">Cosa aspettarsi</div>
+              <div class="treat-meta-text">Approccio graduale e giocoso, visita senza fretta, con i genitori presenti e coinvolti in ogni fase.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. Igiene Dentale -->
+      <div class="treat-card reveal">
+        <div class="treat-card-header">
+          <div class="treat-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <div>
+            <div class="treat-number">07</div>
+            <h3 style="font-family:var(--f-body);font-size:1.2rem;font-weight:700;color:var(--navy)">Igiene Dentale Professionale</h3>
+          </div>
+        </div>
+        <div class="treat-card-body">
+          <p>La pulizia dentale professionale è il trattamento preventivo più importante che puoi fare per la tua salute orale. La nostra igienista dentale esegue l'ablazione del tartaro (scaling) sopra e sottogengivale, la lucidatura delle superfici dentali e, quando necessario, il levigamento radicolare per ridurre le tasche parodontali. Ogni seduta include una valutazione dettagliata dello stato gengivale e un piano di igiene domiciliare personalizzato: tecnica di spazzolamento, utilizzo del filo interdentale, scovolini e sciacqui. La prevenzione regolare riduce drasticamente il rischio di carie, parodontite e perdita di denti nel lungo periodo. Raccomandiamo una seduta ogni 6 mesi.</p>
+          <div class="treat-meta">
+            <div class="treat-meta-box">
+              <div class="treat-meta-label">Quando venire</div>
+              <div class="treat-meta-text">Ogni 6 mesi come prevenzione, o prima in caso di tartaro visibile, gengive che sanguinano, alito cattivo persistente.</div>
+            </div>
+            <div class="treat-meta-box">
+              <div class="treat-meta-label">Cosa aspettarsi</div>
+              <div class="treat-meta-text">Seduta di circa 45–60 minuti, indolore e confortevole. Denti visibilmente più puliti e luminosi.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. Impronta Digitale -->
+      <div class="treat-card reveal reveal-delay-1">
+        <div class="treat-card-header">
+          <div class="treat-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+          </div>
+          <div>
+            <div class="treat-number">08</div>
+            <h3 style="font-family:var(--f-body);font-size:1.2rem;font-weight:700;color:var(--navy)">Impronta Digitale 3D</h3>
+          </div>
+        </div>
+        <div class="treat-card-body">
+          <p>Lo scanner intraorale è una delle tecnologie che ha rivoluzionato l'odontoiatria moderna. Sostituisce completamente le tradizionali impronte con materiale pastoso, spesso scomode e fastidiose, con una semplice scansione digitale che dura pochi minuti. Il risultato è un modello tridimensionale ad alta precisione, visualizzabile immediatamente sullo schermo con il paziente, che permette di pianificare protesi, allineatori ortodontici e corone con una precisione millimetrica. La tecnologia digitale riduce gli errori, velocizza i tempi di consegna dei manufatti e migliora il comfort complessivo del trattamento. Tutto il flusso, dalla scansione alla produzione, avviene in digitale.</p>
+          <div class="treat-meta">
+            <div class="treat-meta-box">
+              <div class="treat-meta-label">Quando viene usata</div>
+              <div class="treat-meta-text">Per protesi, corone, allineatori ortodontici, valutazioni estetiche, chirurgia guidata in implantologia.</div>
+            </div>
+            <div class="treat-meta-box">
+              <div class="treat-meta-label">Cosa aspettarsi</div>
+              <div class="treat-meta-text">Scansione rapida (3–5 minuti), completamente non invasiva. Puoi vedere il modello 3D dei tuoi denti in tempo reale.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 9. TAC Dentale -->
+      <div class="treat-card reveal">
+        <div class="treat-card-header">
+          <div class="treat-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <div>
+            <div class="treat-number">09</div>
+            <h3 style="font-family:var(--f-body);font-size:1.2rem;font-weight:700;color:var(--navy)">TAC Dentale (CBCT)</h3>
+          </div>
+        </div>
+        <div class="treat-card-body">
+          <p>La TAC dentale cone beam (CBCT) è uno strumento diagnostico tridimensionale che permette di visualizzare con estrema precisione le strutture ossee dei mascellari, le radici dei denti, i nervi e i seni paranasali. È indispensabile per la pianificazione implantologica, la chirurgia orale complessa, l'endodonzia avanzata e la diagnosi di patologie non visibili alla radiografia tradizionale. La dose di radiazioni emessa è significativamente inferiore a quella di una TAC tradizionale, rendendola sicura e appropriata per la maggior parte dei pazienti adulti. L'analisi delle immagini 3D viene effettuata direttamente dai nostri specialisti con software dedicato, e il risultato viene discusso con il paziente in modo chiaro e comprensibile.</p>
+          <div class="treat-meta">
+            <div class="treat-meta-box">
+              <div class="treat-meta-label">Quando viene usata</div>
+              <div class="treat-meta-text">Prima di un impianto, per valutare denti inclusi, cisti ossee, denti del giudizio complicati, endodonzia complessa.</div>
+            </div>
+            <div class="treat-meta-box">
+              <div class="treat-meta-label">Cosa aspettarsi</div>
+              <div class="treat-meta-text">Scansione rapida di circa 15 secondi, nessun dolore. Referto disponibile per la visita di pianificazione.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="container text-center">
+    <p class="eyebrow reveal" style="color:rgba(255,255,255,0.6)">Il passo successivo</p>
+    <h2 class="reveal">Hai domande su un trattamento?</h2>
+    <p class="reveal" style="max-width:520px;margin:0 auto 2rem">Contattaci per una consulenza. Ti spieghiamo tutto in modo chiaro, senza tecnicismi, e costruiamo insieme il piano di cura più adatto a te.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap" class="reveal">
+      <a href="contatti.html" class="btn btn-terra btn-lg">Prenota una visita</a>
+      <a href="domande-frequenti.html" class="btn btn-outline-white btn-lg">Domande frequenti</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="font-family:var(--f-display);font-size:1.2rem;color:#F5F2EE">Studio Dentistico<br>Rinaldi Montalbano</div>
+        <p style="margin-top:0.75rem">Via Emilia Ovest, 45/A<br>Savignano sul Rubicone (Zona Cesare)<br>Tel: <a href="tel:0541944339" style="color:var(--teal-2)">0541 944339</a></p>
+      </div>
+      <div>
+        <h4>Pagine</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="chi-siamo.html">Chi siamo</a></li>
+          <li><a href="trattamenti.html">Trattamenti</a></li>
+          <li><a href="urgenze.html" class="urgent">🚨 Urgenze</a></li>
+          <li><a href="domande-frequenti.html">FAQ</a></li>
+          <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legale</h4>
+        <ul class="footer-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="cookie.html">Cookie Policy</a></li>
+        </ul>
+        <h4 style="margin-top:1.5rem">Orari</h4>
+        <p style="font-size:0.82rem;line-height:1.8">Lun–Ven: 9:00–13:00<br>15:00–19:00<br>Sab: su appuntamento</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Studio Dentistico Rinaldi Montalbano</span>
+      <span><a href="privacy.html">Privacy</a> · <a href="cookie.html">Cookie</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- PHONE FLOAT -->
+<a href="tel:0541944339" class="phone-float" aria-label="Chiama lo studio">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.64 3.4 2 2 0 013.62 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 9.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+</a>
+
+<!-- COOKIE BAR -->
+<div class="cookie-bar" id="cookie-bar">
+  <p>Utilizziamo i cookie per migliorare la tua esperienza. Continuando accetti la nostra <a href="cookie.html">cookie policy</a> e <a href="privacy.html">privacy policy</a>.</p>
+  <button class="btn btn-primary btn-sm" id="cookie-ok">Accetta</button>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
