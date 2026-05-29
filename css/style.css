@@ -26,6 +26,12 @@
   --red:     #B83226;
   --red-2:   #D94030;
   --green:   #2D6B4A;
+  /* Fresh accent — homepage refresh */
+  --teal:      #14756F;
+  --teal-2:    #1C928B;
+  --teal-deep: #0E5650;
+  --mint:      #E7F1EE;
+  --mint-2:    #F1F6F4;
 
   /* Semantic */
   --bg:      var(--cream);
@@ -1451,3 +1457,80 @@ em { font-style: italic; }
 .bg-warm  { background: var(--warm); }
 .bg-deep  { background: var(--deep); }
 .bg-paper { background: var(--paper); }
+
+/* ══════════════════════════════════════
+   HOMEPAGE REFRESH — light, fresh, professional (2026-05-29)
+   Scoped to body.page-home so the inner pages stay untouched.
+   Replaces the dark/brown hero + gold blocks with an airy
+   ivory→mint palette and a calm teal accent.
+══════════════════════════════════════ */
+
+/* ── Hero: dark slab → light & airy ── */
+.page-home .hero {
+  background: linear-gradient(168deg, #FDFCFB 0%, #F3F8F6 46%, #E4EFEB 100%);
+}
+.page-home .hero-bg {
+  background:
+    radial-gradient(ellipse 70% 55% at 78% 26%, rgba(28,146,139,0.16) 0%, transparent 62%),
+    radial-gradient(ellipse 60% 50% at 10% 92%, rgba(20,117,111,0.10) 0%, transparent 60%);
+}
+.page-home .hero-bg::after { opacity: 0.022; }   /* keep grain a whisper on light */
+.page-home .hero::before {                        /* soft decorative arc, top-right */
+  content: '';
+  position: absolute;
+  top: -14%; right: -7%;
+  width: min(48vw, 640px); aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid rgba(20,117,111,0.16);
+  box-shadow: inset 0 0 140px rgba(28,146,139,0.07);
+  pointer-events: none;
+  z-index: 1;
+}
+.page-home .hero-title { color: var(--deep); }
+.page-home .hero-title .italic { color: var(--teal); }
+.page-home .hero-sub { color: #5C6B66; }
+.page-home .hero-eyebrow-bar .eyebrow { color: var(--teal); }
+.page-home .hero-eyebrow-bar .hero-location { color: #6E7A75; text-shadow: none; }
+.page-home .hero-scroll-line { background: linear-gradient(to bottom, rgba(20,117,111,0.6), transparent); }
+.page-home .hero-scroll span { color: rgba(23,48,44,0.42); }
+
+/* Hero buttons re-tuned for a light background */
+.page-home .hero .btn-gold { background: var(--teal); color: #fff; }
+.page-home .hero .btn-gold:hover { background: var(--teal-deep); box-shadow: 0 10px 28px rgba(20,117,111,0.30); }
+.page-home .hero .btn-outline-light { border-color: rgba(23,48,44,0.26); color: var(--deep); }
+.page-home .hero .btn-outline-light:hover { background: rgba(20,117,111,0.07); border-color: var(--teal); color: var(--teal-deep); }
+
+/* ── Nav over the now-light hero (before scroll) ── */
+.page-home .nav:not(.scrolled) .nav-logo-text { color: var(--deep); }
+.page-home .nav:not(.scrolled) .nav-logo-mark { border-color: var(--teal); }
+.page-home .nav:not(.scrolled) .nav-logo-mark svg { color: var(--teal); }
+.page-home .nav:not(.scrolled) .nav-links a { color: #50605B; }
+.page-home .nav:not(.scrolled) .nav-links a:hover { color: var(--deep); background: rgba(20,117,111,0.07); }
+.page-home .nav:not(.scrolled) .nav-lang { border-color: rgba(23,48,44,0.18); }
+.page-home .nav:not(.scrolled) .nav-lang button { color: #6E7A75; }
+.page-home .nav:not(.scrolled) .nav-lang button.is-active { background: var(--teal); color: #fff !important; box-shadow: none; }
+.page-home .nav:not(.scrolled) .nav-burger span { background: var(--deep); }
+
+/* ── Accents: gold → teal across the homepage ── */
+.page-home .eyebrow { color: var(--teal); }
+.page-home .divider { background: var(--teal); }
+.page-home .stat-num { color: var(--teal); }
+.page-home .team-tag { color: var(--teal); }
+.page-home .svc-row:hover .svc-content h3 { color: var(--teal); }
+
+/* ── Marquee: solid brown-gold → clean teal band ── */
+.page-home .marquee-strip { background: var(--teal); }
+
+/* ── Pull-quote: dark slab → soft light panel ── */
+.page-home .pull-quote { background: var(--mint-2); }
+.page-home .pull-quote::before { color: rgba(20,117,111,0.08); }
+.page-home .pull-quote blockquote { color: var(--deep); }
+.page-home .pull-quote blockquote em { color: var(--teal); }
+.page-home .pull-quote cite { color: var(--teal-deep); }
+
+/* ── CTA band: solid gold → light gradient, dark text ── */
+.page-home .cta-band { background: linear-gradient(120deg, #F3F8F6 0%, #E4EFEB 100%); }
+.page-home .cta-band h2 { color: var(--deep); }
+.page-home .cta-band h2 em { color: var(--teal); }
+.page-home .cta-band .btn-dark { background: var(--teal); }
+.page-home .cta-band .btn-dark:hover { background: var(--teal-deep); }
