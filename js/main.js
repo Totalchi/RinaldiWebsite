@@ -132,6 +132,9 @@ const T = {
     'contact.ph.lead':      'Siamo a Savignano sul Rubicone, facilmente raggiungibile da Cesena, Rimini e tutta la Valmarecchia.',
     'contact.info.title':   'Informazioni pratiche',
     'contact.form.title':   'Prenota o scrivi',
+    'contact.cta.title':    'Prenota il tuo appuntamento',
+    'contact.cta.text':     'Per prenotare una visita o per qualsiasi domanda, chiamaci negli orari di apertura oppure scrivici un\'email. Ti richiameremo al più presto per fissare la data e l\'ora che preferisci.',
+    'contact.cta.hours':    'Lun–Ven 9:00–13:00 / 15:00–19:00 · Sabato su appuntamento',
     'contact.form.nome':    'Nome',
     'contact.form.cognome': 'Cognome',
     'contact.form.tel':     'Telefono',
@@ -323,6 +326,9 @@ const T = {
     'contact.ph.lead':      'We are in Savignano sul Rubicone, easily reachable from Cesena, Rimini and the whole Valmarecchia area.',
     'contact.info.title':   'Practical information',
     'contact.form.title':   'Book or write to us',
+    'contact.cta.title':    'Book your appointment',
+    'contact.cta.text':     'To book a visit or for any question, call us during opening hours or send us an email. We\'ll get back to you as soon as possible to arrange the date and time that suits you.',
+    'contact.cta.hours':    'Mon–Fri 9:00–13:00 / 15:00–19:00 · Saturday by appointment',
     'contact.form.nome':    'First name',
     'contact.form.cognome': 'Last name',
     'contact.form.tel':     'Phone',
@@ -848,22 +854,6 @@ document.addEventListener('DOMContentLoaded', () => {
       a.style.color = 'var(--gold)';
   });
 
-  /* ── Contact form ── */
-  const form = document.getElementById('contact-form');
-  if (form) {
-    form.addEventListener('submit', async e => {
-      e.preventDefault();
-      const btn = form.querySelector('button[type="submit"]');
-      const success = document.getElementById('form-success');
-      btn.disabled = true;
-      const orig = btn.textContent;
-      btn.textContent = localStorage.getItem('sdm-lang') === 'en' ? 'Sending…' : 'Invio in corso…';
-      await new Promise(r => setTimeout(r, 1200));
-      btn.disabled = false;
-      btn.textContent = orig;
-      form.reset();
-      if (success) { success.style.display = 'block'; setTimeout(() => success.style.display = 'none', 6000); }
-    });
-  }
+  /* Contact form removed — bookings now go via phone/email (see contatti.html). */
 
 });
