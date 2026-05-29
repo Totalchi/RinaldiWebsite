@@ -16,7 +16,7 @@ const T = {
     'cookie.btn':  'Accetta',
     /* Index — hero */
     'hero.eyebrow':  'Studio Dentistico',
-    'hero.title':    'Il sorriso<br>che <span class="italic">meriti</span>,<br>curato con<br><span class="italic">arte</span>.',
+    'hero.title':    'Il sorriso che <em>meriti</em>,<br>curato con <em>arte</em>.',
     'hero.sub':      'Tre specialisti, un approccio personale. Da oltre 25 anni ci prendiamo cura della salute dentale delle famiglie di Savignano e dintorni.',
     'hero.cta1':     'Prenota una visita',
     'hero.cta2':     'Urgenze',
@@ -210,7 +210,7 @@ const T = {
     'cookie.btn':  'Accept',
     /* Index — hero */
     'hero.eyebrow':  'Dental Practice',
-    'hero.title':    'The smile you<br><em>deserve</em>,<br>crafted with<br><em>artistry</em>.',
+    'hero.title':    'The smile you <em>deserve</em>,<br>crafted with <em>artistry</em>.',
     'hero.sub':      'Three specialists, one personal approach. For over 25 years we have cared for the dental health of families in Savignano and the surrounding area.',
     'hero.cta1':     'Book an appointment',
     'hero.cta2':     'Emergency',
