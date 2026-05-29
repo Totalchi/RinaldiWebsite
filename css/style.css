@@ -1534,3 +1534,10 @@ em { font-style: italic; }
 .page-home .cta-band h2 em { color: var(--teal); }
 .page-home .cta-band .btn-dark { background: var(--teal); }
 .page-home .cta-band .btn-dark:hover { background: var(--teal-deep); }
+
+/* ── Remaining gold buttons → teal for a cohesive homepage ── */
+.page-home .nav-cta-btn { background: var(--teal); color: #fff; }
+.page-home .nav-cta-btn:hover { background: var(--teal-deep); box-shadow: 0 8px 24px rgba(20,117,111,0.30); }
+.page-home .mob-drawer .btn-gold { background: var(--teal); color: #fff; }
+.page-home .cookie-bar .btn-gold { background: var(--teal); color: #fff; }
+.page-home .cookie-bar .btn-gold:hover { background: var(--teal-deep); }
