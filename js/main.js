@@ -12,12 +12,13 @@ const T = {
     'nav.contact': 'Contatti',
     'nav.book':    'Prenota',
     /* Cookie */
-    'cookie.p':    'Utilizziamo cookie tecnici per il funzionamento del sito. <a href="cookie.html">Cookie policy</a> · <a href="privacy.html">Privacy</a>',
+    'cookie.p':    'Usiamo cookie tecnici necessari al funzionamento del sito. Con il tuo consenso raccogliamo anche statistiche d\'uso anonime e la posizione approssimativa per migliorare il sito. <a href="cookie.html">Cookie policy</a> · <a href="privacy.html">Privacy</a>',
     'cookie.btn':  'Accetta',
+    'cookie.reject': 'Rifiuta',
     /* Index — hero */
     'hero.eyebrow':  'Studio Dentistico',
     'hero.title':    'Il sorriso che <em>meriti</em>,<br>curato con <em>arte</em>.',
-    'hero.sub':      'Tre specialisti, un approccio personale. Da oltre 25 anni ci prendiamo cura della salute dentale delle famiglie di Savignano e dintorni.',
+    'hero.sub':      'Tre specialisti, un approccio personale. Da oltre 20 anni ci prendiamo cura della salute dentale delle famiglie di Savignano e dintorni.',
     'hero.cta1':     'Prenota una visita',
     'hero.cta2':     'Urgenze',
     /* Stats */
@@ -28,7 +29,7 @@ const T = {
     /* Intro */
     'intro.eyebrow': 'Chi siamo',
     'intro.title':   'Un luogo dove<br><em>la cura è di casa</em>.',
-    'intro.p1':      'Lo Studio Dentistico Rinaldi Montalbano nasce nel 1998 dalla visione di Dott. Marcello Rinaldi: offrire cure dentali di alto livello in un ambiente familiare, dove ogni paziente è accolto per nome e trattato come persona, non come numero.',
+    'intro.p1':      'Lo Studio Dentistico Rinaldi Montalbano nasce nel 2003 dalla visione di Dott. Marcello Rinaldi: offrire cure dentali di alto livello in un ambiente familiare, dove ogni paziente è accolto per nome e trattato come persona, non come numero.',
     'intro.p2':      'Oggi, insieme a Dott.ssa Clara Montalbano e Dott. Mauro Rinaldi, formiamo un team multidisciplinare che copre ogni aspetto della salute orale — dalla prima visita del bambino alla riabilitazione completa dell\'adulto.',
     'intro.cta':     'Conosci il team',
     /* Services */
@@ -56,13 +57,13 @@ const T = {
     'svc.09.desc': 'Tomografia computerizzata per diagnosi precise in implantologia, chirurgia e ortodonzia.',
     /* Quote */
     'quote.text': '"La bocca è la porta della salute. Noi ci prendiamo cura di <em>quella porta</em>, con rispetto e precisione."',
-    'quote.cite': 'Studio Dentistico Rinaldi Montalbano — dal 1998',
+    'quote.cite': 'Studio Dentistico Rinaldi Montalbano — dal 2003',
     /* Team */
     'team.eyebrow': 'Il team',
     'team.title':   'Tre dentisti.<br><em>Un\'unica visione.</em>',
     'team.cta':     'Leggi le biografie',
     'team.1.tag':   'Fondatore · Implantologia',
-    'team.1.bio':   'Fondatore dello studio nel 1998. Specialista in implantologia e chirurgia orale con oltre 25 anni di esperienza nel territorio romagnolo.',
+    'team.1.bio':   'Fondatore dello studio nel 2003. Specialista in implantologia e chirurgia orale con oltre 20 anni di esperienza nel territorio romagnolo.',
     'team.2.tag':   'Ortodonzia · Pedodonzia',
     'team.2.bio':   'Specialista in ortodonzia fissa e mobile, con particolare attenzione ai pazienti in età evolutiva e al trattamento con allineatori trasparenti.',
     'team.3.tag':   'Protesi · Estetica',
@@ -88,7 +89,7 @@ const T = {
     'team.ph.h1':       'Tre dentisti.<br><em>Un\'unica cura.</em>',
     'team.ph.lead':     'Tre professionisti uniti dalla passione per la cura del paziente e dall\'aggiornamento continuo.',
     'team.history.eyebrow': 'La nostra storia',
-    'team.history.title':   'Dal 1998, con la stessa <em>dedizione</em>.',
+    'team.history.title':   'Dal 2003, con la stessa <em>dedizione</em>.',
     'team.history.p1':      'Lo studio nasce dalla volontà di Dott. Marcello Rinaldi di portare a Savignano sul Rubicone un centro odontoiatrico che unisse competenza specialistica e calore umano. Nel corso degli anni, si sono uniti Dott.ssa Clara Montalbano e Dott. Mauro Rinaldi, rendendo lo studio un vero riferimento per le famiglie del territorio.',
     'team.values.eyebrow':  'I nostri valori',
     'team.values.title':    'Cosa ci guida <em>ogni giorno</em>.',
@@ -170,7 +171,7 @@ const T = {
     /* chi-siamo.html — new keys */
     'team.section.eyebrow': 'Il team',
     'team.section.title':   'I professionisti<br><em>che ti curano.</em>',
-    'team.history.p2':      'In oltre venticinque anni lo studio è cresciuto, si è arricchito di nuovi specialisti e di tecnologie all\'avanguardia, senza mai perdere il calore di un approccio familiare. Ogni paziente viene accolto per nome, ascoltato con attenzione e accompagnato in ogni fase del percorso di cura.',
+    'team.history.p2':      'In oltre vent\'anni lo studio è cresciuto, si è arricchito di nuovi specialisti e di tecnologie all\'avanguardia, senza mai perdere il calore di un approccio familiare. Ogni paziente viene accolto per nome, ascoltato con attenzione e accompagnato in ogni fase del percorso di cura.',
     'team.history.p3':      'Siamo profondamente radicati nel territorio romagnolo: Savignano sul Rubicone è la nostra casa, e le famiglie di questa zona sono le nostre famiglie da generazioni.',
     /* trattamenti.html — new keys */
     'treat.list.eyebrow': 'Tutte le specializzazioni',
@@ -206,12 +207,13 @@ const T = {
     'nav.contact': 'Contact',
     'nav.book':    'Book',
     /* Cookie */
-    'cookie.p':    'We use technical cookies to make this site work. <a href="cookie.html">Cookie policy</a> · <a href="privacy.html">Privacy</a>',
+    'cookie.p':    'We use technical cookies needed for the site to work. With your consent we also collect anonymous usage statistics and approximate location to improve the site. <a href="cookie.html">Cookie policy</a> · <a href="privacy.html">Privacy</a>',
     'cookie.btn':  'Accept',
+    'cookie.reject': 'Reject',
     /* Index — hero */
     'hero.eyebrow':  'Dental Practice',
     'hero.title':    'The smile you <em>deserve</em>,<br>crafted with <em>artistry</em>.',
-    'hero.sub':      'Three specialists, one personal approach. For over 25 years we have cared for the dental health of families in Savignano and the surrounding area.',
+    'hero.sub':      'Three specialists, one personal approach. For over 20 years we have cared for the dental health of families in Savignano and the surrounding area.',
     'hero.cta1':     'Book an appointment',
     'hero.cta2':     'Emergency',
     /* Stats */
@@ -222,7 +224,7 @@ const T = {
     /* Intro */
     'intro.eyebrow': 'About us',
     'intro.title':   'A place where<br><em>care feels like home</em>.',
-    'intro.p1':      'Studio Dentistico Rinaldi Montalbano was founded in 1998 by Dr Marcello Rinaldi with a clear vision: to provide high-quality dental care in a welcoming, family environment where every patient is greeted by name.',
+    'intro.p1':      'Studio Dentistico Rinaldi Montalbano was founded in 2003 by Dr Marcello Rinaldi with a clear vision: to provide high-quality dental care in a welcoming, family environment where every patient is greeted by name.',
     'intro.p2':      'Today, together with Dr Clara Montalbano and Dr Mauro Rinaldi, we form a multidisciplinary team covering every aspect of oral health — from a child\'s first visit to full adult rehabilitation.',
     'intro.cta':     'Meet the team',
     /* Services */
@@ -250,13 +252,13 @@ const T = {
     'svc.09.desc': 'Computed tomography for precise diagnosis in implantology, surgery and orthodontics.',
     /* Quote */
     'quote.text': '"The mouth is the gateway to health. We take care of <em>that gateway</em>, with respect and precision."',
-    'quote.cite': 'Studio Dentistico Rinaldi Montalbano — since 1998',
+    'quote.cite': 'Studio Dentistico Rinaldi Montalbano — since 2003',
     /* Team */
     'team.eyebrow': 'The team',
     'team.title':   'Three dentists.<br><em>One vision.</em>',
     'team.cta':     'Read the biographies',
     'team.1.tag':   'Founder · Implantology',
-    'team.1.bio':   'Founder of the practice in 1998. Specialist in implantology and oral surgery with over 25 years of experience in the Romagna region.',
+    'team.1.bio':   'Founder of the practice in 2003. Specialist in implantology and oral surgery with over 20 years of experience in the Romagna region.',
     'team.2.tag':   'Orthodontics · Paediatrics',
     'team.2.bio':   'Specialist in fixed and removable orthodontics, with particular focus on young patients and clear aligner treatment.',
     'team.3.tag':   'Prosthetics · Aesthetics',
@@ -282,7 +284,7 @@ const T = {
     'team.ph.h1':       'Three dentists.<br><em>One care.</em>',
     'team.ph.lead':     'Three professionals united by their passion for patient care and continuous professional development.',
     'team.history.eyebrow': 'Our story',
-    'team.history.title':   'Since 1998, with the same <em>dedication</em>.',
+    'team.history.title':   'Since 2003, with the same <em>dedication</em>.',
     'team.history.p1':      'The practice was born from Dr Marcello Rinaldi\'s desire to bring to Savignano sul Rubicone a dental centre combining specialist expertise with human warmth. Over the years, Dr Clara Montalbano and Dr Mauro Rinaldi joined the team, making the practice a true reference point for families in the area.',
     'team.values.eyebrow':  'Our values',
     'team.values.title':    'What guides us <em>every day</em>.',
@@ -364,7 +366,7 @@ const T = {
     /* chi-siamo.html — new keys */
     'team.section.eyebrow': 'The team',
     'team.section.title':   'The professionals<br><em>who care for you.</em>',
-    'team.history.p2':      'Over more than twenty-five years the practice has grown, welcoming new specialists and cutting-edge technologies, without ever losing the warmth of a family approach. Every patient is greeted by name, listened to carefully and supported at every stage of their care.',
+    'team.history.p2':      'Over more than twenty years the practice has grown, welcoming new specialists and cutting-edge technologies, without ever losing the warmth of a family approach. Every patient is greeted by name, listened to carefully and supported at every stage of their care.',
     'team.history.p3':      'We are deeply rooted in the Romagna region: Savignano sul Rubicone is our home, and the families of this area have been our families for generations.',
     /* trattamenti.html — new keys */
     'treat.list.eyebrow': 'All specialisations',
@@ -432,7 +434,7 @@ const STATIC_TEXT_EN = {
   'Tomografia computerizzata per diagnosi precise in implantologia, chirurgia e ortodonzia.': 'Computed tomography for precise diagnosis in implantology, surgery and orthodontics.',
   'Leggi le biografie': 'Read the biographies',
   'Fondatore · Implantologia': 'Founder · Implantology',
-  'Fondatore dello studio nel 1998. Specialista in implantologia e chirurgia orale con oltre 25 anni di esperienza nel territorio romagnolo.': 'Founder of the practice in 1998. Specialist in implantology and oral surgery with over 25 years of experience in the Romagna region.',
+  'Fondatore dello studio nel 2003. Specialista in implantologia e chirurgia orale con oltre 20 anni di esperienza nel territorio romagnolo.': 'Founder of the practice in 2003. Specialist in implantology and oral surgery with over 20 years of experience in the Romagna region.',
   'Ortodonzia · Pedodonzia': 'Orthodontics · Paediatric Dentistry',
   'Specialista in ortodonzia fissa e mobile, con particolare attenzione ai pazienti in età evolutiva e al trattamento con allineatori trasparenti.': 'Specialist in fixed and removable orthodontics, with particular attention to young patients and clear aligner treatment.',
   'Protesi · Estetica': 'Prosthetics · Aesthetics',
@@ -446,7 +448,7 @@ const STATIC_TEXT_EN = {
   'Utilizziamo cookie tecnici.': 'We use technical cookies.',
   'Utilizziamo cookie tecnici per il funzionamento del sito.': 'We use technical cookies to make this site work.',
   'Accetta': 'Accept',
-  'Da oltre venticinque anni, tre professionisti condividono uno spazio, una filosofia e un obiettivo: prendersi cura della salute orale di ogni paziente come se fosse di famiglia.': 'For over twenty-five years, three professionals have shared one space, one philosophy and one goal: caring for each patient\'s oral health as if they were family.',
+  'Da oltre vent\'anni, tre professionisti condividono uno spazio, una filosofia e un obiettivo: prendersi cura della salute orale di ogni paziente come se fosse di famiglia.': 'For over twenty years, three professionals have shared one space, one philosophy and one goal: caring for each patient\'s oral health as if they were family.',
   'Nati qui,': 'Born here,',
   'cresciuti con voi.': 'grown with you.',
   'Lo studio nasce nel': 'The practice was founded in',
@@ -457,7 +459,7 @@ const STATIC_TEXT_EN = {
   'Trattamenti': 'Treatments',
   'Fondatore · Implantologia &amp; Chirurgia Orale': 'Founder · Implantology & Oral Surgery',
   'Fondatore · Implantologia & Chirurgia Orale': 'Founder · Implantology & Oral Surgery',
-  'Fondatore dello studio nel 1998, il Dott. Marcello Rinaldi è specialista in implantologia e chirurgia orale con oltre venticinque anni di esperienza clinica. Cresciuto e formatosi nel territorio romagnolo, porta in ogni intervento la precisione della specializzazione e il calore di chi conosce i propri pazienti da una vita. È il punto di riferimento per i casi più complessi di chirurgia implantologica, con un approccio diretto, trasparente e sempre orientato al benessere del paziente.': 'Founder of the practice in 1998, Dr Marcello Rinaldi is a specialist in implantology and oral surgery with more than twenty-five years of clinical experience. Raised and trained in the Romagna region, he brings specialist precision and the warmth of someone who has known his patients for a lifetime to every procedure. He is the reference point for the most complex implant surgery cases, with a direct, transparent approach always focused on patient wellbeing.',
+  'Fondatore dello studio nel 2003, il Dott. Marcello Rinaldi è specialista in implantologia e chirurgia orale con oltre vent\'anni di esperienza clinica. Cresciuto e formatosi nel territorio romagnolo, porta in ogni intervento la precisione della specializzazione e il calore di chi conosce i propri pazienti da una vita. È il punto di riferimento per i casi più complessi di chirurgia implantologica, con un approccio diretto, trasparente e sempre orientato al benessere del paziente.': 'Founder of the practice in 2003, Dr Marcello Rinaldi is a specialist in implantology and oral surgery with more than twenty years of clinical experience. Raised and trained in the Romagna region, he brings specialist precision and the warmth of someone who has known his patients for a lifetime to every procedure. He is the reference point for the most complex implant surgery cases, with a direct, transparent approach always focused on patient wellbeing.',
   'Ortodonzia · Allineatori · Pedodonzia': 'Orthodontics · Aligners · Paediatric Dentistry',
   'Specialista in ortodonzia fissa e mobile, la Dott.ssa Clara Montalbano si distingue per la competenza con gli allineatori trasparenti e per la cura particolare riservata alla pedodonzia. Il suo approccio gentile e rassicurante la rende il riferimento per i pazienti più giovani e per le famiglie che cercano un dentista capace di mettere a proprio agio anche i bambini più timorosi. Porta avanti la propria formazione con costanza, aggiornandosi sulle tecniche ortodontiche più innovative.': 'A specialist in fixed and removable orthodontics, Dr Clara Montalbano is known for her expertise with clear aligners and her special care in paediatric dentistry. Her gentle, reassuring approach makes her a trusted point of reference for younger patients and for families looking for a dentist who can put even the most anxious children at ease. She continues her professional development consistently, keeping up to date with the most innovative orthodontic techniques.',
   'Protesi · Riabilitazione · Estetica': 'Prosthetics · Rehabilitation · Aesthetics',
@@ -493,7 +495,7 @@ const STATIC_TEXT_EN = {
   '"Ogni bocca racconta una storia diversa. Il nostro compito è': '"Every mouth tells a different story. Our task is to',
   'leggerla con cura': 'read it with care',
   ', trattarla con competenza e restituire un sorriso che duri nel tempo."': ', treat it with expertise and restore a smile that lasts."',
-  'Studio Dentistico Rinaldi Montalbano — approccio olistico dal 1998': 'Studio Dentistico Rinaldi Montalbano — holistic approach since 1998',
+  'Studio Dentistico Rinaldi Montalbano — approccio olistico dal 2003': 'Studio Dentistico Rinaldi Montalbano — holistic approach since 2003',
   'Prenota una visita': 'Book an appointment',
   'di consulenza.': 'consultation.',
   'Studio Dentistico Rinaldi Montalbano · Via Emilia Ovest 45/A, Savignano sul Rubicone': 'Studio Dentistico Rinaldi Montalbano · Via Emilia Ovest 45/A, Savignano sul Rubicone',
@@ -589,6 +591,8 @@ const STATIC_TEXT_EN = {
   'informazioni relative allo stato di salute orale, anamnesi medica, diagnosi, piani di trattamento, radiografie e documentazione clinica raccolta nel corso delle visite;': 'information relating to oral health, medical history, diagnoses, treatment plans, X-rays and clinical documentation collected during visits;',
   'Dati di navigazione:': 'Browsing data:',
   'indirizzo IP, tipo di browser, sistema operativo e pagine visitate, raccolti automaticamente in forma anonima o pseudonimizzata dai log del server.': 'IP address, browser type, operating system and visited pages, collected automatically in anonymous or pseudonymised form from server logs.',
+  'Dati di utilizzo e statistiche (previo consenso):': 'Usage and statistics data (with consent):',
+  'con il vostro consenso raccogliamo dati aggregati e anonimi sull\'uso del sito (pagine viste, durata della visita, sezioni e click), tipo di dispositivo, lingua e posizione geografica approssimativa (ricavata dall\'indirizzo IP e dalla geolocalizzazione del browser), tramite un sistema di statistica di prima parte, per finalità statistiche e di miglioramento del sito. Potete rifiutare questa raccolta tramite il banner dei cookie.': 'with your consent we collect aggregated, anonymous data on site usage (pages viewed, visit duration, sections and clicks), device type, language and approximate geographic location (derived from the IP address and browser geolocation), through a first-party statistics system, for statistical and site-improvement purposes. You can refuse this collection via the cookie banner.',
   'Non raccogliamo dati sensibili ulteriori rispetto a quelli strettamente necessari per le finalità indicate. Non raccogliamo dati di persone di età inferiore ai 14 anni senza il consenso esplicito dei genitori o tutori legali.': 'We do not collect sensitive data beyond what is strictly necessary for the purposes indicated. We do not collect data from people under 14 years of age without the explicit consent of parents or legal guardians.',
   '3. Finalità e base giuridica del trattamento': '3. Purposes and legal basis of processing',
   '3.1 Gestione delle prenotazioni e dei rapporti clinici': '3.1 Management of bookings and clinical relationships',
@@ -672,10 +676,10 @@ Object.assign(STATIC_TEXT_EN, {
   'Informativa sulla privacy di Google': 'Google Privacy Policy',
   'e la': 'and the',
   'pagina dedicata ai cookie di Google': 'Google cookies page',
-  'Questo sito non utilizza cookie di profilazione, strumenti di remarketing pubblicitario, pixel di tracciamento o servizi di analisi di terze parti (come Google Analytics). La vostra navigazione non viene profilata a fini commerciali.': 'This site does not use profiling cookies, advertising remarketing tools, tracking pixels or third-party analytics services such as Google Analytics. Your browsing is not profiled for commercial purposes.',
+  'Questo sito raccoglie statistiche d\'uso aggregate e anonime (pagine viste, durata della visita, sezioni e click, posizione geografica approssimativa) tramite un sistema di prima parte ospitato sui nostri sistemi, al solo scopo di migliorare il sito. Non utilizza cookie di profilazione, strumenti di remarketing pubblicitario, pixel di tracciamento né servizi di analisi di terze parti (come Google Analytics), e la vostra navigazione non viene profilata a fini commerciali.': 'This site collects aggregated, anonymous usage statistics (pages viewed, visit duration, sections and clicks, approximate geographic location) through a first-party system hosted on our own infrastructure, solely to improve the site. It does not use profiling cookies, advertising remarketing tools, tracking pixels or third-party analytics services (such as Google Analytics), and your browsing is not profiled for commercial purposes.',
   'Potete controllare, limitare o eliminare i cookie direttamente attraverso le impostazioni del vostro browser. Di seguito trovate i link alle istruzioni dei browser più diffusi:': 'You can control, limit or delete cookies directly through your browser settings. Below are links to instructions for the most common browsers:',
   'Tenete presente che la disabilitazione dei cookie tecnici potrebbe compromettere il corretto funzionamento di alcune funzionalità del sito, come il ricordo delle preferenze linguistiche o la conservazione del vostro consenso al banner cookie.': 'Please note that disabling technical cookies may affect the correct operation of some site functions, such as remembering language preferences or storing your cookie banner consent.',
-  'In conformità con il Provvedimento del Garante per la protezione dei dati personali sull\'uso dei cookie (8 maggio 2014) e con le successive linee guida del 2021, il presente sito non richiede il consenso preventivo per i soli cookie tecnici elencati al punto 2. Il banner informativo visibile al primo accesso al sito vi segnala la presenza di cookie tecnici e vi rimanda a questa pagina per i dettagli.': 'In accordance with the Italian Data Protection Authority provision on cookie use (8 May 2014) and the subsequent 2021 guidelines, this site does not require prior consent for the technical cookies listed in section 2 only. The information banner shown on first access informs you of the presence of technical cookies and refers you to this page for details.',
+  'In conformità con il Provvedimento del Garante per la protezione dei dati personali sull\'uso dei cookie (8 maggio 2014) e con le successive linee guida del 2021, i cookie tecnici elencati al punto 2 non richiedono il consenso preventivo. La raccolta di statistiche d\'uso e della posizione approssimativa avviene invece solo previo vostro consenso, espresso tramite il pulsante «Accetta» del banner; potete rifiutarla con «Rifiuta» o modificare la scelta in qualsiasi momento cancellando i dati di navigazione del sito.': 'In accordance with the Italian Data Protection Authority provision on cookie use (8 May 2014) and the subsequent 2021 guidelines, the technical cookies listed in section 2 do not require prior consent. The collection of usage statistics and approximate location, however, takes place only with your prior consent, given via the «Accept» button on the banner; you can refuse it with «Reject» or change your choice at any time by clearing the site\'s browsing data.',
   'Per i cookie di Google Maps (di terze parti), l\'utilizzo del sito e della pagina Contatti implica l\'accettazione delle politiche cookie di Google, come da informativa al punto 3. Se non desiderate che Google imposti cookie attraverso la mappa incorporata, potete accedere alle informazioni sull\'indirizzo dello studio in altri modi (ad esempio ricercando l\'indirizzo direttamente su maps.google.com in una sessione separata) o disabilitare i cookie di terze parti nel vostro browser.': 'For Google Maps cookies (third-party cookies), use of the site and the Contact page implies acceptance of Google\'s cookie policies, as explained in section 3. If you do not want Google to set cookies through the embedded map, you can access the practice address information in other ways, for example by searching the address directly on maps.google.com in a separate session, or disable third-party cookies in your browser.',
   'Per qualsiasi domanda relativa all\'utilizzo dei cookie su questo sito, potete contattarci a': 'For any question about the use of cookies on this site, you can contact us at',
   '. Per informazioni più ampie sul trattamento dei vostri dati personali, consultate la nostra': '. For broader information on the processing of your personal data, please consult our',
@@ -719,6 +723,8 @@ function translateStaticContent(lang) {
     acceptNode(node) {
       const parent = node.parentElement;
       if (!parent || ['SCRIPT', 'STYLE', 'SVG'].includes(parent.tagName)) return NodeFilter.FILTER_REJECT;
+      /* Dynamic team cards manage their own (already-translated) text */
+      if (parent.closest('[data-team-list][data-dynamic="1"]')) return NodeFilter.FILTER_REJECT;
       return node.nodeValue.trim() ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
     }
   });
@@ -741,6 +747,173 @@ function translateStaticContent(lang) {
       if (value && attrMap[value]) el.setAttribute(attr, attrMap[value]);
     });
   });
+}
+
+/* ── Dynamic team members (Supabase) ── */
+let teamMembers = null;
+
+function sdmEscHtml(s) {
+  return String(s == null ? '' : s)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+function sdmEscAttr(s) { return sdmEscHtml(s).replace(/"/g, '&quot;'); }
+
+function teamCardHTML(m, lang, bioType) {
+  const tag = (lang === 'en' ? m.tag_en : m.tag_it) || '';
+  const shortBio = (lang === 'en' ? m.bio_short_en : m.bio_short_it) || '';
+  const longBio  = (lang === 'en' ? m.bio_long_en  : m.bio_long_it)  || shortBio;
+  const bio = bioType === 'long' ? longBio : shortBio;
+  const grad = `linear-gradient(145deg, ${m.gradient_from || '#D8CFC4'} 0%, ${m.gradient_to || '#9E7E3A'} 100%)`;
+  const inner = m.photo_url
+    ? `<img src="${sdmEscAttr(m.photo_url)}" alt="${sdmEscAttr(m.name)}" loading="lazy">`
+    : `<div class="team-photo-bg" data-initials="${sdmEscAttr(m.initials || '')}" style="--accent:${sdmEscAttr(m.gradient_to || '#9E7E3A')}"></div>`;
+  return '<div class="team-card reveal is-in">'
+    + `<div class="team-photo" style="background:${grad}">${inner}</div>`
+    + `<div class="team-tag">${sdmEscHtml(tag)}</div>`
+    + `<h3>${sdmEscHtml(m.name)}</h3>`
+    + `<p>${sdmEscHtml(bio)}</p>`
+    + '</div>';
+}
+
+function renderTeam(lang) {
+  if (!teamMembers || !teamMembers.length) return;
+  document.querySelectorAll('[data-team-list]').forEach(list => {
+    const bioType = list.dataset.bio || 'short';
+    list.innerHTML = teamMembers.map(m => teamCardHTML(m, lang, bioType)).join('');
+    list.dataset.dynamic = '1';
+    if (list.closest('.team-carousel')) {
+      requestAnimationFrame(() => list.dispatchEvent(new Event('scroll')));
+    }
+  });
+}
+
+async function loadTeam() {
+  const cfg = window.SDM_CONFIG;
+  if (!cfg || !cfg.SUPABASE_URL) return;
+  try {
+    const r = await fetch(cfg.SUPABASE_URL + '/rest/v1/team_members?select=*&order=sort_order.asc', {
+      headers: { apikey: cfg.SUPABASE_ANON_KEY, Authorization: 'Bearer ' + cfg.SUPABASE_ANON_KEY }
+    });
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const data = await r.json();
+    if (data && data.length) {
+      teamMembers = data;
+      renderTeam(localStorage.getItem('sdm-lang') || 'it');
+    }
+  } catch (e) {
+    console.warn('[SDM] team load failed, keeping static cards:', e && e.message ? e.message : e);
+  }
+}
+
+/* ── Anonymous usage analytics (first-party, Supabase) ── */
+function initAnalytics() {
+  const cfg = window.SDM_CONFIG;
+  if (!cfg || !cfg.SUPABASE_URL) return;
+  const ENDPOINT = cfg.SUPABASE_URL + '/rest/v1/analytics_events';
+  const KEY = cfg.SUPABASE_ANON_KEY;
+
+  let sid = sessionStorage.getItem('sdm-sid');
+  if (!sid) {
+    sid = (crypto.randomUUID && crypto.randomUUID()) || ('s-' + Date.now() + '-' + Math.random().toString(36).slice(2));
+    sessionStorage.setItem('sdm-sid', sid);
+  }
+  const device = window.matchMedia('(max-width: 760px)').matches ? 'mobile' : 'desktop';
+  const page = location.pathname.split('/').pop() || 'index.html';
+  const curLang = () => localStorage.getItem('sdm-lang') || 'it';
+  let geo = {};
+  let lastSection = page;
+
+  function send(event_type, label, value) {
+    const body = Object.assign({
+      session_id: sid, event_type,
+      label: label != null ? String(label).slice(0, 80) : null,
+      value: value != null ? value : null,
+      device, lang: curLang()
+    }, geo);
+    try {
+      fetch(ENDPOINT, {
+        method: 'POST', keepalive: true,
+        headers: { apikey: KEY, Authorization: 'Bearer ' + KEY, 'Content-Type': 'application/json', Prefer: 'return=minimal' },
+        body: JSON.stringify(body)
+      }).catch(function () {});
+    } catch (e) {}
+  }
+
+  /* pageview, after a best-effort IP geolocation */
+  (async () => {
+    try {
+      const ctrl = new AbortController();
+      const to = setTimeout(() => ctrl.abort(), 3000);
+      const r = await fetch('https://ipapi.co/json/', { signal: ctrl.signal });
+      clearTimeout(to);
+      if (r.ok) {
+        const d = await r.json();
+        geo = {
+          city: d.city || null, region: d.region || null,
+          country: d.country_name || d.country || null,
+          latitude: d.latitude || null, longitude: d.longitude || null
+        };
+      }
+    } catch (e) {}
+    send('pageview', page);
+  })();
+
+  /* section visibility (once each) */
+  if ('IntersectionObserver' in window) {
+    const seen = new Set();
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        const el = e.target;
+        const name = el.dataset.track || el.id || (el.className && el.className.toString().split(' ')[0]) || 'section';
+        lastSection = name;
+        if (!seen.has(name)) { seen.add(name); send('section', name); }
+      });
+    }, { threshold: 0.3 });
+    document.querySelectorAll('section, .cta-band, .pull-quote, .stats-row, [data-track]').forEach(s => io.observe(s));
+  }
+
+  /* clicks on links/buttons */
+  document.addEventListener('click', e => {
+    const el = e.target.closest('a, button');
+    if (!el) return;
+    let label = el.dataset.track || el.getAttribute('aria-label') || (el.textContent || '').replace(/\s+/g, ' ').trim();
+    const href = el.getAttribute && el.getAttribute('href');
+    if (href && href.indexOf('tel:') === 0) label = 'tel ' + href.slice(4);
+    if (label) send('click', label);
+  }, true);
+
+  /* time on page */
+  let start = Date.now(), durationSent = false;
+  function flushDuration() {
+    if (durationSent) return;
+    durationSent = true;
+    send('duration', page, Math.round((Date.now() - start) / 1000));
+  }
+  window.addEventListener('pagehide', flushDuration);
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') flushDuration(); });
+
+  /* heartbeat keeps the session "live" in the dashboard */
+  setInterval(() => { if (document.visibilityState === 'visible') send('heartbeat', lastSection); }, 30000);
+
+  /* precise location (consent already given) — requested once per session */
+  if (navigator.geolocation && !sessionStorage.getItem('sdm-geo')) {
+    sessionStorage.setItem('sdm-geo', '1');
+    navigator.geolocation.getCurrentPosition(async pos => {
+      const lat = pos.coords.latitude, lng = pos.coords.longitude;
+      let city = null, region = null, country = null;
+      try {
+        const r = await fetch('https://nominatim.openstreetmap.org/reverse?format=json&zoom=10&lat=' + lat + '&lon=' + lng);
+        if (r.ok) {
+          const d = await r.json(); const a = d.address || {};
+          city = a.city || a.town || a.village || a.municipality || null;
+          region = a.state || null; country = a.country || null;
+        }
+      } catch (e) {}
+      geo = { city, region, country, latitude: lat, longitude: lng };
+      send('geo', 'gps');
+    }, () => {}, { timeout: 8000, maximumAge: 600000 });
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -801,10 +974,13 @@ document.addEventListener('DOMContentLoaded', () => {
     /* Cookie bar */
     const cpEl = document.getElementById('cookie-p');
     const cbEl = document.getElementById('cookie-ok');
+    const cnEl = document.getElementById('cookie-no');
     if (cpEl) cpEl.innerHTML = T[l]['cookie.p'];
     if (cbEl) cbEl.textContent = T[l]['cookie.btn'];
+    if (cnEl) cnEl.textContent = T[l]['cookie.reject'];
 
     translateStaticContent(l);
+    renderTeam(l);
   }
 
   const lang = localStorage.getItem('sdm-lang') || 'it';
@@ -837,12 +1013,47 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-in'));
   }
 
-  /* ── Cookie bar ── */
+  /* ── Team carousel ── */
+  document.querySelectorAll('.team-carousel').forEach(carousel => {
+    const track = carousel.querySelector('.team-track');
+    if (!track) return;
+    const prev = carousel.querySelector('.team-nav-prev');
+    const next = carousel.querySelector('.team-nav-next');
+
+    const stepSize = () => {
+      const card = track.querySelector('.team-card');
+      const gap = parseFloat(getComputedStyle(track).columnGap) || 32;
+      return card ? card.getBoundingClientRect().width + gap : track.clientWidth;
+    };
+
+    /* Arrows stay visible at all times; scrollBy is a no-op once at an end. */
+    prev?.addEventListener('click', () => track.scrollBy({ left: -stepSize(), behavior: 'smooth' }));
+    next?.addEventListener('click', () => track.scrollBy({ left: stepSize(), behavior: 'smooth' }));
+  });
+
+  /* ── Cookie consent (opt-in: analytics only after explicit consent) ── */
   const cookieBar = document.getElementById('cookie-bar');
   if (cookieBar) {
-    if (localStorage.getItem('sdm-cookies')) cookieBar.classList.add('is-hidden');
-    document.getElementById('cookie-ok')?.addEventListener('click', () => {
-      localStorage.setItem('sdm-cookies', '1');
+    const okBtn = document.getElementById('cookie-ok');
+    let noBtn = document.getElementById('cookie-no');
+    if (!noBtn && okBtn) {
+      noBtn = document.createElement('button');
+      noBtn.id = 'cookie-no';
+      noBtn.type = 'button';
+      noBtn.className = 'btn btn-sm btn-cookie-no';
+      noBtn.textContent = (T[lang] && T[lang]['cookie.reject']) || 'Rifiuta';
+      okBtn.parentNode.insertBefore(noBtn, okBtn);
+    }
+    const consent = localStorage.getItem('sdm-consent');
+    if (consent) cookieBar.classList.add('is-hidden');
+    if (consent === 'accepted') initAnalytics();
+    okBtn && okBtn.addEventListener('click', () => {
+      localStorage.setItem('sdm-consent', 'accepted');
+      cookieBar.classList.add('is-hidden');
+      initAnalytics();
+    });
+    noBtn && noBtn.addEventListener('click', () => {
+      localStorage.setItem('sdm-consent', 'rejected');
       cookieBar.classList.add('is-hidden');
     });
   }
@@ -855,5 +1066,14 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* Contact form removed — bookings now go via phone/email (see contatti.html). */
+
+  /* ── Load dynamic team members from Supabase (replaces static cards) ── */
+  loadTeam();
+
+  /* ── Hidden admin access via the footer © symbol (like RM Bygg) ── */
+  const copyEl = document.querySelector('.footer-bottom span');
+  if (copyEl && copyEl.textContent.indexOf('©') !== -1 && !copyEl.querySelector('a')) {
+    copyEl.innerHTML = copyEl.innerHTML.replace('©', '<a href="admin.html" class="admin-dot" aria-label="Area riservata">©</a>');
+  }
 
 });

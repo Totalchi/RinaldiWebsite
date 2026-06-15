@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="robots" content="noindex, nofollow"/>
+<title>Admin — Studio Dentistico Rinaldi Montalbano</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+  :root{
+    --cream:#F6F3ED; --paper:#FDFCF9; --warm:#EDE8DF;
+    --deep:#1A1410; --deep-2:#2C2318;
+    --gold:#9E7E3A; --gold-2:#B8933F; --gold-light:#D4B96A;
+    --terra:#C4622D; --stone:#857B6E; --stone-2:#A89E92;
+    --red:#B83226; --green:#2D6B4A;
+    --line:rgba(26,20,16,0.12); --line-2:rgba(26,20,16,0.2);
+    --f-display:'Cormorant Garamond',Georgia,serif; --f-body:'Inter',-apple-system,'Segoe UI',sans-serif;
+    --r:10px; --r-sm:6px; --r-lg:16px;
+    --sh:0 2px 20px rgba(26,20,16,0.08); --sh-l:0 12px 48px rgba(26,20,16,0.16);
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--f-body);background:var(--cream);color:var(--deep);line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:var(--gold)}
+  button{font-family:inherit;cursor:pointer}
+  input,textarea,select{font-family:inherit;font-size:0.92rem;color:var(--deep);background:var(--paper);border:1px solid var(--line-2);border-radius:var(--r-sm);padding:0.6rem 0.7rem;width:100%}
+  input:focus,textarea:focus,select:focus{outline:none;border-color:var(--gold)}
+  label{display:block;font-size:0.72rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--stone);margin-bottom:0.35rem}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;border:none;border-radius:50px;padding:0.7rem 1.4rem;font-size:0.82rem;font-weight:600;letter-spacing:0.03em;transition:transform .15s,box-shadow .2s,background .2s}
+  .btn:hover{transform:translateY(-1px)}
+  .btn-gold{background:var(--gold);color:#fff}
+  .btn-gold:hover{background:var(--gold-2)}
+  .btn-dark{background:var(--deep);color:var(--cream)}
+  .btn-ghost{background:transparent;border:1px solid var(--line-2);color:var(--deep)}
+  .btn-danger{background:transparent;border:1px solid rgba(184,50,38,0.4);color:var(--red)}
+  .btn-danger:hover{background:rgba(184,50,38,0.08)}
+  .btn-sm{padding:0.45rem 0.85rem;font-size:0.76rem}
+
+  /* Login */
+  .login-wrap{min-height:100vh;display:grid;place-items:center;padding:1.5rem}
+  .login-card{width:100%;max-width:380px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);padding:2.5rem 2rem;box-shadow:var(--sh)}
+  .login-card h1{font-family:var(--f-display);font-weight:500;font-size:1.8rem;margin-bottom:0.3rem}
+  .login-card p{font-size:0.85rem;color:var(--stone);margin-bottom:1.6rem}
+  .field{margin-bottom:1rem}
+  .err{color:var(--red);font-size:0.82rem;margin-top:0.8rem;min-height:1.1rem}
+
+  /* App shell */
+  .app{display:none;max-width:1100px;margin:0 auto;padding:1.5rem}
+  .topbar{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:1rem 0 1.5rem;border-bottom:1px solid var(--line);margin-bottom:1.5rem}
+  .topbar h1{font-family:var(--f-display);font-weight:500;font-size:1.5rem}
+  .topbar .sub{font-size:0.75rem;color:var(--stone);letter-spacing:0.04em}
+  .tabs{display:flex;gap:0.4rem;margin-bottom:1.5rem}
+  .tab{background:transparent;border:1px solid var(--line-2);border-radius:50px;padding:0.5rem 1.1rem;font-size:0.8rem;font-weight:600;color:var(--stone)}
+  .tab.is-active{background:var(--deep);color:var(--cream);border-color:var(--deep)}
+  .panel{display:none}
+  .panel.is-active{display:block}
+
+  /* Team list */
+  .toolbar{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:1.2rem;flex-wrap:wrap}
+  .toolbar h2{font-family:var(--f-display);font-weight:500;font-size:1.3rem}
+  .member{display:flex;align-items:center;gap:1rem;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:0.8rem;margin-bottom:0.7rem}
+  .member-av{width:54px;height:54px;border-radius:50%;flex-shrink:0;display:grid;place-items:center;font-family:var(--f-display);font-size:1.2rem;color:var(--deep);background:var(--warm);overflow:hidden;border:1px solid var(--line-2)}
+  .member-av img{width:100%;height:100%;object-fit:cover}
+  .member-main{flex:1;min-width:0}
+  .member-main .nm{font-weight:600;font-size:0.95rem}
+  .member-main .tg{font-size:0.78rem;color:var(--stone);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .member-actions{display:flex;align-items:center;gap:0.3rem;flex-shrink:0}
+  .icon-btn{width:34px;height:34px;display:grid;place-items:center;border:1px solid var(--line-2);background:var(--paper);border-radius:var(--r-sm);color:var(--deep)}
+  .icon-btn:hover{border-color:var(--gold);color:var(--gold)}
+  .icon-btn:disabled{opacity:0.3;cursor:default}
+  .icon-btn svg{width:16px;height:16px}
+  .pill{font-size:0.68rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;padding:0.2rem 0.55rem;border-radius:50px}
+  .pill-on{background:rgba(45,107,74,0.12);color:var(--green)}
+  .pill-off{background:rgba(184,50,38,0.1);color:var(--red)}
+
+  /* Editor */
+  .editor{display:none;background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);padding:1.5rem;margin-bottom:1.5rem;box-shadow:var(--sh)}
+  .editor.is-open{display:block}
+  .editor h3{font-family:var(--f-display);font-weight:500;font-size:1.25rem;margin-bottom:1.2rem}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+  @media(max-width:680px){.grid2{grid-template-columns:1fr}}
+  .photo-row{display:flex;gap:1rem;align-items:center;margin-bottom:1rem}
+  .photo-prev{width:80px;height:100px;border-radius:var(--r-sm);object-fit:cover;border:1px solid var(--line-2);background:var(--warm);flex-shrink:0}
+  .editor-actions{display:flex;gap:0.6rem;margin-top:1.4rem;flex-wrap:wrap}
+  .muted{font-size:0.76rem;color:var(--stone)}
+  .toast{position:fixed;bottom:1.2rem;left:50%;transform:translateX(-50%);background:var(--deep);color:var(--cream);padding:0.7rem 1.3rem;border-radius:50px;font-size:0.85rem;box-shadow:var(--sh-l);opacity:0;pointer-events:none;transition:opacity .25s;z-index:50}
+  .toast.show{opacity:1}
+  .empty{text-align:center;color:var(--stone);padding:2.5rem;font-size:0.9rem}
+  .analytics-soon{text-align:center;color:var(--stone);padding:3rem 1rem}
+
+  /* Analytics dashboard */
+  .period{display:flex;gap:0.3rem;flex-wrap:wrap}
+  .seg{background:transparent;border:1px solid var(--line-2);border-radius:50px;padding:0.4rem 0.9rem;font-size:0.76rem;font-weight:600;color:var(--stone)}
+  .seg.is-active{background:var(--gold);color:#fff;border-color:var(--gold)}
+  .live-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:1rem 1.2rem;margin-bottom:1.2rem;font-size:0.9rem}
+  .live-dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--green);margin-right:0.5rem;animation:pulse 2s infinite;vertical-align:middle}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(45,107,74,0.5)}70%{box-shadow:0 0 0 8px rgba(45,107,74,0)}100%{box-shadow:0 0 0 0 rgba(45,107,74,0)}}
+  .live-list{margin-top:0.6rem;display:flex;flex-direction:column;gap:0.25rem;font-size:0.8rem;color:var(--stone)}
+  .stat-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:0.8rem;margin-bottom:1.2rem}
+  .stat-c{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:1rem 1.1rem}
+  .stat-c .v{font-family:var(--f-display);font-size:1.7rem;line-height:1;color:var(--deep)}
+  .stat-c .l{font-size:0.7rem;letter-spacing:0.05em;text-transform:uppercase;color:var(--stone);margin-top:0.35rem}
+  .ana-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.2rem}
+  @media(max-width:760px){.ana-grid{grid-template-columns:1fr}}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:1.1rem}
+  .card h3{font-family:var(--f-display);font-weight:500;font-size:1.1rem;margin-bottom:0.8rem}
+  .bar-row{display:flex;align-items:center;gap:0.6rem;margin-bottom:0.5rem;font-size:0.8rem}
+  .bar-row .nm{width:42%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--stone)}
+  .bar-row .bar{flex:1;height:8px;background:var(--warm);border-radius:50px;overflow:hidden}
+  .bar-row .bar span{display:block;height:100%;background:var(--gold);border-radius:50px}
+  .bar-row .ct{width:34px;text-align:right;font-weight:600}
+  .rank{display:flex;justify-content:space-between;gap:0.6rem;padding:0.4rem 0;border-bottom:1px solid var(--line);font-size:0.82rem}
+  .rank:last-child{border-bottom:none}
+  .rank .ct{font-weight:600;color:var(--gold)}
+</style>
+</head>
+<body>
+
+<!-- LOGIN -->
+<div class="login-wrap" id="login-wrap">
+  <form class="login-card" id="login-form">
+    <h1>Area riservata</h1>
+    <p>Studio Dentistico Rinaldi Montalbano</p>
+    <div class="field">
+      <label for="email">Email</label>
+      <input type="email" id="email" autocomplete="username" required/>
+    </div>
+    <div class="field">
+      <label for="password">Password</label>
+      <input type="password" id="password" autocomplete="current-password" required/>
+    </div>
+    <button type="submit" class="btn btn-gold" style="width:100%" id="login-btn">Accedi</button>
+    <div class="err" id="login-err"></div>
+  </form>
+</div>
+
+<!-- APP -->
+<div class="app" id="app">
+  <div class="topbar">
+    <div>
+      <h1>Pannello di gestione</h1>
+      <div class="sub" id="who"></div>
+    </div>
+    <button class="btn btn-ghost btn-sm" id="logout-btn">Esci</button>
+  </div>
+
+  <div class="tabs">
+    <button class="tab is-active" data-tab="team">Team</button>
+    <button class="tab" data-tab="analytics">Analytics</button>
+  </div>
+
+  <!-- TEAM PANEL -->
+  <section class="panel is-active" id="panel-team">
+    <div class="toolbar">
+      <h2>Membri del team</h2>
+      <button class="btn btn-dark btn-sm" id="new-btn">+ Nuovo membro</button>
+    </div>
+
+    <!-- EDITOR -->
+    <div class="editor" id="editor">
+      <h3 id="editor-title">Nuovo membro</h3>
+      <input type="hidden" id="f-id"/>
+
+      <div class="photo-row">
+        <img class="photo-prev" id="f-photo-prev" alt="" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E"/>
+        <div style="flex:1">
+          <label for="f-photo">Foto (jpg/png, opzionale)</label>
+          <input type="file" id="f-photo" accept="image/*"/>
+          <div class="muted" style="margin-top:0.3rem">Se non carichi una foto, viene mostrato il cerchio con le iniziali.</div>
+        </div>
+      </div>
+
+      <div class="grid2">
+        <div class="field"><label for="f-name">Nome *</label><input id="f-name" placeholder="Dott. Mario Rossi"/></div>
+        <div class="field"><label for="f-initials">Iniziali</label><input id="f-initials" maxlength="3" placeholder="MR"/></div>
+      </div>
+      <div class="grid2">
+        <div class="field"><label for="f-tag-it">Specializzazione (IT)</label><input id="f-tag-it" placeholder="Implantologia · Chirurgia"/></div>
+        <div class="field"><label for="f-tag-en">Specializzazione (EN)</label><input id="f-tag-en" placeholder="Implantology · Surgery"/></div>
+      </div>
+      <div class="grid2">
+        <div class="field"><label for="f-bs-it">Bio breve (IT) — homepage</label><textarea id="f-bs-it" rows="3"></textarea></div>
+        <div class="field"><label for="f-bs-en">Bio breve (EN) — homepage</label><textarea id="f-bs-en" rows="3"></textarea></div>
+      </div>
+      <div class="grid2">
+        <div class="field"><label for="f-bl-it">Bio lunga (IT) — pagina Chi siamo</label><textarea id="f-bl-it" rows="5"></textarea></div>
+        <div class="field"><label for="f-bl-en">Bio lunga (EN) — pagina Chi siamo</label><textarea id="f-bl-en" rows="5"></textarea></div>
+      </div>
+      <div class="grid2">
+        <div class="field"><label for="f-gfrom">Colore sfondo (chiaro)</label><input type="color" id="f-gfrom" value="#D8CFC4"/></div>
+        <div class="field"><label for="f-gto">Colore sfondo (accento)</label><input type="color" id="f-gto" value="#9E7E3A"/></div>
+      </div>
+      <div class="grid2">
+        <div class="field"><label for="f-order">Ordine</label><input type="number" id="f-order" value="0"/></div>
+        <div class="field" style="display:flex;align-items:flex-end;gap:0.5rem">
+          <input type="checkbox" id="f-visible" checked style="width:auto"/>
+          <label for="f-visible" style="margin:0">Visibile sul sito</label>
+        </div>
+      </div>
+
+      <div class="editor-actions">
+        <button class="btn btn-gold" id="save-btn">Salva</button>
+        <button class="btn btn-ghost" id="cancel-btn">Annulla</button>
+        <span class="muted" id="save-status" style="align-self:center"></span>
+      </div>
+    </div>
+
+    <div id="member-list"></div>
+  </section>
+
+  <!-- ANALYTICS PANEL -->
+  <section class="panel" id="panel-analytics">
+    <div class="toolbar">
+      <h2>Statistiche del sito</h2>
+      <div class="period">
+        <button class="seg is-active" data-period="today">Oggi</button>
+        <button class="seg" data-period="7d">7 giorni</button>
+        <button class="seg" data-period="30d">30 giorni</button>
+        <button class="seg" data-period="all">Sempre</button>
+      </div>
+    </div>
+
+    <div class="live-card">
+      <span class="live-dot"></span><strong id="live-count">0</strong> visitatori attivi ora
+      <div class="live-list" id="live-list"></div>
+    </div>
+
+    <div class="stat-cards" id="stat-cards"></div>
+
+    <div class="ana-grid">
+      <div class="card">
+        <h3>Provenienza</h3>
+        <div id="map" style="height:320px;border-radius:8px;overflow:hidden;background:var(--warm)"></div>
+      </div>
+      <div class="card">
+        <h3>Città principali</h3>
+        <div id="top-cities"></div>
+      </div>
+    </div>
+
+    <div class="ana-grid">
+      <div class="card"><h3>Sezioni viste</h3><div id="sections-bars"></div></div>
+      <div class="card"><h3>Click principali</h3><div id="top-clicks"></div></div>
+    </div>
+  </section>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/config.js"></script>
+<script>
+(function(){
+  const cfg = window.SDM_CONFIG;
+  const sb = window.supabase.createClient(cfg.SUPABASE_URL, cfg.SUPABASE_ANON_KEY);
+  const BUCKET = cfg.TEAM_PHOTO_BUCKET || 'team-photos';
+
+  const $ = id => document.getElementById(id);
+  const loginWrap = $('login-wrap'), app = $('app');
+  let members = [];
+  let editingId = null;
+  let pickedFile = null;
+
+  function toast(msg){ const t=$('toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),2600); }
+  function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+  function escAttr(s){ return esc(s).replace(/"/g,'&quot;'); }
+
+  /* ── Auth ── */
+  async function refreshSession(){
+    const { data } = await sb.auth.getSession();
+    if (data.session){ showApp(data.session.user); }
+    else { loginWrap.style.display='grid'; app.style.display='none'; }
+  }
+  function showApp(user){
+    loginWrap.style.display='none';
+    app.style.display='block';
+    $('who').textContent = user.email;
+    loadMembers();
+  }
+  $('login-form').addEventListener('submit', async (e)=>{
+    e.preventDefault();
+    $('login-err').textContent='';
+    $('login-btn').textContent='Accesso…';
+    const { data, error } = await sb.auth.signInWithPassword({ email:$('email').value.trim(), password:$('password').value });
+    $('login-btn').textContent='Accedi';
+    if (error){ $('login-err').textContent = error.message || 'Accesso non riuscito'; return; }
+    showApp(data.user);
+  });
+  $('logout-btn').addEventListener('click', async ()=>{ await sb.auth.signOut(); location.reload(); });
+
+  /* ── Tabs ── */
+  document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click', ()=>{
+    document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('is-active', x===t));
+    const name = t.dataset.tab;
+    document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('is-active', p.id==='panel-'+name));
+    if (name==='analytics') openAnalytics(); else stopLive();
+  }));
+
+  /* ── Team list ── */
+  async function loadMembers(){
+    const { data, error } = await sb.from('team_members').select('*').order('sort_order',{ascending:true});
+    if (error){ toast('Errore di caricamento'); return; }
+    members = data || [];
+    renderList();
+  }
+  function avatarHTML(m){
+    if (m.photo_url) return `<div class="member-av"><img src="${escAttr(m.photo_url)}" alt=""></div>`;
+    return `<div class="member-av" style="background:linear-gradient(145deg,${escAttr(m.gradient_from||'#D8CFC4')},${escAttr(m.gradient_to||'#9E7E3A')})">${esc(m.initials||'')}</div>`;
+  }
+  function renderList(){
+    const wrap = $('member-list');
+    if (!members.length){ wrap.innerHTML = '<div class="empty">Nessun membro. Aggiungine uno con “+ Nuovo membro”.</div>'; return; }
+    wrap.innerHTML = members.map((m,i)=>`
+      <div class="member">
+        ${avatarHTML(m)}
+        <div class="member-main">
+          <div class="nm">${esc(m.name)} <span class="pill ${m.visible?'pill-on':'pill-off'}">${m.visible?'Visibile':'Nascosto'}</span></div>
+          <div class="tg">${esc(m.tag_it||'')}</div>
+        </div>
+        <div class="member-actions">
+          <button class="icon-btn" data-act="up" data-id="${m.id}" ${i===0?'disabled':''} title="Su">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
+          <button class="icon-btn" data-act="down" data-id="${m.id}" ${i===members.length-1?'disabled':''} title="Giù">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+          <button class="icon-btn" data-act="edit" data-id="${m.id}" title="Modifica">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4z"/></svg></button>
+          <button class="icon-btn" data-act="del" data-id="${m.id}" title="Elimina">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2m2 0v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6"/></svg></button>
+        </div>
+      </div>`).join('');
+    wrap.querySelectorAll('[data-act]').forEach(b=>b.addEventListener('click', onRowAction));
+  }
+
+  function onRowAction(e){
+    const btn = e.currentTarget;
+    const id = btn.dataset.id;
+    const act = btn.dataset.act;
+    if (act==='edit') return openEditor(members.find(m=>m.id===id));
+    if (act==='del') return delMember(id);
+    if (act==='up' || act==='down') return reorder(id, act);
+  }
+
+  async function reorder(id, dir){
+    const i = members.findIndex(m=>m.id===id);
+    const j = dir==='up' ? i-1 : i+1;
+    if (j<0 || j>=members.length) return;
+    const a = members[i], b = members[j];
+    const ao = a.sort_order, bo = b.sort_order;
+    // swap sort_order values (handle equal values by deriving from index)
+    const newA = (ao===bo) ? j : bo;
+    const newB = (ao===bo) ? i : ao;
+    const r1 = await sb.from('team_members').update({sort_order:newA}).eq('id',a.id);
+    const r2 = await sb.from('team_members').update({sort_order:newB}).eq('id',b.id);
+    if (r1.error||r2.error){ toast('Errore riordino'); return; }
+    await loadMembers();
+  }
+
+  async function delMember(id){
+    const m = members.find(x=>x.id===id);
+    if (!confirm('Eliminare '+(m?m.name:'questo membro')+'?')) return;
+    const { error } = await sb.from('team_members').delete().eq('id',id);
+    if (error){ toast('Errore eliminazione'); return; }
+    toast('Membro eliminato');
+    await loadMembers();
+  }
+
+  /* ── Editor ── */
+  function openEditor(m){
+    editingId = m ? m.id : null;
+    pickedFile = null;
+    $('editor-title').textContent = m ? 'Modifica membro' : 'Nuovo membro';
+    $('f-id').value = m ? m.id : '';
+    $('f-name').value = m? (m.name||'') : '';
+    $('f-initials').value = m? (m.initials||'') : '';
+    $('f-tag-it').value = m? (m.tag_it||'') : '';
+    $('f-tag-en').value = m? (m.tag_en||'') : '';
+    $('f-bs-it').value = m? (m.bio_short_it||'') : '';
+    $('f-bs-en').value = m? (m.bio_short_en||'') : '';
+    $('f-bl-it').value = m? (m.bio_long_it||'') : '';
+    $('f-bl-en').value = m? (m.bio_long_en||'') : '';
+    $('f-gfrom').value = m? (m.gradient_from||'#D8CFC4') : '#D8CFC4';
+    $('f-gto').value = m? (m.gradient_to||'#9E7E3A') : '#9E7E3A';
+    $('f-order').value = m? (m.sort_order??0) : (members.length+1);
+    $('f-visible').checked = m? !!m.visible : true;
+    $('f-photo').value = '';
+    setPreview(m && m.photo_url ? m.photo_url : '');
+    $('save-status').textContent='';
+    $('editor').classList.add('is-open');
+    $('editor').scrollIntoView({behavior:'smooth', block:'start'});
+  }
+  function closeEditor(){ $('editor').classList.remove('is-open'); editingId=null; pickedFile=null; }
+  function setPreview(src){
+    const el = $('f-photo-prev');
+    if (src){ el.src = src; el.style.display='block'; }
+    else { el.removeAttribute('src'); el.style.display='block'; }
+  }
+  $('new-btn').addEventListener('click', ()=>openEditor(null));
+  $('cancel-btn').addEventListener('click', closeEditor);
+  $('f-photo').addEventListener('change', (e)=>{
+    const file = e.target.files[0];
+    if (!file) return;
+    pickedFile = file;
+    const reader = new FileReader();
+    reader.onload = ev => setPreview(ev.target.result);
+    reader.readAsDataURL(file);
+  });
+
+  function resizeImage(file, maxDim, quality){
+    return new Promise((resolve) => {
+      if (!file.type || file.type.indexOf('image/') !== 0) { resolve(file); return; }
+      const img = new Image();
+      const url = URL.createObjectURL(file);
+      img.onload = () => {
+        URL.revokeObjectURL(url);
+        let w = img.naturalWidth, h = img.naturalHeight;
+        const scale = Math.min(1, maxDim / Math.max(w, h));
+        w = Math.round(w * scale); h = Math.round(h * scale);
+        const canvas = document.createElement('canvas');
+        canvas.width = w; canvas.height = h;
+        canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+        canvas.toBlob(b => resolve(b || file), 'image/jpeg', quality);
+      };
+      img.onerror = () => { URL.revokeObjectURL(url); resolve(file); };
+      img.src = url;
+    });
+  }
+  async function uploadPhoto(file){
+    const blob = await resizeImage(file, 1000, 0.82);
+    const path = (crypto.randomUUID ? crypto.randomUUID() : String(Date.now())) + '.jpg';
+    const { error } = await sb.storage.from(BUCKET).upload(path, blob, { cacheControl:'3600', upsert:false, contentType:'image/jpeg' });
+    if (error) throw error;
+    return sb.storage.from(BUCKET).getPublicUrl(path).data.publicUrl;
+  }
+
+  $('save-btn').addEventListener('click', async ()=>{
+    const name = $('f-name').value.trim();
+    if (!name){ toast('Il nome è obbligatorio'); return; }
+    $('save-status').textContent='Salvataggio…';
+    try{
+      let photo_url = undefined;
+      if (pickedFile){ photo_url = await uploadPhoto(pickedFile); }
+      const row = {
+        name,
+        initials: $('f-initials').value.trim() || null,
+        tag_it: $('f-tag-it').value.trim() || null,
+        tag_en: $('f-tag-en').value.trim() || null,
+        bio_short_it: $('f-bs-it').value.trim() || null,
+        bio_short_en: $('f-bs-en').value.trim() || null,
+        bio_long_it: $('f-bl-it').value.trim() || null,
+        bio_long_en: $('f-bl-en').value.trim() || null,
+        gradient_from: $('f-gfrom').value,
+        gradient_to: $('f-gto').value,
+        sort_order: parseInt($('f-order').value,10) || 0,
+        visible: $('f-visible').checked
+      };
+      if (photo_url !== undefined) row.photo_url = photo_url;
+
+      let error;
+      if (editingId){ ({ error } = await sb.from('team_members').update(row).eq('id', editingId)); }
+      else { ({ error } = await sb.from('team_members').insert(row)); }
+      if (error) throw error;
+
+      $('save-status').textContent='';
+      toast(editingId ? 'Modifiche salvate' : 'Membro aggiunto');
+      closeEditor();
+      await loadMembers();
+    }catch(err){
+      $('save-status').textContent='';
+      toast('Errore: '+(err.message||err));
+    }
+  });
+
+  /* ── Analytics dashboard ── */
+  let anaPeriod = 'today';
+  let liveTimer = null;
+  let amap = null, amarkers = null;
+
+  function periodSince(p){
+    const now = Date.now();
+    if (p==='today'){ const d=new Date(); d.setHours(0,0,0,0); return d.toISOString(); }
+    if (p==='7d')  return new Date(now-7*864e5).toISOString();
+    if (p==='30d') return new Date(now-30*864e5).toISOString();
+    return null;
+  }
+  async function fetchEvents(since, limit){
+    let q = sb.from('analytics_events').select('*').order('created_at',{ascending:false}).limit(limit||20000);
+    if (since) q = q.gte('created_at', since);
+    const { data, error } = await q;
+    if (error){ toast('Errore analytics: '+(error.message||'')); return []; }
+    return data||[];
+  }
+  const pct = (n,d)=> d? Math.round(n/d*100) : 0;
+  function fmtTime(sec){ if(!sec) return '0s'; const m=Math.floor(sec/60), s=Math.round(sec%60); return m? (m+'m '+s+'s') : (s+'s'); }
+
+  async function loadAnalytics(){
+    const ev = await fetchEvents(periodSince(anaPeriod));
+    renderStats(ev); renderCities(ev); renderSections(ev); renderClicks(ev);
+  }
+  function renderStats(ev){
+    const pv = ev.filter(e=>e.event_type==='pageview');
+    const sessions = new Set(ev.map(e=>e.session_id)).size;
+    const durs = ev.filter(e=>e.event_type==='duration' && e.value).map(e=>e.value);
+    const avg = durs.length? durs.reduce((a,b)=>a+b,0)/durs.length : 0;
+    const mob = pv.filter(e=>e.device==='mobile').length;
+    const it  = pv.filter(e=>e.lang==='it').length;
+    const cc={}; pv.forEach(e=>{ if(e.city) cc[e.city]=(cc[e.city]||0)+1; });
+    const top = Object.entries(cc).sort((a,b)=>b[1]-a[1])[0];
+    const cards=[
+      ['Visite', pv.length], ['Sessioni', sessions], ['Tempo medio', fmtTime(avg)],
+      ['Mobile', pct(mob,pv.length)+'%'], ['Italiano', pct(it,pv.length)+'%'], ['Top città', top? top[0] : '—']
+    ];
+    $('stat-cards').innerHTML = cards.map(c=>`<div class="stat-c"><div class="v">${esc(c[1])}</div><div class="l">${esc(c[0])}</div></div>`).join('');
+  }
+  function renderCities(ev){
+    const pv = ev.filter(e=>e.event_type==='pageview' || e.event_type==='geo');
+    const m={};
+    pv.forEach(e=>{ if(!e.city) return; if(!m[e.city]) m[e.city]={city:e.city,count:0,lat:e.latitude,lng:e.longitude}; m[e.city].count++; if(e.latitude){m[e.city].lat=e.latitude;m[e.city].lng=e.longitude;} });
+    const cities = Object.values(m).sort((a,b)=>b.count-a.count);
+    $('top-cities').innerHTML = cities.length? cities.slice(0,12).map(c=>`<div class="rank"><span>${esc(c.city)}</span><span class="ct">${c.count}</span></div>`).join('') : '<div class="muted">Nessun dato di località.</div>';
+    renderMap(cities.filter(c=>c.lat&&c.lng));
+  }
+  function renderMap(cities){
+    if (typeof L==='undefined') return;
+    if (!amap){
+      amap = L.map('map',{attributionControl:false,scrollWheelZoom:false}).setView([44.0903,12.3972],6);
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{maxZoom:19}).addTo(amap);
+      amarkers = L.layerGroup().addTo(amap);
+    }
+    amarkers.clearLayers();
+    const pts=[]; const max=cities.reduce((mx,c)=>Math.max(mx,c.count),1);
+    cities.forEach(c=>{
+      L.circleMarker([c.lat,c.lng],{radius:6+18*(c.count/max),color:'#D4B96A',weight:1,fillColor:'#9E7E3A',fillOpacity:0.6}).bindTooltip(c.city+': '+c.count).addTo(amarkers);
+      pts.push([c.lat,c.lng]);
+    });
+    if (pts.length){ try{ amap.fitBounds(pts,{padding:[30,30],maxZoom:9}); }catch(e){} }
+    setTimeout(()=>amap.invalidateSize(),120);
+  }
+  function renderSections(ev){
+    const c={}; ev.filter(e=>e.event_type==='section').forEach(e=>{ const k=e.label||'—'; c[k]=(c[k]||0)+1; });
+    const arr=Object.entries(c).sort((a,b)=>b[1]-a[1]).slice(0,10);
+    const max=arr.reduce((mx,x)=>Math.max(mx,x[1]),1);
+    $('sections-bars').innerHTML = arr.length? arr.map(x=>`<div class="bar-row"><span class="nm">${esc(x[0])}</span><span class="bar"><span style="width:${pct(x[1],max)}%"></span></span><span class="ct">${x[1]}</span></div>`).join('') : '<div class="muted">Nessun dato.</div>';
+  }
+  function renderClicks(ev){
+    const c={}; ev.filter(e=>e.event_type==='click').forEach(e=>{ const k=e.label||'—'; c[k]=(c[k]||0)+1; });
+    const arr=Object.entries(c).sort((a,b)=>b[1]-a[1]).slice(0,12);
+    $('top-clicks').innerHTML = arr.length? arr.map(x=>`<div class="rank"><span>${esc(x[0])}</span><span class="ct">${x[1]}</span></div>`).join('') : '<div class="muted">Nessun dato.</div>';
+  }
+  async function loadLive(){
+    const ev = await fetchEvents(new Date(Date.now()-3*60000).toISOString(), 2000);
+    const by={}; ev.forEach(e=>{ if(!by[e.session_id]) by[e.session_id]=e; });
+    const sessions = Object.values(by);
+    $('live-count').textContent = sessions.length;
+    $('live-list').innerHTML = sessions.slice(0,10).map(s=>`• ${esc(s.device||'?')} · ${esc(s.label||s.event_type)}${s.city?' · '+esc(s.city):''}`).join('');
+  }
+  function openAnalytics(){ loadAnalytics(); loadLive(); if(!liveTimer) liveTimer=setInterval(loadLive,30000); }
+  function stopLive(){ if(liveTimer){ clearInterval(liveTimer); liveTimer=null; } }
+
+  document.querySelectorAll('.seg').forEach(b=>b.addEventListener('click',()=>{
+    document.querySelectorAll('.seg').forEach(x=>x.classList.toggle('is-active',x===b));
+    anaPeriod=b.dataset.period; loadAnalytics();
+  }));
+
+  refreshSession();
+})();
+</script>
+</body>
+</html>

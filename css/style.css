@@ -709,7 +709,7 @@ em { font-style: italic; }
   transform: translateX(-50%);
 }
 .team-photo-bg::before {
-  content: 'MR';
+  content: attr(data-initials);
   top: 50%;
   width: clamp(104px, 38%, 150px);
   aspect-ratio: 1;
@@ -720,7 +720,7 @@ em { font-style: italic; }
   border: 1px solid rgba(246,243,237,0.42);
   background:
     radial-gradient(circle at 30% 24%, rgba(255,255,255,0.28), transparent 34%),
-    linear-gradient(145deg, rgba(246,243,237,0.92), rgba(212,185,106,0.52));
+    linear-gradient(145deg, rgba(246,243,237,0.92), color-mix(in srgb, var(--accent, #9E7E3A) 52%, transparent));
   box-shadow:
     0 22px 60px rgba(0,0,0,0.2),
     inset 0 1px 0 rgba(255,255,255,0.55);
@@ -742,27 +742,25 @@ em { font-style: italic; }
     radial-gradient(circle, transparent 58%, rgba(246,243,237,0.18) 59%, transparent 61%);
   pointer-events: none;
 }
-.team-card:nth-child(2) .team-photo-bg::before {
+/* Static fallback: keep the original per-position look until live data
+   renders (which sets data-initials / --accent on each card). */
+[data-team-list]:not([data-dynamic]) .team-card .team-photo-bg::before {
+  content: 'MR';
+  background:
+    radial-gradient(circle at 30% 24%, rgba(255,255,255,0.28), transparent 34%),
+    linear-gradient(145deg, rgba(246,243,237,0.92), rgba(212,185,106,0.52));
+}
+[data-team-list]:not([data-dynamic]) .team-card:nth-child(2) .team-photo-bg::before {
   content: 'CM';
   background:
     radial-gradient(circle at 30% 24%, rgba(255,255,255,0.3), transparent 34%),
     linear-gradient(145deg, rgba(246,243,237,0.94), rgba(196,98,45,0.46));
 }
-.team-card:nth-child(2) .team-photo-bg::after {
-  background:
-    linear-gradient(120deg, rgba(246,243,237,0.2), transparent 38%),
-    radial-gradient(circle, transparent 58%, rgba(196,98,45,0.2) 59%, transparent 61%);
-}
-.team-card:nth-child(3) .team-photo-bg::before {
+[data-team-list]:not([data-dynamic]) .team-card:nth-child(3) .team-photo-bg::before {
   content: 'MR';
   background:
     radial-gradient(circle at 30% 24%, rgba(255,255,255,0.24), transparent 34%),
     linear-gradient(145deg, rgba(246,243,237,0.86), rgba(26,20,16,0.34));
-}
-.team-card:nth-child(3) .team-photo-bg::after {
-  background:
-    linear-gradient(120deg, rgba(246,243,237,0.16), transparent 38%),
-    radial-gradient(circle, transparent 58%, rgba(26,20,16,0.18) 59%, transparent 61%);
 }
 .team-photo img { width: 100%; height: 100%; object-fit: cover; }
 .team-tag {
@@ -784,6 +782,62 @@ em { font-style: italic; }
   font-size: 0.85rem;
   color: var(--stone);
   line-height: 1.75;
+}
+
+/* ── Team carousel (arrows) ── */
+.team-carousel { position: relative; }
+.team-grid.team-track {
+  display: flex;
+  grid-template-columns: none;          /* override the base grid */
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 4px 4px 1.25rem;
+  margin: -4px -4px 0;                   /* keep cards flush with the container edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.team-grid.team-track::-webkit-scrollbar { display: none; }
+.team-grid.team-track > .team-card {
+  flex: 0 0 calc((100% - 4rem) / 3);     /* 3 visible on desktop */
+  scroll-snap-align: start;
+}
+@media (max-width: 900px) {
+  .team-grid.team-track > .team-card { flex-basis: calc((100% - 2rem) / 2); }
+}
+@media (max-width: 600px) {
+  .team-grid.team-track > .team-card { flex-basis: 86%; }
+}
+.team-nav {
+  position: absolute;
+  top: 38%;                              /* centred on the photo */
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line-2);
+  border-radius: 50%;
+  background: var(--paper);
+  color: var(--deep);
+  cursor: pointer;
+  z-index: 3;
+  box-shadow: var(--sh);
+  transition: border-color .25s var(--ease), color .25s var(--ease),
+              box-shadow .25s var(--ease), opacity .25s var(--ease);
+}
+.team-nav:hover { border-color: var(--gold); color: var(--gold); box-shadow: var(--sh-l); }
+.team-nav svg { width: 20px; height: 20px; }
+/* Desktop: arrows sit just outside the cards, in the margin */
+.team-nav-prev { left: 0;  transform: translate(calc(-100% - 0.4rem), -50%); }
+.team-nav-next { right: 0; transform: translate(calc(100% + 0.4rem), -50%); }
+/* Narrower screens have no spare margin → tuck them just inside the edge */
+@media (max-width: 1100px) {
+  .team-nav-prev { transform: translate(8px, -50%); }
+  .team-nav-next { transform: translate(-8px, -50%); }
+}
+@media (max-width: 760px) {
+  .team-nav { width: 40px; height: 40px; top: 34%; }
 }
 
 /* ══════════════════════════════════════
@@ -1402,6 +1456,15 @@ em { font-style: italic; }
 }
 .cookie-bar a { color: var(--gold-light); }
 .cookie-bar .btn { flex-shrink: 0; }
+.cookie-bar .btn-cookie-no {
+  background: transparent;
+  border: 1px solid rgba(246,243,237,0.3);
+  color: rgba(246,243,237,0.85);
+}
+.cookie-bar .btn-cookie-no:hover { border-color: var(--gold-light); color: var(--gold-light); }
+
+/* Hidden admin entry: the © in the footer is a link, styled as plain text */
+.admin-dot { color: inherit; text-decoration: none; cursor: pointer; }
 
 /* ══════════════════════════════════════
    PHONE FLOAT
