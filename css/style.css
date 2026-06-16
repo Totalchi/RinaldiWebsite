@@ -831,13 +831,13 @@ em { font-style: italic; }
 /* Desktop: arrows sit just outside the cards, in the margin */
 .team-nav-prev { left: 0;  transform: translate(calc(-100% - 0.4rem), -50%); }
 .team-nav-next { right: 0; transform: translate(calc(100% + 0.4rem), -50%); }
-/* Narrower screens have no spare margin → tuck them just inside the edge */
+/* Below desktop there is no spare margin → place the arrows in a centred
+   row beneath the cards (stays aligned regardless of card height) */
 @media (max-width: 1100px) {
-  .team-nav-prev { transform: translate(8px, -50%); }
-  .team-nav-next { transform: translate(-8px, -50%); }
-}
-@media (max-width: 760px) {
-  .team-nav { width: 40px; height: 40px; top: 34%; }
+  .team-carousel { padding-bottom: 3.75rem; }
+  .team-nav { top: auto; bottom: 0; width: 42px; height: 42px; }
+  .team-nav-prev { left: 50%; right: auto; transform: translateX(calc(-100% - 6px)); }
+  .team-nav-next { left: 50%; right: auto; transform: translateX(6px); }
 }
 
 /* ══════════════════════════════════════
