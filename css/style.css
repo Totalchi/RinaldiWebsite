@@ -1466,6 +1466,49 @@ em { font-style: italic; }
 /* Hidden admin entry: the © in the footer is a link, styled as plain text */
 .admin-dot { color: inherit; text-decoration: none; cursor: pointer; }
 
+/* ── WhatsApp float (bottom-left, like RM Bygg) ── */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 8%;
+  left: 2.25rem;
+  right: auto;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 4px 16px rgba(37,211,102,0.35);
+  z-index: 90;
+  text-decoration: none;
+  transition: transform 0.3s var(--ease-out), box-shadow 0.25s;
+}
+.whatsapp-btn:hover { transform: translateY(-3px) scale(1.05); box-shadow: 0 10px 28px rgba(37,211,102,0.48); }
+.whatsapp-btn svg { width: 27px; height: 27px; }
+.whatsapp-tooltip {
+  position: absolute;
+  left: 120%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--deep);
+  color: var(--cream);
+  font-family: var(--f-body);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  padding: 0.4rem 0.7rem;
+  border-radius: var(--r-sm);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.whatsapp-btn:hover .whatsapp-tooltip { opacity: 1; }
+@media (max-width: 760px) {
+  .whatsapp-btn { bottom: 5%; left: 1.25rem; }
+  .whatsapp-tooltip { display: none; }
+}
+
 /* ══════════════════════════════════════
    PHONE FLOAT
 ══════════════════════════════════════ */

@@ -8,4 +8,6 @@ window.SDM_CONFIG = {
   SUPABASE_URL: 'https://gnrwkqwymsaujlelnbrm.supabase.co',
   SUPABASE_ANON_KEY: 'sb_publishable_6rR6cEPZNXz3kGWN_vTZ1g_uW7gK395',
   TEAM_PHOTO_BUCKET: 'team-photos',
+  // PLACEHOLDER — vervang door het echte WhatsApp-nummer (internationaal, alleen cijfers, bv. 39XXXXXXXXXX). Leeg laten = knop verschijnt niet.
+  WHATSAPP_NUMBER: '390000000000',
 };
